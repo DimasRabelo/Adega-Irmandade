@@ -59,17 +59,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -78,6 +79,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\adegalogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ajudaesuporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\emails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\estoque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\funcionario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconeemail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconeolho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconesenha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\produtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\relatorio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\vendas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\adegalogosemfundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\adegalogo-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\adegalogo-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\adegairmandadelogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\botaoFechar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
