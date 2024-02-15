@@ -30,134 +30,233 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.pnlMenuPrincipal = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.pnlCont = new System.Windows.Forms.Panel();
+            this.lblProdutos = new System.Windows.Forms.Label();
+            this.lblVendas = new System.Windows.Forms.Label();
+            this.lblCliente = new System.Windows.Forms.Label();
+            this.lblEstoque = new System.Windows.Forms.Label();
+            this.lblNumCliente = new System.Windows.Forms.Label();
+            this.lblNumEstoque = new System.Windows.Forms.Label();
+            this.lblFuncionario = new System.Windows.Forms.Label();
+            this.lblNumProdutos = new System.Windows.Forms.Label();
+            this.lblNumVendas = new System.Windows.Forms.Label();
+            this.lblNumFuncionario = new System.Windows.Forms.Label();
+            this.pnlUsuario = new System.Windows.Forms.Panel();
+            this.lblData = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.btnEmail = new System.Windows.Forms.Button();
+            this.btnEstoque = new System.Windows.Forms.Button();
+            this.btnProdutos = new System.Windows.Forms.Button();
+            this.btnVendas = new System.Windows.Forms.Button();
+            this.btnRelatorio = new System.Windows.Forms.Button();
+            this.btnFuncionario = new System.Windows.Forms.Button();
+            this.btnAjuda = new System.Windows.Forms.Button();
             this.pnlMenuPrincipal.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlCont.SuspendLayout();
+            this.pnlUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenuPrincipal
             // 
             this.pnlMenuPrincipal.BackColor = System.Drawing.Color.White;
-            this.pnlMenuPrincipal.Controls.Add(this.panel1);
-            this.pnlMenuPrincipal.Controls.Add(this.pictureBox1);
-            this.pnlMenuPrincipal.Controls.Add(this.button10);
-            this.pnlMenuPrincipal.Controls.Add(this.button9);
-            this.pnlMenuPrincipal.Controls.Add(this.button8);
-            this.pnlMenuPrincipal.Controls.Add(this.button6);
-            this.pnlMenuPrincipal.Controls.Add(this.button4);
-            this.pnlMenuPrincipal.Controls.Add(this.button3);
-            this.pnlMenuPrincipal.Controls.Add(this.button2);
-            this.pnlMenuPrincipal.Controls.Add(this.button1);
+            this.pnlMenuPrincipal.Controls.Add(this.pnlCont);
+            this.pnlMenuPrincipal.Controls.Add(this.pnlUsuario);
+            this.pnlMenuPrincipal.Controls.Add(this.pctLogo);
+            this.pnlMenuPrincipal.Controls.Add(this.btnCliente);
+            this.pnlMenuPrincipal.Controls.Add(this.btnEmail);
+            this.pnlMenuPrincipal.Controls.Add(this.btnEstoque);
+            this.pnlMenuPrincipal.Controls.Add(this.btnProdutos);
+            this.pnlMenuPrincipal.Controls.Add(this.btnVendas);
+            this.pnlMenuPrincipal.Controls.Add(this.btnRelatorio);
+            this.pnlMenuPrincipal.Controls.Add(this.btnFuncionario);
+            this.pnlMenuPrincipal.Controls.Add(this.btnAjuda);
             resources.ApplyResources(this.pnlMenuPrincipal, "pnlMenuPrincipal");
             this.pnlMenuPrincipal.Name = "pnlMenuPrincipal";
             // 
-            // panel1
+            // pnlCont
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
+            this.pnlCont.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlCont.Controls.Add(this.lblProdutos);
+            this.pnlCont.Controls.Add(this.lblVendas);
+            this.pnlCont.Controls.Add(this.lblCliente);
+            this.pnlCont.Controls.Add(this.lblEstoque);
+            this.pnlCont.Controls.Add(this.lblNumCliente);
+            this.pnlCont.Controls.Add(this.lblNumEstoque);
+            this.pnlCont.Controls.Add(this.lblFuncionario);
+            this.pnlCont.Controls.Add(this.lblNumProdutos);
+            this.pnlCont.Controls.Add(this.lblNumVendas);
+            this.pnlCont.Controls.Add(this.lblNumFuncionario);
+            resources.ApplyResources(this.pnlCont, "pnlCont");
+            this.pnlCont.Name = "pnlCont";
             // 
-            // pictureBox1
+            // lblProdutos
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Image = global::Adega_Irmandade.Properties.Resources.adegalogo_2;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            this.lblProdutos.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblProdutos, "lblProdutos");
+            this.lblProdutos.ForeColor = System.Drawing.Color.White;
+            this.lblProdutos.Name = "lblProdutos";
             // 
-            // button10
+            // lblVendas
             // 
-            resources.ApplyResources(this.button10, "button10");
-            this.button10.Image = global::Adega_Irmandade.Properties.Resources.cliente;
-            this.button10.Name = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            this.lblVendas.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblVendas, "lblVendas");
+            this.lblVendas.ForeColor = System.Drawing.Color.White;
+            this.lblVendas.Name = "lblVendas";
             // 
-            // button9
+            // lblCliente
             // 
-            resources.ApplyResources(this.button9, "button9");
-            this.button9.Image = global::Adega_Irmandade.Properties.Resources.emails;
-            this.button9.Name = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.lblCliente.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblCliente, "lblCliente");
+            this.lblCliente.ForeColor = System.Drawing.Color.White;
+            this.lblCliente.Name = "lblCliente";
             // 
-            // button8
+            // lblEstoque
             // 
-            resources.ApplyResources(this.button8, "button8");
-            this.button8.Image = global::Adega_Irmandade.Properties.Resources.estoque;
-            this.button8.Name = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.lblEstoque.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblEstoque, "lblEstoque");
+            this.lblEstoque.ForeColor = System.Drawing.Color.White;
+            this.lblEstoque.Name = "lblEstoque";
             // 
-            // button6
+            // lblNumCliente
             // 
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.Image = global::Adega_Irmandade.Properties.Resources.produtos;
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.lblNumCliente.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblNumCliente, "lblNumCliente");
+            this.lblNumCliente.ForeColor = System.Drawing.Color.White;
+            this.lblNumCliente.Name = "lblNumCliente";
             // 
-            // button4
+            // lblNumEstoque
             // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Image = global::Adega_Irmandade.Properties.Resources.vendas;
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.lblNumEstoque.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblNumEstoque, "lblNumEstoque");
+            this.lblNumEstoque.ForeColor = System.Drawing.Color.White;
+            this.lblNumEstoque.Name = "lblNumEstoque";
             // 
-            // button3
+            // lblFuncionario
             // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Image = global::Adega_Irmandade.Properties.Resources.relatorio;
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.lblFuncionario.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblFuncionario, "lblFuncionario");
+            this.lblFuncionario.ForeColor = System.Drawing.Color.White;
+            this.lblFuncionario.Name = "lblFuncionario";
             // 
-            // button2
+            // lblNumProdutos
             // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Image = global::Adega_Irmandade.Properties.Resources.funcionario;
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.lblNumProdutos.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblNumProdutos, "lblNumProdutos");
+            this.lblNumProdutos.ForeColor = System.Drawing.Color.White;
+            this.lblNumProdutos.Name = "lblNumProdutos";
             // 
-            // button1
+            // lblNumVendas
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Image = global::Adega_Irmandade.Properties.Resources.ajudaesuporte;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblNumVendas.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblNumVendas, "lblNumVendas");
+            this.lblNumVendas.ForeColor = System.Drawing.Color.White;
+            this.lblNumVendas.Name = "lblNumVendas";
             // 
-            // label1
+            // lblNumFuncionario
             // 
-            this.label1.BackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblNumFuncionario.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblNumFuncionario, "lblNumFuncionario");
+            this.lblNumFuncionario.ForeColor = System.Drawing.Color.White;
+            this.lblNumFuncionario.Name = "lblNumFuncionario";
             // 
-            // label2
+            // pnlUsuario
             // 
-            this.label2.BackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Name = "label2";
+            this.pnlUsuario.BackColor = System.Drawing.Color.Black;
+            this.pnlUsuario.Controls.Add(this.lblData);
+            this.pnlUsuario.Controls.Add(this.lblHora);
+            this.pnlUsuario.Controls.Add(this.lblUsuario);
+            resources.ApplyResources(this.pnlUsuario, "pnlUsuario");
+            this.pnlUsuario.Name = "pnlUsuario";
             // 
-            // label3
+            // lblData
             // 
-            this.label3.BackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Name = "label3";
+            this.lblData.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblData, "lblData");
+            this.lblData.ForeColor = System.Drawing.Color.White;
+            this.lblData.Name = "lblData";
+            // 
+            // lblHora
+            // 
+            this.lblHora.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblHora, "lblHora");
+            this.lblHora.ForeColor = System.Drawing.Color.White;
+            this.lblHora.Name = "lblHora";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.lblUsuario, "lblUsuario");
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pctLogo
+            // 
+            this.pctLogo.BackColor = System.Drawing.Color.Black;
+            this.pctLogo.Image = global::Adega_Irmandade.Properties.Resources.adegalogo_2;
+            resources.ApplyResources(this.pctLogo, "pctLogo");
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.TabStop = false;
+            // 
+            // btnCliente
+            // 
+            resources.ApplyResources(this.btnCliente, "btnCliente");
+            this.btnCliente.Image = global::Adega_Irmandade.Properties.Resources.cliente;
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            // 
+            // btnEmail
+            // 
+            resources.ApplyResources(this.btnEmail, "btnEmail");
+            this.btnEmail.Image = global::Adega_Irmandade.Properties.Resources.emails;
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.UseVisualStyleBackColor = true;
+            // 
+            // btnEstoque
+            // 
+            resources.ApplyResources(this.btnEstoque, "btnEstoque");
+            this.btnEstoque.Image = global::Adega_Irmandade.Properties.Resources.estoque;
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.UseVisualStyleBackColor = true;
+            // 
+            // btnProdutos
+            // 
+            resources.ApplyResources(this.btnProdutos, "btnProdutos");
+            this.btnProdutos.Image = global::Adega_Irmandade.Properties.Resources.produtos;
+            this.btnProdutos.Name = "btnProdutos";
+            this.btnProdutos.UseVisualStyleBackColor = true;
+            // 
+            // btnVendas
+            // 
+            resources.ApplyResources(this.btnVendas, "btnVendas");
+            this.btnVendas.Image = global::Adega_Irmandade.Properties.Resources.vendas;
+            this.btnVendas.Name = "btnVendas";
+            this.btnVendas.UseVisualStyleBackColor = true;
+            // 
+            // btnRelatorio
+            // 
+            resources.ApplyResources(this.btnRelatorio, "btnRelatorio");
+            this.btnRelatorio.Image = global::Adega_Irmandade.Properties.Resources.relatorio;
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.UseVisualStyleBackColor = true;
+            // 
+            // btnFuncionario
+            // 
+            resources.ApplyResources(this.btnFuncionario, "btnFuncionario");
+            this.btnFuncionario.Image = global::Adega_Irmandade.Properties.Resources.funcionario;
+            this.btnFuncionario.Name = "btnFuncionario";
+            this.btnFuncionario.UseVisualStyleBackColor = true;
+            // 
+            // btnAjuda
+            // 
+            resources.ApplyResources(this.btnAjuda, "btnAjuda");
+            this.btnAjuda.Image = global::Adega_Irmandade.Properties.Resources.ajudaesuporte;
+            this.btnAjuda.Name = "btnAjuda";
+            this.btnAjuda.UseVisualStyleBackColor = true;
             // 
             // frmMenuPrincipal
             // 
@@ -168,8 +267,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenuPrincipal";
             this.pnlMenuPrincipal.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlCont.ResumeLayout(false);
+            this.pnlUsuario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,18 +277,29 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlMenuPrincipal;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnAjuda;
+        private System.Windows.Forms.Button btnCliente;
+        private System.Windows.Forms.Button btnEmail;
+        private System.Windows.Forms.Button btnEstoque;
+        private System.Windows.Forms.Button btnProdutos;
+        private System.Windows.Forms.Button btnVendas;
+        private System.Windows.Forms.Button btnRelatorio;
+        private System.Windows.Forms.Button btnFuncionario;
+        private System.Windows.Forms.PictureBox pctLogo;
+        private System.Windows.Forms.Panel pnlUsuario;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblNumFuncionario;
+        private System.Windows.Forms.Panel pnlCont;
+        private System.Windows.Forms.Label lblNumProdutos;
+        private System.Windows.Forms.Label lblNumVendas;
+        private System.Windows.Forms.Label lblNumCliente;
+        private System.Windows.Forms.Label lblNumEstoque;
+        private System.Windows.Forms.Label lblFuncionario;
+        private System.Windows.Forms.Label lblProdutos;
+        private System.Windows.Forms.Label lblVendas;
+        private System.Windows.Forms.Label lblCliente;
+        private System.Windows.Forms.Label lblEstoque;
     }
 }
