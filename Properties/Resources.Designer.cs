@@ -83,6 +83,16 @@ namespace Adega_Irmandade.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adegalogo__1_ {
+            get {
+                object obj = ResourceManager.GetObject("adegalogo (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adegalogo_2 {
             get {
                 object obj = ResourceManager.GetObject("adegalogo_2", resourceCulture);

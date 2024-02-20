@@ -32,6 +32,7 @@
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.pnlSenha = new System.Windows.Forms.Panel();
+            this.pctMostrar = new System.Windows.Forms.PictureBox();
             this.pctSenha = new System.Windows.Forms.PictureBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.pnlEmail = new System.Windows.Forms.Panel();
@@ -42,6 +43,7 @@
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pnlLogin.SuspendLayout();
             this.pnlSenha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctSenha)).BeginInit();
             this.pnlEmail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctEmail)).BeginInit();
@@ -75,16 +77,29 @@
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.UseWaitCursor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // pnlSenha
             // 
             this.pnlSenha.BackColor = System.Drawing.Color.White;
+            this.pnlSenha.Controls.Add(this.pctMostrar);
             this.pnlSenha.Controls.Add(this.pctSenha);
             this.pnlSenha.Controls.Add(this.txtSenha);
             this.pnlSenha.Location = new System.Drawing.Point(75, 145);
             this.pnlSenha.Name = "pnlSenha";
             this.pnlSenha.Size = new System.Drawing.Size(360, 30);
             this.pnlSenha.TabIndex = 2;
+            // 
+            // pctMostrar
+            // 
+            this.pctMostrar.Image = global::Adega_Irmandade.Properties.Resources.iconeolho;
+            this.pctMostrar.Location = new System.Drawing.Point(340, 15);
+            this.pctMostrar.Name = "pctMostrar";
+            this.pctMostrar.Size = new System.Drawing.Size(20, 15);
+            this.pctMostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctMostrar.TabIndex = 3;
+            this.pctMostrar.TabStop = false;
+            this.pctMostrar.Click += new System.EventHandler(this.pctMostrar_Click);
             // 
             // pctSenha
             // 
@@ -104,7 +119,7 @@
             this.txtSenha.ForeColor = System.Drawing.Color.Black;
             this.txtSenha.Location = new System.Drawing.Point(41, 3);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(313, 22);
+            this.txtSenha.Size = new System.Drawing.Size(295, 22);
             this.txtSenha.TabIndex = 0;
             // 
             // pnlEmail
@@ -160,14 +175,17 @@
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctFechar.TabIndex = 4;
             this.pctFechar.TabStop = false;
+            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
+            this.pctFechar.MouseEnter += new System.EventHandler(this.pctFechar_MouseEnter);
+            this.pctFechar.MouseLeave += new System.EventHandler(this.pctFechar_MouseLeave);
             // 
             // pctLogo
             // 
             this.pctLogo.BackColor = System.Drawing.Color.Transparent;
             this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
-            this.pctLogo.Location = new System.Drawing.Point(405, 12);
+            this.pctLogo.Location = new System.Drawing.Point(406, 30);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(217, 189);
+            this.pctLogo.Size = new System.Drawing.Size(192, 169);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLogo.TabIndex = 1;
             this.pctLogo.TabStop = false;
@@ -190,6 +208,7 @@
             this.pnlLogin.PerformLayout();
             this.pnlSenha.ResumeLayout(false);
             this.pnlSenha.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctSenha)).EndInit();
             this.pnlEmail.ResumeLayout(false);
             this.pnlEmail.PerformLayout();
@@ -213,6 +232,7 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.PictureBox pctFechar;
         private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.PictureBox pctMostrar;
     }
 }
 

@@ -17,9 +17,20 @@ namespace Adega_Irmandade
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+      
+            private void pctFechar_Click(object sender, EventArgs e)
+            {
+                var resposta = MessageBox.Show("Deseja realmente sair?", "SAIR", MessageBoxButtons.YesNoCancel);
+                if (resposta == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+                else if (resposta == DialogResult.No)
+                {
+                    new frmLogin().Show();
+                    Close();
+                }
+            }
         }
     }
-}
+

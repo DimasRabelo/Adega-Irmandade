@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="variaveis.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\fundofumaça.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\adegalogo %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
