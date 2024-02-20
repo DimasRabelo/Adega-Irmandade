@@ -31,6 +31,16 @@ namespace Adega_Irmandade
                     Close();
                 }
             }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+
         }
+
+        private void btnFuncionario_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 

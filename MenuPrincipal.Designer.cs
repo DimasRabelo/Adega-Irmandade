@@ -49,6 +49,7 @@
             this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pctFechar = new System.Windows.Forms.PictureBox();
             this.btnCliente = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.btnProdutos = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
-            this.btnFuncionario = new System.Windows.Forms.Button();
             this.btnAjuda = new System.Windows.Forms.Button();
             this.pnlMenuPrincipal.SuspendLayout();
             this.pnlCont.SuspendLayout();
@@ -72,6 +72,7 @@
             // pnlMenuPrincipal
             // 
             this.pnlMenuPrincipal.BackColor = System.Drawing.Color.White;
+            this.pnlMenuPrincipal.Controls.Add(this.button1);
             this.pnlMenuPrincipal.Controls.Add(this.pctLogo);
             this.pnlMenuPrincipal.Controls.Add(this.pnlCont);
             this.pnlMenuPrincipal.Controls.Add(this.panel1);
@@ -82,7 +83,6 @@
             this.pnlMenuPrincipal.Controls.Add(this.btnProdutos);
             this.pnlMenuPrincipal.Controls.Add(this.btnVendas);
             this.pnlMenuPrincipal.Controls.Add(this.btnRelatorio);
-            this.pnlMenuPrincipal.Controls.Add(this.btnFuncionario);
             this.pnlMenuPrincipal.Controls.Add(this.btnAjuda);
             resources.ApplyResources(this.pnlMenuPrincipal, "pnlMenuPrincipal");
             this.pnlMenuPrincipal.Name = "pnlMenuPrincipal";
@@ -234,6 +234,13 @@
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
             this.lblUsuario.Name = "lblUsuario";
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Image = global::Adega_Irmandade.Properties.Resources.funcionario;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // pctLogo
             // 
             this.pctLogo.BackColor = System.Drawing.Color.Black;
@@ -257,6 +264,7 @@
             this.btnCliente.Image = global::Adega_Irmandade.Properties.Resources.cliente;
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnEmail
             // 
@@ -292,13 +300,6 @@
             this.btnRelatorio.Image = global::Adega_Irmandade.Properties.Resources.relatorio;
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.UseVisualStyleBackColor = true;
-            // 
-            // btnFuncionario
-            // 
-            resources.ApplyResources(this.btnFuncionario, "btnFuncionario");
-            this.btnFuncionario.Image = global::Adega_Irmandade.Properties.Resources.funcionario;
-            this.btnFuncionario.Name = "btnFuncionario";
-            this.btnFuncionario.UseVisualStyleBackColor = true;
             // 
             // btnAjuda
             // 
@@ -337,7 +338,6 @@
         private System.Windows.Forms.Button btnProdutos;
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Button btnRelatorio;
-        private System.Windows.Forms.Button btnFuncionario;
         private System.Windows.Forms.Panel pnlUsuario;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblData;
@@ -359,5 +359,6 @@
         private System.Windows.Forms.DataGridView dgvContato;
         private System.Windows.Forms.PictureBox pctFechar;
         private System.Windows.Forms.PictureBox pctLogo;
+        private System.Windows.Forms.Button button1;
     }
 }
