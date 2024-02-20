@@ -100,6 +100,8 @@
             this.pctMostrar.TabIndex = 3;
             this.pctMostrar.TabStop = false;
             this.pctMostrar.Click += new System.EventHandler(this.pctMostrar_Click);
+            this.pctMostrar.MouseEnter += new System.EventHandler(this.pctFechar_MouseEnter);
+            this.pctMostrar.MouseLeave += new System.EventHandler(this.pctFechar_MouseLeave);
             // 
             // pctSenha
             // 

@@ -118,20 +118,47 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pctLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>520, 3</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 170</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pctLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="pctLogo.Location" type="System.Drawing.Point, System.Drawing">
     <value>870, 355</value>
   </data>
   <data name="pctLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 286</value>
+    <value>347, 290</value>
   </data>
   <data name="pctLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pctLogo.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
@@ -145,556 +172,7 @@
     <value>pnlMenuPrincipal</value>
   </data>
   <data name="&gt;&gt;pctLogo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblProdutos.Name" xml:space="preserve">
-    <value>lblProdutos</value>
-  </data>
-  <data name="&gt;&gt;lblProdutos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblProdutos.Parent" xml:space="preserve">
-    <value>pnlCont</value>
-  </data>
-  <data name="&gt;&gt;lblProdutos.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblVendas.Name" xml:space="preserve">
-    <value>lblVendas</value>
-  </data>
-  <data name="&gt;&gt;lblVendas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblVendas.Parent" xml:space="preserve">
-    <value>pnlCont</value>
-  </data>
-  <data name="&gt;&gt;lblVendas.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblCliente.Name" xml:space="preserve">
-    <value>lblCliente</value>
-  </data>
-  <data name="&gt;&gt;lblCliente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCliente.Parent" xml:space="preserve">
-    <value>pnlCont</value>
-  </data>
-  <data name="&gt;&gt;lblCliente.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblEstoque.Name" xml:space="preserve">
-    <value>lblEstoque</value>
-  </data>
-  <data name="&gt;&gt;lblEstoque.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblEstoque.Parent" xml:space="preserve">
-    <value>pnlCont</value>
-  </data>
-  <data name="&gt;&gt;lblEstoque.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblNumProdutos.Name" xml:space="preserve">
-    <value>lblNumProdutos</value>
-  </data>
-  <data name="&gt;&gt;lblNumProdutos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblNumProdutos.Parent" xml:space="preserve">
-    <value>pnlCont</value>
-  </data>
-  <data name="&gt;&gt;lblNumProdutos.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblNumCliente.Name" xml:space="preserve">
-    <value>lblNumCliente</value>
-  </data>
-  <data name="&gt;&gt;lblNumCliente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblNumCliente.Parent" xml:space="preserve">
-    <value>pnlCont</value>
-  </data>
-  <data name="&gt;&gt;lblNumCliente.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblNumEstoque.Name" xml:space="preserve">
-    <value>lblNumEstoque</value>
-  </data>
-  <data name="&gt;&gt;lblNumEstoque.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblNumEstoque.Parent" xml:space="preserve">
-    <value>pnlCont</value>
-  </data>
-  <data name="&gt;&gt;lblNumEstoque.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblFuncionario.Name" xml:space="preserve">
-    <value>lblFuncionario</value>
-  </data>
-  <data name="&gt;&gt;lblFuncionario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblFuncionario.Parent" xml:space="preserve">
-    <value>pnlCont</value>
-  </data>
-  <data name="&gt;&gt;lblFuncionario.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblNumVendas.Name" xml:space="preserve">
-    <value>lblNumVendas</value>
-  </data>
-  <data name="&gt;&gt;lblNumVendas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblNumVendas.Parent" xml:space="preserve">
-    <value>pnlCont</value>
-  </data>
-  <data name="&gt;&gt;lblNumVendas.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lblNumFuncionario.Name" xml:space="preserve">
-    <value>lblNumFuncionario</value>
-  </data>
-  <data name="&gt;&gt;lblNumFuncionario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblNumFuncionario.Parent" xml:space="preserve">
-    <value>pnlCont</value>
-  </data>
-  <data name="&gt;&gt;lblNumFuncionario.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="pnlCont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 3</value>
-  </data>
-  <data name="pnlCont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 346</value>
-  </data>
-  <data name="pnlCont.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;pnlCont.Name" xml:space="preserve">
-    <value>pnlCont</value>
-  </data>
-  <data name="&gt;&gt;pnlCont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlCont.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;pnlCont.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pctFechar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pctFechar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="pctFechar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 29</value>
-  </data>
-  <data name="pctFechar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pctFechar.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;pctFechar.Name" xml:space="preserve">
-    <value>pctFechar</value>
-  </data>
-  <data name="&gt;&gt;pctFechar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pctFechar.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;pctFechar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dgvProdutosMaisVendidos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 35</value>
-  </data>
-  <data name="dgvProdutosMaisVendidos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 262</value>
-  </data>
-  <data name="dgvProdutosMaisVendidos.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;dgvProdutosMaisVendidos.Name" xml:space="preserve">
-    <value>dgvProdutosMaisVendidos</value>
-  </data>
-  <data name="&gt;&gt;dgvProdutosMaisVendidos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvProdutosMaisVendidos.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;dgvProdutosMaisVendidos.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 15.75pt, style=Bold</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 300</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 46</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.Text" xml:space="preserve">
-    <value>Produtos Mais Vendidos</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lblProdutosMaisVendidos.Name" xml:space="preserve">
-    <value>lblProdutosMaisVendidos</value>
-  </data>
-  <data name="&gt;&gt;lblProdutosMaisVendidos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblProdutosMaisVendidos.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;lblProdutosMaisVendidos.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 3</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 346</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;dgvContato.Name" xml:space="preserve">
-    <value>dgvContato</value>
-  </data>
-  <data name="&gt;&gt;dgvContato.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvContato.Parent" xml:space="preserve">
-    <value>pnlUsuario</value>
-  </data>
-  <data name="&gt;&gt;dgvContato.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblData.Name" xml:space="preserve">
-    <value>lblData</value>
-  </data>
-  <data name="&gt;&gt;lblData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblData.Parent" xml:space="preserve">
-    <value>pnlUsuario</value>
-  </data>
-  <data name="&gt;&gt;lblData.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblHora.Name" xml:space="preserve">
-    <value>lblHora</value>
-  </data>
-  <data name="&gt;&gt;lblHora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblHora.Parent" xml:space="preserve">
-    <value>pnlUsuario</value>
-  </data>
-  <data name="&gt;&gt;lblHora.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblUsuario.Name" xml:space="preserve">
-    <value>lblUsuario</value>
-  </data>
-  <data name="&gt;&gt;lblUsuario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblUsuario.Parent" xml:space="preserve">
-    <value>pnlUsuario</value>
-  </data>
-  <data name="&gt;&gt;lblUsuario.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pnlUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 355</value>
-  </data>
-  <data name="pnlUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>857, 290</value>
-  </data>
-  <data name="pnlUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;pnlUsuario.Name" xml:space="preserve">
-    <value>pnlUsuario</value>
-  </data>
-  <data name="&gt;&gt;pnlUsuario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlUsuario.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;pnlUsuario.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnCliente.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnCliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnCliente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>871, 3</value>
-  </data>
-  <data name="btnCliente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 170</value>
-  </data>
-  <data name="btnCliente.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;btnCliente.Name" xml:space="preserve">
-    <value>btnCliente</value>
-  </data>
-  <data name="&gt;&gt;btnCliente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCliente.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;btnCliente.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btnEmail.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnEmail.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1047, 3</value>
-  </data>
-  <data name="btnEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 170</value>
-  </data>
-  <data name="btnEmail.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;btnEmail.Name" xml:space="preserve">
-    <value>btnEmail</value>
-  </data>
-  <data name="&gt;&gt;btnEmail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnEmail.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;btnEmail.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btnEstoque.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnEstoque.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnEstoque.Location" type="System.Drawing.Point, System.Drawing">
-    <value>695, 3</value>
-  </data>
-  <data name="btnEstoque.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 170</value>
-  </data>
-  <data name="btnEstoque.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;btnEstoque.Name" xml:space="preserve">
-    <value>btnEstoque</value>
-  </data>
-  <data name="&gt;&gt;btnEstoque.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnEstoque.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;btnEstoque.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btnProdutos.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnProdutos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnProdutos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>695, 179</value>
-  </data>
-  <data name="btnProdutos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 170</value>
-  </data>
-  <data name="btnProdutos.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btnProdutos.Name" xml:space="preserve">
-    <value>btnProdutos</value>
-  </data>
-  <data name="&gt;&gt;btnProdutos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnProdutos.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;btnProdutos.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="btnVendas.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnVendas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnVendas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>519, 179</value>
-  </data>
-  <data name="btnVendas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 170</value>
-  </data>
-  <data name="btnVendas.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnVendas.Name" xml:space="preserve">
-    <value>btnVendas</value>
-  </data>
-  <data name="&gt;&gt;btnVendas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnVendas.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;btnVendas.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="btnRelatorio.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnRelatorio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnRelatorio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>871, 179</value>
-  </data>
-  <data name="btnRelatorio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 170</value>
-  </data>
-  <data name="btnRelatorio.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnRelatorio.Name" xml:space="preserve">
-    <value>btnRelatorio</value>
-  </data>
-  <data name="&gt;&gt;btnRelatorio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRelatorio.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;btnRelatorio.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="btnFuncionario.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnFuncionario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnFuncionario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>519, 3</value>
-  </data>
-  <data name="btnFuncionario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 170</value>
-  </data>
-  <data name="btnFuncionario.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnFuncionario.Name" xml:space="preserve">
-    <value>btnFuncionario</value>
-  </data>
-  <data name="&gt;&gt;btnFuncionario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnFuncionario.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;btnFuncionario.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="btnAjuda.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnAjuda.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAjuda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1047, 179</value>
-  </data>
-  <data name="btnAjuda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 170</value>
-  </data>
-  <data name="btnAjuda.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnAjuda.Name" xml:space="preserve">
-    <value>btnAjuda</value>
-  </data>
-  <data name="&gt;&gt;btnAjuda.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAjuda.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;btnAjuda.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="pnlMenuPrincipal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="pnlMenuPrincipal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1220, 655</value>
-  </data>
-  <data name="pnlMenuPrincipal.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuPrincipal.Name" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuPrincipal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuPrincipal.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuPrincipal.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="lblProdutos.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Black, 12pt, style=Bold</value>
@@ -1026,11 +504,134 @@
   <data name="&gt;&gt;lblNumFuncionario.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="pnlCont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 3</value>
+  </data>
+  <data name="pnlCont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 346</value>
+  </data>
+  <data name="pnlCont.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;pnlCont.Name" xml:space="preserve">
+    <value>pnlCont</value>
+  </data>
+  <data name="&gt;&gt;pnlCont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlCont.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;pnlCont.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pctFechar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pctFechar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="pctFechar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 29</value>
+  </data>
+  <data name="pctFechar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pctFechar.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.Name" xml:space="preserve">
+    <value>pctFechar</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dgvProdutosMaisVendidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 35</value>
+  </data>
+  <data name="dgvProdutosMaisVendidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 262</value>
+  </data>
+  <data name="dgvProdutosMaisVendidos.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Name" xml:space="preserve">
+    <value>dgvProdutosMaisVendidos</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Black, 15.75pt, style=Bold</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 300</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 46</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.Text" xml:space="preserve">
+    <value>Produtos Mais Vendidos</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.Name" xml:space="preserve">
+    <value>lblProdutosMaisVendidos</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 3</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 346</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="dgvContato.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 5</value>
+    <value>0, 4</value>
   </data>
   <data name="dgvContato.Size" type="System.Drawing.Size, System.Drawing">
-    <value>676, 282</value>
+    <value>682, 282</value>
   </data>
   <data name="dgvContato.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1048,7 +649,7 @@
     <value>0</value>
   </data>
   <data name="lblData.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 20.25pt, style=Bold</value>
+    <value>Arial Black, 20.25pt, style=Bold</value>
   </data>
   <data name="lblData.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1081,7 +682,7 @@
     <value>1</value>
   </data>
   <data name="lblHora.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 20.25pt, style=Bold</value>
+    <value>Arial Black, 20.25pt, style=Bold</value>
   </data>
   <data name="lblHora.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1114,13 +715,13 @@
     <value>2</value>
   </data>
   <data name="lblUsuario.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 18.75pt, style=Bold</value>
+    <value>Arial Black, 18.75pt, style=Bold</value>
   </data>
   <data name="lblUsuario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>688, 5</value>
+    <value>688, 4</value>
   </data>
   <data name="lblUsuario.Size" type="System.Drawing.Size, System.Drawing">
     <value>164, 91</value>
@@ -1145,6 +746,237 @@
   </data>
   <data name="&gt;&gt;lblUsuario.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="pnlUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 355</value>
+  </data>
+  <data name="pnlUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>857, 290</value>
+  </data>
+  <data name="pnlUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;pnlUsuario.Name" xml:space="preserve">
+    <value>pnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;pnlUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlUsuario.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;pnlUsuario.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnCliente.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnCliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>871, 3</value>
+  </data>
+  <data name="btnCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 170</value>
+  </data>
+  <data name="btnCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;btnCliente.Name" xml:space="preserve">
+    <value>btnCliente</value>
+  </data>
+  <data name="&gt;&gt;btnCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCliente.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;btnCliente.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnEmail.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnEmail.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1047, 3</value>
+  </data>
+  <data name="btnEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 170</value>
+  </data>
+  <data name="btnEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnEmail.Name" xml:space="preserve">
+    <value>btnEmail</value>
+  </data>
+  <data name="&gt;&gt;btnEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEmail.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;btnEmail.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnEstoque.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnEstoque.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnEstoque.Location" type="System.Drawing.Point, System.Drawing">
+    <value>695, 3</value>
+  </data>
+  <data name="btnEstoque.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 170</value>
+  </data>
+  <data name="btnEstoque.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btnEstoque.Name" xml:space="preserve">
+    <value>btnEstoque</value>
+  </data>
+  <data name="&gt;&gt;btnEstoque.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEstoque.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;btnEstoque.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnProdutos.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnProdutos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnProdutos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>695, 179</value>
+  </data>
+  <data name="btnProdutos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 170</value>
+  </data>
+  <data name="btnProdutos.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnProdutos.Name" xml:space="preserve">
+    <value>btnProdutos</value>
+  </data>
+  <data name="&gt;&gt;btnProdutos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnProdutos.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;btnProdutos.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnVendas.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnVendas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnVendas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>519, 179</value>
+  </data>
+  <data name="btnVendas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 170</value>
+  </data>
+  <data name="btnVendas.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnVendas.Name" xml:space="preserve">
+    <value>btnVendas</value>
+  </data>
+  <data name="&gt;&gt;btnVendas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnVendas.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;btnVendas.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnRelatorio.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnRelatorio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRelatorio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>871, 179</value>
+  </data>
+  <data name="btnRelatorio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 170</value>
+  </data>
+  <data name="btnRelatorio.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnRelatorio.Name" xml:space="preserve">
+    <value>btnRelatorio</value>
+  </data>
+  <data name="&gt;&gt;btnRelatorio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRelatorio.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;btnRelatorio.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnAjuda.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAjuda.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAjuda.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1047, 179</value>
+  </data>
+  <data name="btnAjuda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 170</value>
+  </data>
+  <data name="btnAjuda.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnAjuda.Name" xml:space="preserve">
+    <value>btnAjuda</value>
+  </data>
+  <data name="&gt;&gt;btnAjuda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAjuda.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;btnAjuda.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="pnlMenuPrincipal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="pnlMenuPrincipal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1220, 655</value>
+  </data>
+  <data name="pnlMenuPrincipal.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuPrincipal.Name" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuPrincipal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuPrincipal.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuPrincipal.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
