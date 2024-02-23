@@ -10,5 +10,8 @@ namespace Adega_Irmandade
     {
         // LOGIN
         public static string usuario, senha, nivel;
+
+        // MENU
+        public static int maisVendidos;
     }
 }

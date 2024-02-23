@@ -24,8 +24,8 @@ namespace Adega_Irmandade.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        internal static Image esconder;
-        internal static Image mostrar;
+        private static Image esconder;
+        private static Image mostrar;
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -33,7 +33,9 @@ namespace Adega_Irmandade.Properties {
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-        
+
+        public static Image Esconder1 { get => esconder; set => esconder = value; }
+
         /// <summary>
         ///   Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
         /// </summary>
@@ -231,5 +233,8 @@ namespace Adega_Irmandade.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        internal static Image Esconder { get => Esconder1; set => Esconder1 = value; }
+        internal static Image Mostrar { get => mostrar; set => mostrar = value; }
     }
 }

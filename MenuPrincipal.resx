@@ -118,33 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnFuncionarios.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnFuncionarios.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnFuncionarios.Location" type="System.Drawing.Point, System.Drawing">
     <value>520, 3</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnFuncionarios.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 170</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnFuncionarios.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;btnFuncionarios.Name" xml:space="preserve">
+    <value>btnFuncionarios</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnFuncionarios.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnFuncionarios.Parent" xml:space="preserve">
     <value>pnlMenuPrincipal</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnFuncionarios.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="pctLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -525,6 +525,27 @@
   <data name="&gt;&gt;pnlCont.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="dgvProdutosMaisVendidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 38</value>
+  </data>
+  <data name="dgvProdutosMaisVendidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 259</value>
+  </data>
+  <data name="dgvProdutosMaisVendidos.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Name" xml:space="preserve">
+    <value>dgvProdutosMaisVendidos</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="pctFechar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -550,27 +571,6 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;pctFechar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dgvProdutosMaisVendidos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 35</value>
-  </data>
-  <data name="dgvProdutosMaisVendidos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 262</value>
-  </data>
-  <data name="dgvProdutosMaisVendidos.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;dgvProdutosMaisVendidos.Name" xml:space="preserve">
-    <value>dgvProdutosMaisVendidos</value>
-  </data>
-  <data name="&gt;&gt;dgvProdutosMaisVendidos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgvProdutosMaisVendidos.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;dgvProdutosMaisVendidos.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="lblProdutosMaisVendidos.Font" type="System.Drawing.Font, System.Drawing">
@@ -631,7 +631,7 @@
     <value>0, 4</value>
   </data>
   <data name="dgvContato.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 282</value>
+    <value>609, 282</value>
   </data>
   <data name="dgvContato.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -655,10 +655,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>688, 100</value>
+    <value>615, 100</value>
   </data>
   <data name="lblData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 91</value>
+    <value>237, 91</value>
   </data>
   <data name="lblData.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -688,10 +688,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblHora.Location" type="System.Drawing.Point, System.Drawing">
-    <value>688, 195</value>
+    <value>615, 195</value>
   </data>
   <data name="lblHora.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 91</value>
+    <value>237, 91</value>
   </data>
   <data name="lblHora.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -721,10 +721,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>688, 4</value>
+    <value>615, 4</value>
   </data>
   <data name="lblUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 91</value>
+    <value>237, 91</value>
   </data>
   <data name="lblUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -978,6 +978,9 @@
   <data name="&gt;&gt;pnlMenuPrincipal.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="time1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -987,14 +990,17 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1230, 655</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>MenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;time1.Name" xml:space="preserve">
+    <value>time1</value>
+  </data>
+  <data name="&gt;&gt;time1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMenuPrincipal</value>

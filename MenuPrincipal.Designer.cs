@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMenuPrincipal = new System.Windows.Forms.Panel();
+            this.btnFuncionarios = new System.Windows.Forms.Button();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pnlCont = new System.Windows.Forms.Panel();
             this.lblProdutos = new System.Windows.Forms.Label();
             this.lblVendas = new System.Windows.Forms.Label();
@@ -42,16 +47,13 @@
             this.lblNumVendas = new System.Windows.Forms.Label();
             this.lblNumFuncionario = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvProdutosMaisVendidos = new System.Windows.Forms.DataGridView();
+            this.pctFechar = new System.Windows.Forms.PictureBox();
             this.lblProdutosMaisVendidos = new System.Windows.Forms.Label();
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.dgvContato = new System.Windows.Forms.DataGridView();
             this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.pctFechar = new System.Windows.Forms.PictureBox();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnEmail = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
@@ -59,20 +61,22 @@
             this.btnVendas = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnAjuda = new System.Windows.Forms.Button();
+            this.time1 = new System.Windows.Forms.Timer(this.components);
+            this.dgvProdutosMaisVendidos = new System.Windows.Forms.DataGridView();
             this.pnlMenuPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.pnlCont.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosMaisVendidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosMaisVendidos)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenuPrincipal
             // 
             this.pnlMenuPrincipal.BackColor = System.Drawing.Color.White;
-            this.pnlMenuPrincipal.Controls.Add(this.button1);
+            this.pnlMenuPrincipal.Controls.Add(this.btnFuncionarios);
             this.pnlMenuPrincipal.Controls.Add(this.pctLogo);
             this.pnlMenuPrincipal.Controls.Add(this.pnlCont);
             this.pnlMenuPrincipal.Controls.Add(this.panel1);
@@ -86,6 +90,21 @@
             this.pnlMenuPrincipal.Controls.Add(this.btnAjuda);
             resources.ApplyResources(this.pnlMenuPrincipal, "pnlMenuPrincipal");
             this.pnlMenuPrincipal.Name = "pnlMenuPrincipal";
+            // 
+            // btnFuncionarios
+            // 
+            resources.ApplyResources(this.btnFuncionarios, "btnFuncionarios");
+            this.btnFuncionarios.Image = global::Adega_Irmandade.Properties.Resources.funcionario;
+            this.btnFuncionarios.Name = "btnFuncionarios";
+            this.btnFuncionarios.UseVisualStyleBackColor = true;
+            // 
+            // pctLogo
+            // 
+            this.pctLogo.BackColor = System.Drawing.Color.Black;
+            this.pctLogo.Image = global::Adega_Irmandade.Properties.Resources.adegalogo;
+            resources.ApplyResources(this.pctLogo, "pctLogo");
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.TabStop = false;
             // 
             // pnlCont
             // 
@@ -176,18 +195,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Controls.Add(this.pctFechar);
             this.panel1.Controls.Add(this.dgvProdutosMaisVendidos);
+            this.panel1.Controls.Add(this.pctFechar);
             this.panel1.Controls.Add(this.lblProdutosMaisVendidos);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // dgvProdutosMaisVendidos
+            // pctFechar
             // 
-            this.dgvProdutosMaisVendidos.BackgroundColor = System.Drawing.Color.Black;
-            this.dgvProdutosMaisVendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dgvProdutosMaisVendidos, "dgvProdutosMaisVendidos");
-            this.dgvProdutosMaisVendidos.Name = "dgvProdutosMaisVendidos";
+            this.pctFechar.BackColor = System.Drawing.Color.Black;
+            this.pctFechar.Image = global::Adega_Irmandade.Properties.Resources.botaoFechar1;
+            resources.ApplyResources(this.pctFechar, "pctFechar");
+            this.pctFechar.Name = "pctFechar";
+            this.pctFechar.TabStop = false;
+            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
             // lblProdutosMaisVendidos
             // 
@@ -234,37 +255,12 @@
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
             this.lblUsuario.Name = "lblUsuario";
             // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Image = global::Adega_Irmandade.Properties.Resources.funcionario;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pctLogo
-            // 
-            this.pctLogo.BackColor = System.Drawing.Color.Black;
-            this.pctLogo.Image = global::Adega_Irmandade.Properties.Resources.adegalogo;
-            resources.ApplyResources(this.pctLogo, "pctLogo");
-            this.pctLogo.Name = "pctLogo";
-            this.pctLogo.TabStop = false;
-            // 
-            // pctFechar
-            // 
-            this.pctFechar.BackColor = System.Drawing.Color.Black;
-            this.pctFechar.Image = global::Adega_Irmandade.Properties.Resources.botaoFechar1;
-            resources.ApplyResources(this.pctFechar, "pctFechar");
-            this.pctFechar.Name = "pctFechar";
-            this.pctFechar.TabStop = false;
-            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
-            // 
             // btnCliente
             // 
             resources.ApplyResources(this.btnCliente, "btnCliente");
             this.btnCliente.Image = global::Adega_Irmandade.Properties.Resources.cliente;
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnEmail
             // 
@@ -308,6 +304,42 @@
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.UseVisualStyleBackColor = true;
             // 
+            // time1
+            // 
+            this.time1.Tick += new System.EventHandler(this.time1_Tick);
+            // 
+            // dgvProdutosMaisVendidos
+            // 
+            this.dgvProdutosMaisVendidos.AllowUserToResizeRows = false;
+            this.dgvProdutosMaisVendidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvProdutosMaisVendidos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProdutosMaisVendidos.BackgroundColor = System.Drawing.Color.Black;
+            this.dgvProdutosMaisVendidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosMaisVendidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProdutosMaisVendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProdutosMaisVendidos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProdutosMaisVendidos.EnableHeadersVisualStyles = false;
+            resources.ApplyResources(this.dgvProdutosMaisVendidos, "dgvProdutosMaisVendidos");
+            this.dgvProdutosMaisVendidos.MultiSelect = false;
+            this.dgvProdutosMaisVendidos.Name = "dgvProdutosMaisVendidos";
+            this.dgvProdutosMaisVendidos.ReadOnly = true;
+            this.dgvProdutosMaisVendidos.RowHeadersVisible = false;
+            this.dgvProdutosMaisVendidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
             // frmMenuPrincipal
             // 
             resources.ApplyResources(this, "$this");
@@ -316,14 +348,15 @@
             this.Controls.Add(this.pnlMenuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenuPrincipal";
+            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.pnlMenuPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.pnlCont.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosMaisVendidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             this.pnlUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosMaisVendidos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,11 +387,12 @@
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblEstoque;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvProdutosMaisVendidos;
         private System.Windows.Forms.Label lblProdutosMaisVendidos;
         private System.Windows.Forms.DataGridView dgvContato;
         private System.Windows.Forms.PictureBox pctFechar;
         private System.Windows.Forms.PictureBox pctLogo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFuncionarios;
+        private System.Windows.Forms.Timer time1;
+        private System.Windows.Forms.DataGridView dgvProdutosMaisVendidos;
     }
 }

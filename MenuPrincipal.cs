@@ -15,10 +15,19 @@ namespace Adega_Irmandade
         public frmMenuPrincipal()
         {
             InitializeComponent();
+            lblUsuario.Text = variaveis.usuario;
+            lblData.Text = DateTime.Now.ToShortDateString();
+            time1.Start();
         }
 
-      
-            private void pctFechar_Click(object sender, EventArgs e)
+        private void time1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+
+
+        private void pctFechar_Click(object sender, EventArgs e)
             {
                 var resposta = MessageBox.Show("Deseja realmente sair?", "SAIR", MessageBoxButtons.YesNoCancel);
                 if (resposta == DialogResult.Yes)
@@ -32,15 +41,14 @@ namespace Adega_Irmandade
                 }
             }
 
-        private void btnCliente_Click(object sender, EventArgs e)
+        private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
+            banco.dgProdutos = dgvProdutosMaisVendidos;
+            banco.CarregarVendas();
 
         }
 
-        private void btnFuncionario_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
     }
 

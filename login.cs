@@ -45,13 +45,13 @@ namespace Adega_Irmandade
             if (mostrar == 0)
             {
                 txtSenha.PasswordChar = '\0';
-                pctMostrar.Image = Properties.Resources.esconder;
+                pctMostrar.Image = Properties.Resources.Esconder1;
                 mostrar = 1;
             }
             else
             {
                 txtSenha.PasswordChar = '*';
-                pctMostrar.Image = Properties.Resources.mostrar;
+                pctMostrar.Image = Properties.Resources.Mostrar;
                 mostrar = 0;
             }
         }
