@@ -10,9 +10,8 @@
 
 namespace Adega_Irmandade.Properties {
     using System;
-    using System.Drawing;
-
-
+    
+    
     /// <summary>
     ///   Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
     /// </summary>
@@ -24,8 +23,7 @@ namespace Adega_Irmandade.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        private static Image esconder;
-        private static Image mostrar;
+        
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -33,9 +31,7 @@ namespace Adega_Irmandade.Properties {
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-
-        public static Image Esconder1 { get => esconder; set => esconder = value; }
-
+        
         /// <summary>
         ///   Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
         /// </summary>
@@ -87,16 +83,6 @@ namespace Adega_Irmandade.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap adegalogo__1_ {
-            get {
-                object obj = ResourceManager.GetObject("adegalogo (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap adegalogo_2 {
             get {
                 object obj = ResourceManager.GetObject("adegalogo_2", resourceCulture);
@@ -107,19 +93,9 @@ namespace Adega_Irmandade.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ajudaesuporte {
+        internal static System.Drawing.Bitmap ajuda {
             get {
-                object obj = ResourceManager.GetObject("ajudaesuporte", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap botaoFechar1 {
-            get {
-                object obj = ResourceManager.GetObject("botaoFechar1", resourceCulture);
+                object obj = ResourceManager.GetObject("ajuda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -157,9 +133,9 @@ namespace Adega_Irmandade.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap funcionario {
+        internal static System.Drawing.Bitmap funcionarios {
             get {
-                object obj = ResourceManager.GetObject("funcionario", resourceCulture);
+                object obj = ResourceManager.GetObject("funcionarios", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -207,9 +183,9 @@ namespace Adega_Irmandade.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap produtos {
+        internal static System.Drawing.Bitmap produto {
             get {
-                object obj = ResourceManager.GetObject("produtos", resourceCulture);
+                object obj = ResourceManager.GetObject("produto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,8 +209,15 @@ namespace Adega_Irmandade.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-        internal static Image Esconder { get => Esconder1; set => Esconder1 = value; }
-        internal static Image Mostrar { get => mostrar; set => mostrar = value; }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vendas1 {
+            get {
+                object obj = ResourceManager.GetObject("vendas1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
