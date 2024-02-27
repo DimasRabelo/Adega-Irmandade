@@ -48,7 +48,10 @@ namespace Adega_Irmandade
 
         }
 
-     
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
