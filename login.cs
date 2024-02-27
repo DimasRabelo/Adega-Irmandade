@@ -45,7 +45,7 @@ namespace Adega_Irmandade
             if (mostrar == 0)
             {
                 txtSenha.PasswordChar = '\0';
-                pctMostrar.Image = Properties.Resources.Esconder1;
+                pctMostrar.Image = Properties.Resources.Esconder;
                 mostrar = 1;
             }
             else

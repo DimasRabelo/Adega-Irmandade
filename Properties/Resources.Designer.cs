@@ -10,8 +10,9 @@
 
 namespace Adega_Irmandade.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
     /// </summary>
@@ -31,7 +32,10 @@ namespace Adega_Irmandade.Properties {
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-        
+
+        public static Image Esconder { get; internal set; }
+        public static Image Mostrar { get; internal set; }
+
         /// <summary>
         ///   Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
         /// </summary>
@@ -103,6 +107,16 @@ namespace Adega_Irmandade.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoFechar {
+            get {
+                object obj = ResourceManager.GetObject("botaoFechar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cliente {
             get {
                 object obj = ResourceManager.GetObject("cliente", resourceCulture);
@@ -146,6 +160,16 @@ namespace Adega_Irmandade.Properties {
         internal static System.Drawing.Bitmap fundofumaça {
             get {
                 object obj = ResourceManager.GetObject("fundofumaça", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundofumacamenu {
+            get {
+                object obj = ResourceManager.GetObject("fundofumacamenu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -170,7 +170,7 @@
             // pctFechar
             // 
             this.pctFechar.BackColor = System.Drawing.Color.Transparent;
-            this.pctFechar.Image = global::Adega_Irmandade.Properties.Resources.botaoFechar1;
+            this.pctFechar.Image = global::Adega_Irmandade.Properties.Resources.botaoFechar;
             this.pctFechar.Location = new System.Drawing.Point(948, 12);
             this.pctFechar.Name = "pctFechar";
             this.pctFechar.Size = new System.Drawing.Size(30, 30);
