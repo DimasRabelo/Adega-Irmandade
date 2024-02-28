@@ -45,13 +45,12 @@ namespace Adega_Irmandade
         {
             banco.dgProdutos = dgvProdutosMaisVendidos;
             banco.CarregarVendas();
-
+            banco.CarregarFuncionario();
+            lblNumFuncionario.Text = variaveis.qtdFuncionarios.ToString();
+         
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
     }
 

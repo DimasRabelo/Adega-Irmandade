@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.time1 = new System.Windows.Forms.Timer(this.components);
             this.pnlMenuPrincipal = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             this.lblNumProdutos = new System.Windows.Forms.Label();
             this.dgvContato = new System.Windows.Forms.DataGridView();
             this.lblFuncionario = new System.Windows.Forms.Label();
-            this.lblNumFunionario = new System.Windows.Forms.Label();
+            this.lblNumFuncionario = new System.Windows.Forms.Label();
             this.lblNumVendas = new System.Windows.Forms.Label();
             this.pnlMenuPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVends)).BeginInit();
@@ -195,23 +195,23 @@
             this.dgvProdutosMaisVendidos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvProdutosMaisVendidos.BackgroundColor = System.Drawing.Color.Black;
             this.dgvProdutosMaisVendidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosMaisVendidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosMaisVendidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProdutosMaisVendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProdutosMaisVendidos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProdutosMaisVendidos.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProdutosMaisVendidos.EnableHeadersVisualStyles = false;
             resources.ApplyResources(this.dgvProdutosMaisVendidos, "dgvProdutosMaisVendidos");
             this.dgvProdutosMaisVendidos.MultiSelect = false;
@@ -270,7 +270,7 @@
             this.pnlUsuario.Controls.Add(this.lblNumProdutos);
             this.pnlUsuario.Controls.Add(this.dgvContato);
             this.pnlUsuario.Controls.Add(this.lblFuncionario);
-            this.pnlUsuario.Controls.Add(this.lblNumFunionario);
+            this.pnlUsuario.Controls.Add(this.lblNumFuncionario);
             this.pnlUsuario.Controls.Add(this.lblNumVendas);
             resources.ApplyResources(this.pnlUsuario, "pnlUsuario");
             this.pnlUsuario.Name = "pnlUsuario";
@@ -325,7 +325,6 @@
             resources.ApplyResources(this.lblProdutos, "lblProdutos");
             this.lblProdutos.ForeColor = System.Drawing.Color.White;
             this.lblProdutos.Name = "lblProdutos";
-            this.lblProdutos.Click += new System.EventHandler(this.label9_Click);
             // 
             // lblNumEstoque
             // 
@@ -357,13 +356,13 @@
             this.lblFuncionario.ForeColor = System.Drawing.Color.White;
             this.lblFuncionario.Name = "lblFuncionario";
             // 
-            // lblNumFunionario
+            // lblNumFuncionario
             // 
-            this.lblNumFunionario.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumFunionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            resources.ApplyResources(this.lblNumFunionario, "lblNumFunionario");
-            this.lblNumFunionario.ForeColor = System.Drawing.Color.White;
-            this.lblNumFunionario.Name = "lblNumFunionario";
+            this.lblNumFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.lblNumFuncionario, "lblNumFuncionario");
+            this.lblNumFuncionario.ForeColor = System.Drawing.Color.White;
+            this.lblNumFuncionario.Name = "lblNumFuncionario";
             // 
             // lblNumVendas
             // 
@@ -424,7 +423,7 @@
         private System.Windows.Forms.PictureBox btnEmails;
         private System.Windows.Forms.Label lblFuncionario;
         private System.Windows.Forms.Label lblNumVendas;
-        private System.Windows.Forms.Label lblNumFunionario;
+        private System.Windows.Forms.Label lblNumFuncionario;
         private System.Windows.Forms.Label lblNumProdutos;
         private System.Windows.Forms.Label lblNumEstoque;
         private System.Windows.Forms.DataGridView dgvContato;

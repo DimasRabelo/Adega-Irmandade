@@ -399,15 +399,6 @@
   <data name="&gt;&gt;btnFuncionario.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="dgvProdutosMaisVendidos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 76</value>
-  </data>
-  <data name="dgvProdutosMaisVendidos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>840, 253</value>
-  </data>
-  <data name="dgvProdutosMaisVendidos.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
   <data name="&gt;&gt;dgvProdutosMaisVendidos.Name" xml:space="preserve">
     <value>dgvProdutosMaisVendidos</value>
   </data>
@@ -419,27 +410,6 @@
   </data>
   <data name="&gt;&gt;dgvProdutosMaisVendidos.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="lblHora.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
-  </data>
-  <data name="lblHora.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblHora.Location" type="System.Drawing.Point, System.Drawing">
-    <value>589, 5</value>
-  </data>
-  <data name="lblHora.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 30</value>
-  </data>
-  <data name="lblHora.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblHora.Text" xml:space="preserve">
-    <value>00:00</value>
-  </data>
-  <data name="lblHora.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;lblHora.Name" xml:space="preserve">
     <value>lblHora</value>
@@ -453,27 +423,6 @@
   <data name="&gt;&gt;lblHora.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lblData.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 12pt, style=Bold</value>
-  </data>
-  <data name="lblData.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>313, 5</value>
-  </data>
-  <data name="lblData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 30</value>
-  </data>
-  <data name="lblData.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblData.Text" xml:space="preserve">
-    <value>00/00/00</value>
-  </data>
-  <data name="lblData.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
   <data name="&gt;&gt;lblData.Name" xml:space="preserve">
     <value>lblData</value>
   </data>
@@ -485,21 +434,6 @@
   </data>
   <data name="&gt;&gt;lblData.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="pctFechar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pctFechar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 5</value>
-  </data>
-  <data name="pctFechar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 30</value>
-  </data>
-  <data name="pctFechar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pctFechar.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
   </data>
   <data name="&gt;&gt;pctFechar.Name" xml:space="preserve">
     <value>pctFechar</value>
@@ -513,27 +447,6 @@
   <data name="&gt;&gt;pctFechar.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="lblProdutosMaisVendidos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 15.75pt, style=Bold</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 38</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>866, 35</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.Text" xml:space="preserve">
-    <value>PRODUTOS MAIS VENDIDOS</value>
-  </data>
-  <data name="lblProdutosMaisVendidos.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
   <data name="&gt;&gt;lblProdutosMaisVendidos.Name" xml:space="preserve">
     <value>lblProdutosMaisVendidos</value>
   </data>
@@ -545,27 +458,6 @@
   </data>
   <data name="&gt;&gt;lblProdutosMaisVendidos.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="lblUsuario.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 11.25pt, style=Bold</value>
-  </data>
-  <data name="lblUsuario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 5</value>
-  </data>
-  <data name="lblUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 30</value>
-  </data>
-  <data name="lblUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblUsuario.Text" xml:space="preserve">
-    <value>USUÁRIOS</value>
-  </data>
-  <data name="lblUsuario.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;lblUsuario.Name" xml:space="preserve">
     <value>lblUsuario</value>
@@ -954,40 +846,40 @@
   <data name="&gt;&gt;lblFuncionario.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="lblNumFunionario.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblNumFuncionario.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Black, 12pt, style=Bold</value>
   </data>
-  <data name="lblNumFunionario.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lblNumFuncionario.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="lblNumFunionario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblNumFuncionario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lblNumFunionario.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblNumFuncionario.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 10</value>
   </data>
-  <data name="lblNumFunionario.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblNumFuncionario.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 55</value>
   </data>
-  <data name="lblNumFunionario.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblNumFuncionario.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="lblNumFunionario.Text" xml:space="preserve">
+  <data name="lblNumFuncionario.Text" xml:space="preserve">
     <value>000</value>
   </data>
-  <data name="lblNumFunionario.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lblNumFuncionario.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
   </data>
-  <data name="&gt;&gt;lblNumFunionario.Name" xml:space="preserve">
-    <value>lblNumFunionario</value>
+  <data name="&gt;&gt;lblNumFuncionario.Name" xml:space="preserve">
+    <value>lblNumFuncionario</value>
   </data>
-  <data name="&gt;&gt;lblNumFunionario.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblNumFuncionario.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblNumFunionario.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblNumFuncionario.Parent" xml:space="preserve">
     <value>pnlUsuario</value>
   </data>
-  <data name="&gt;&gt;lblNumFunionario.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblNumFuncionario.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
   <data name="lblNumVendas.Font" type="System.Drawing.Font, System.Drawing">
@@ -1064,6 +956,186 @@
   </data>
   <data name="&gt;&gt;pnlMenuPrincipal.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="dgvProdutosMaisVendidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 76</value>
+  </data>
+  <data name="dgvProdutosMaisVendidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>840, 253</value>
+  </data>
+  <data name="dgvProdutosMaisVendidos.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Name" xml:space="preserve">
+    <value>dgvProdutosMaisVendidos</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblHora.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Black, 12pt, style=Bold</value>
+  </data>
+  <data name="lblHora.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblHora.Location" type="System.Drawing.Point, System.Drawing">
+    <value>589, 5</value>
+  </data>
+  <data name="lblHora.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 30</value>
+  </data>
+  <data name="lblHora.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblHora.Text" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <data name="lblHora.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Name" xml:space="preserve">
+    <value>lblHora</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblHora.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Black, 12pt, style=Bold</value>
+  </data>
+  <data name="lblData.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>313, 5</value>
+  </data>
+  <data name="lblData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 30</value>
+  </data>
+  <data name="lblData.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblData.Text" xml:space="preserve">
+    <value>00/00/00</value>
+  </data>
+  <data name="lblData.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblData.Name" xml:space="preserve">
+    <value>lblData</value>
+  </data>
+  <data name="&gt;&gt;lblData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblData.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblData.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pctFechar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pctFechar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 5</value>
+  </data>
+  <data name="pctFechar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 30</value>
+  </data>
+  <data name="pctFechar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pctFechar.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.Name" xml:space="preserve">
+    <value>pctFechar</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Black, 15.75pt, style=Bold</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 38</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>866, 35</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.Text" xml:space="preserve">
+    <value>PRODUTOS MAIS VENDIDOS</value>
+  </data>
+  <data name="lblProdutosMaisVendidos.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.Name" xml:space="preserve">
+    <value>lblProdutosMaisVendidos</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblUsuario.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Black, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblUsuario.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 5</value>
+  </data>
+  <data name="lblUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 30</value>
+  </data>
+  <data name="lblUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblUsuario.Text" xml:space="preserve">
+    <value>USUÁRIOS</value>
+  </data>
+  <data name="lblUsuario.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.Name" xml:space="preserve">
+    <value>lblUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
