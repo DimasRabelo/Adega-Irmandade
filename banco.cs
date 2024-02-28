@@ -7,7 +7,7 @@ namespace Adega_Irmandade
 {
     public static class banco
     {
-        public static DataGridView dgProdutos;
+        public static DataGridView dgProdutos, dgContato;
       
 
         // Remova a declaração da variável reader, pois não é usada e está causando confusão
@@ -132,6 +132,63 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar Quantidade de Emails!\n\n" + erro);
             }
         }
+
+        public static void CarregarContato()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = " SELECT * FROM tblcontato;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgContato.DataSource = dt;
+
+                dgContato.Columns[0].Visible = false;
+                dgContato.Columns[1].HeaderText = "Nome";
+                dgContato.Columns[2].HeaderText = "E-mail";
+                dgContato.Columns[3].HeaderText = "Telefone";
+                dgContato.Columns[4].HeaderText = "Mensagem";
+                dgContato.Columns[5].Visible = false;
+                dgContato.Columns[6].Visible = false;
+                dgContato.Columns[7].Visible = false;
+
+
+                dgContato.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os Emails!\n\n" + erro);
+            }
+        }
+        public static void AlterarStatusEmail()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = " UPDATE tblcontato SET statusContato= 'RESPONDIDO' WHERE idContato=" + variaveis.codContato;
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgContato.DataSource = dt;
+
+
+                dgContato.ClearSelection();
+
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Alterar Status do Emails!\n\n" + erro);
+            }
+        }
+
+
     }
 }
     

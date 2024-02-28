@@ -53,11 +53,52 @@ namespace Adega_Irmandade
             lblNumVendas.Text = variaveis.qtdVendas.ToString();
             banco.CarregarNumEmails();
             lblNumEmails.Text = variaveis.qtdEmails.ToString();
+           
+            banco.dgContato = dgvContato;
+            banco.CarregarContato();
 
 
         }
 
         private void dgvProdutosMaisVendidos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex >= 0)
+            {
+                if (e.RowIndex % 2 == 1)
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(127, 127, 127); // Cor Cinza
+                    e.CellStyle.ForeColor = Color.FromArgb(0, 0, 0); // Cor Preta
+
+                }
+                else
+                {
+                    e.CellStyle.ForeColor = Color.FromArgb(0, 0, 0); // Cor Preta
+                    e.CellStyle.BackColor = Color.FromArgb(127, 127, 127); // Cor Cinza
+                }
+            }
+        }
+
+        private void dgvContato_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var resposta = MessageBox.Show("O E-MAIL FOI RESPONDIDO", "EMAIL", MessageBoxButtons.YesNo);
+            if (resposta == DialogResult.Yes)
+            {
+                // Saber qual linha foi selecionada 
+                variaveis.linhaSelecionada = int.Parse(e.RowIndex.ToString());
+                if(variaveis.linhaSelecionada >= 0)
+                {
+                    variaveis.codContato = Convert.ToInt32(dgvContato[0, variaveis.linhaSelecionada].Value);
+                    banco.AlterarStatusEmail();
+                    banco.dgContato = dgvContato;
+                    banco.CarregarContato();
+
+
+                }
+
+            }
+        }
+
+        private void dgvContato_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.ColumnIndex >= 0)
             {
