@@ -8,7 +8,7 @@ namespace Adega_Irmandade
     public static class banco
     {
         public static DataGridView dgProdutos;
-        private static object reader;
+      
 
         // Remova a declaração da variável reader, pois não é usada e está causando confusão
         // private static object reader;
@@ -25,14 +25,19 @@ namespace Adega_Irmandade
                 da.Fill(dt);
 
                 dgProdutos.DataSource = dt;
+                dgProdutos.Columns[1].DefaultCellStyle.Format = "C2";
+
+                dgProdutos.ClearSelection();
 
                 // Renomear a coluna "nomeProduto" para "Produto" no DataGridView
-                dgProdutos.Columns["nomeProduto"].HeaderText = "Produto";
-                dgProdutos.Columns["precoVendaProduto"].HeaderText = "Preço Unitário";
+                dgProdutos.Columns["nomeProduto"].HeaderText = "PRODUTOS";
+                dgProdutos.Columns["precoVendaProduto"].HeaderText = "PREÇO UNITÁRIO";
                 dgProdutos.Columns["precoVendaProduto"].DefaultCellStyle.Format = "c"; // Formato de moeda
-                dgProdutos.Columns["total_vendido"].HeaderText = "Soma do Valor total vendido";
+                dgProdutos.Columns["total_vendido"].HeaderText = "VALOR TOTAL";
                 dgProdutos.Columns["total_vendido"].DefaultCellStyle.Format = "c"; // Formato de moeda
-                dgProdutos.Columns["Unidades"].HeaderText = "Unidades Vendidas";
+                dgProdutos.Columns["Unidades"].HeaderText = "UNIDADES ";
+               
+
 
                 conexao.Desconectar();
             }
@@ -85,25 +90,46 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar Quantidade de Produtos!\n\n" + erro);
             }
         }
-        public static void CarregarNumEstoque()
+        public static void CarregarNumVendas()
         {
             try
             {
                 conexao.Conectar();
-                string selecionar = "SELECT COUNT(*) AS qtdProdutos FROM vwprodutos";
+                string selecionar = "SELECT COUNT(*) AS qtdVendas FROM vw_vendas_info";
 
                 MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
                 {
-                    variaveis.qtdProdutos = reader.GetInt32(0);
+                    variaveis.qtdVendas = reader.GetInt32(0);
                 }
                 conexao.Desconectar();
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao carregar Quantidade de Produtos!\n\n" + erro);
+                MessageBox.Show("Erro ao carregar Quantidade de Vendas!\n\n" + erro);
+            }
+        }
+        public static void CarregarNumEmails()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT COUNT(*) AS qtdEmails FROM tblcontato";
+
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    variaveis.qtdEmails = reader.GetInt32(0);
+                }
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar Quantidade de Emails!\n\n" + erro);
             }
         }
     }

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.time1 = new System.Windows.Forms.Timer(this.components);
             this.pnlMenuPrincipal = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,13 +53,9 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.lblClientes = new System.Windows.Forms.Label();
-            this.lblNumCliente = new System.Windows.Forms.Label();
             this.lblNumEmails = new System.Windows.Forms.Label();
             this.lblVendas = new System.Windows.Forms.Label();
-            this.lblEstoque = new System.Windows.Forms.Label();
             this.lblProdutos = new System.Windows.Forms.Label();
-            this.lblNumEstoque = new System.Windows.Forms.Label();
             this.lblNumProdutos = new System.Windows.Forms.Label();
             this.dgvContato = new System.Windows.Forms.DataGridView();
             this.lblFuncionario = new System.Windows.Forms.Label();
@@ -108,6 +104,7 @@
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(this.label8, "label8");
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Name = "label8";
@@ -195,29 +192,30 @@
             this.dgvProdutosMaisVendidos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvProdutosMaisVendidos.BackgroundColor = System.Drawing.Color.Black;
             this.dgvProdutosMaisVendidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProdutosMaisVendidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProdutosMaisVendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProdutosMaisVendidos.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvProdutosMaisVendidos.EnableHeadersVisualStyles = false;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProdutosMaisVendidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             resources.ApplyResources(this.dgvProdutosMaisVendidos, "dgvProdutosMaisVendidos");
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProdutosMaisVendidos.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvProdutosMaisVendidos.EnableHeadersVisualStyles = false;
             this.dgvProdutosMaisVendidos.MultiSelect = false;
             this.dgvProdutosMaisVendidos.Name = "dgvProdutosMaisVendidos";
             this.dgvProdutosMaisVendidos.ReadOnly = true;
             this.dgvProdutosMaisVendidos.RowHeadersVisible = false;
+            this.dgvProdutosMaisVendidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProdutosMaisVendidos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProdutosMaisVendidos_CellFormatting);
             // 
             // lblHora
             // 
@@ -235,7 +233,7 @@
             // 
             // pctFechar
             // 
-            this.pctFechar.BackColor = System.Drawing.Color.Black;
+            this.pctFechar.BackColor = System.Drawing.Color.Transparent;
             this.pctFechar.Image = global::Adega_Irmandade.Properties.Resources.botaoFechar;
             resources.ApplyResources(this.pctFechar, "pctFechar");
             this.pctFechar.Name = "pctFechar";
@@ -245,6 +243,7 @@
             // lblProdutosMaisVendidos
             // 
             this.lblProdutosMaisVendidos.BackColor = System.Drawing.Color.Transparent;
+            this.lblProdutosMaisVendidos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(this.lblProdutosMaisVendidos, "lblProdutosMaisVendidos");
             this.lblProdutosMaisVendidos.ForeColor = System.Drawing.Color.White;
             this.lblProdutosMaisVendidos.Name = "lblProdutosMaisVendidos";
@@ -260,13 +259,9 @@
             // 
             this.pnlUsuario.BackColor = System.Drawing.Color.Transparent;
             this.pnlUsuario.Controls.Add(this.lblEmail);
-            this.pnlUsuario.Controls.Add(this.lblClientes);
-            this.pnlUsuario.Controls.Add(this.lblNumCliente);
             this.pnlUsuario.Controls.Add(this.lblNumEmails);
             this.pnlUsuario.Controls.Add(this.lblVendas);
-            this.pnlUsuario.Controls.Add(this.lblEstoque);
             this.pnlUsuario.Controls.Add(this.lblProdutos);
-            this.pnlUsuario.Controls.Add(this.lblNumEstoque);
             this.pnlUsuario.Controls.Add(this.lblNumProdutos);
             this.pnlUsuario.Controls.Add(this.dgvContato);
             this.pnlUsuario.Controls.Add(this.lblFuncionario);
@@ -278,28 +273,15 @@
             // lblEmail
             // 
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(this.lblEmail, "lblEmail");
             this.lblEmail.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Name = "lblEmail";
             // 
-            // lblClientes
-            // 
-            this.lblClientes.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.lblClientes, "lblClientes");
-            this.lblClientes.ForeColor = System.Drawing.Color.White;
-            this.lblClientes.Name = "lblClientes";
-            // 
-            // lblNumCliente
-            // 
-            this.lblNumCliente.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            resources.ApplyResources(this.lblNumCliente, "lblNumCliente");
-            this.lblNumCliente.ForeColor = System.Drawing.Color.White;
-            this.lblNumCliente.Name = "lblNumCliente";
-            // 
             // lblNumEmails
             // 
             this.lblNumEmails.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumEmails.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNumEmails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             resources.ApplyResources(this.lblNumEmails, "lblNumEmails");
             this.lblNumEmails.ForeColor = System.Drawing.Color.White;
@@ -308,35 +290,23 @@
             // lblVendas
             // 
             this.lblVendas.BackColor = System.Drawing.Color.Transparent;
+            this.lblVendas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(this.lblVendas, "lblVendas");
             this.lblVendas.ForeColor = System.Drawing.Color.White;
             this.lblVendas.Name = "lblVendas";
             // 
-            // lblEstoque
-            // 
-            this.lblEstoque.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.lblEstoque, "lblEstoque");
-            this.lblEstoque.ForeColor = System.Drawing.Color.White;
-            this.lblEstoque.Name = "lblEstoque";
-            // 
             // lblProdutos
             // 
             this.lblProdutos.BackColor = System.Drawing.Color.Transparent;
+            this.lblProdutos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(this.lblProdutos, "lblProdutos");
             this.lblProdutos.ForeColor = System.Drawing.Color.White;
             this.lblProdutos.Name = "lblProdutos";
             // 
-            // lblNumEstoque
-            // 
-            this.lblNumEstoque.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            resources.ApplyResources(this.lblNumEstoque, "lblNumEstoque");
-            this.lblNumEstoque.ForeColor = System.Drawing.Color.White;
-            this.lblNumEstoque.Name = "lblNumEstoque";
-            // 
             // lblNumProdutos
             // 
             this.lblNumProdutos.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumProdutos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNumProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             resources.ApplyResources(this.lblNumProdutos, "lblNumProdutos");
             this.lblNumProdutos.ForeColor = System.Drawing.Color.White;
@@ -352,6 +322,7 @@
             // lblFuncionario
             // 
             this.lblFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.lblFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(this.lblFuncionario, "lblFuncionario");
             this.lblFuncionario.ForeColor = System.Drawing.Color.White;
             this.lblFuncionario.Name = "lblFuncionario";
@@ -359,6 +330,7 @@
             // lblNumFuncionario
             // 
             this.lblNumFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNumFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             resources.ApplyResources(this.lblNumFuncionario, "lblNumFuncionario");
             this.lblNumFuncionario.ForeColor = System.Drawing.Color.White;
@@ -367,6 +339,7 @@
             // lblNumVendas
             // 
             this.lblNumVendas.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNumVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             resources.ApplyResources(this.lblNumVendas, "lblNumVendas");
             this.lblNumVendas.ForeColor = System.Drawing.Color.White;
@@ -425,15 +398,11 @@
         private System.Windows.Forms.Label lblNumVendas;
         private System.Windows.Forms.Label lblNumFuncionario;
         private System.Windows.Forms.Label lblNumProdutos;
-        private System.Windows.Forms.Label lblNumEstoque;
         private System.Windows.Forms.DataGridView dgvContato;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblProdutos;
         private System.Windows.Forms.Label lblVendas;
-        private System.Windows.Forms.Label lblEstoque;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblClientes;
-        private System.Windows.Forms.Label lblNumCliente;
         private System.Windows.Forms.Label lblNumEmails;
     }
 }

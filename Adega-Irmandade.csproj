@@ -161,9 +161,6 @@
     <None Include="img\estoque.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\funcionario.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="img\iconeemail.png" />
   </ItemGroup>
   <ItemGroup>
@@ -171,9 +168,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\iconesenha.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\produtos.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="img\relatorio.png" />
