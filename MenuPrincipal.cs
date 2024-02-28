@@ -45,9 +45,20 @@ namespace Adega_Irmandade
         {
             banco.dgProdutos = dgvProdutosMaisVendidos;
             banco.CarregarVendas();
-            banco.CarregarFuncionario();
+            banco.CarregarNumFuncionario();
             lblNumFuncionario.Text = variaveis.qtdFuncionarios.ToString();
-         
+            banco.CarregarNumProdutos();
+            lblNumProdutos.Text = variaveis.qtdProdutos.ToString();
+           // banco.CarregarNumEstoque();
+           // lblNumEstoque.Text = variaveis.qtdEstoque.ToString();
+           // banco.CarregarNumCliente();
+           // lblNumCliente.Text = variaveis.qtdCliente.ToString();
+          //  banco.CarregarNumVendas();
+         //   lblNumVendas.Text = variaveis.qtdVendas.ToString();
+          //  banco.CarregarNumEmails();
+          //  lblNumEmails.Text = variaveis.qtdEmails.ToString();
+
+
         }
 
       

@@ -42,12 +42,12 @@ namespace Adega_Irmandade
             }
         }
 
-        public static void CarregarFuncionario()
+        public static void CarregarNumFuncionario()
         {
             try
             {
                 conexao.Conectar(); // Certifique-se de que conexao está corretamente inicializado e acessível
-                string selecionar = "SELECT COUNT(*) AS qtdFuncionarios FROM tblfuncionarios WHERE statusFuncionario = 'ATIVO'";
+                string selecionar = "SELECT * FROM vw_qtdfuncionarios";
 
                 MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -63,5 +63,50 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar Quantidade de Funcionários!\n\n" + erro);
             }
         }
+
+        public static void CarregarNumProdutos()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT COUNT(*) AS qtdProdutos FROM vwprodutos";
+
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    variaveis.qtdProdutos= reader.GetInt32(0);
+                }
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar Quantidade de Produtos!\n\n" + erro);
+            }
+        }
+        public static void CarregarNumEstoque()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT COUNT(*) AS qtdProdutos FROM vwprodutos";
+
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    variaveis.qtdProdutos = reader.GetInt32(0);
+                }
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar Quantidade de Produtos!\n\n" + erro);
+            }
+        }
     }
 }
+    
+
