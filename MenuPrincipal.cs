@@ -115,7 +115,13 @@ namespace Adega_Irmandade
             }
         }
 
-      
+        private void btnFuncionario_Click(object sender, EventArgs e)
+        {
+            new frmFuncionario().Show();
+            Hide();
+        }
+
+       
     }
     }
 

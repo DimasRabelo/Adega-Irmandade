@@ -103,6 +103,7 @@
             this.pnlMenuPrincipal.Controls.Add(this.pnlUsuario);
             resources.ApplyResources(this.pnlMenuPrincipal, "pnlMenuPrincipal");
             this.pnlMenuPrincipal.Name = "pnlMenuPrincipal";
+           
             // 
             // label8
             // 
@@ -175,6 +176,7 @@
             resources.ApplyResources(this.btnFuncionario, "btnFuncionario");
             this.btnFuncionario.Name = "btnFuncionario";
             this.btnFuncionario.TabStop = false;
+            this.btnFuncionario.Click += new System.EventHandler(this.btnFuncionario_Click);
             // 
             // panel1
             // 
@@ -219,6 +221,7 @@
             this.dgvProdutosMaisVendidos.ReadOnly = true;
             this.dgvProdutosMaisVendidos.RowHeadersVisible = false;
             this.dgvProdutosMaisVendidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+           
             this.dgvProdutosMaisVendidos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProdutosMaisVendidos_CellFormatting);
             // 
             // lblHora
