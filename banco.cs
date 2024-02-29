@@ -176,6 +176,9 @@ namespace Adega_Irmandade
                 da.Fill(dt);
 
                 dgContato.DataSource = dt;
+               
+
+               
 
 
                 dgContato.ClearSelection();

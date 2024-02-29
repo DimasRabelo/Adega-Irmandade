@@ -213,6 +213,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProdutosMaisVendidos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProdutosMaisVendidos.EnableHeadersVisualStyles = false;
+            this.dgvProdutosMaisVendidos.GridColor = System.Drawing.Color.White;
             this.dgvProdutosMaisVendidos.MultiSelect = false;
             this.dgvProdutosMaisVendidos.Name = "dgvProdutosMaisVendidos";
             this.dgvProdutosMaisVendidos.ReadOnly = true;
