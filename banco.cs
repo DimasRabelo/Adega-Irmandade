@@ -206,21 +206,22 @@ namespace Adega_Irmandade
                 dgFuncionario.DataSource = dt;
 
                 dgFuncionario.Columns[0].Visible = false;
-                dgFuncionario.Columns[1].HeaderText = "Nome";
+                dgFuncionario.Columns[1].HeaderText = "NOME";
                 dgFuncionario.Columns[2].Visible = false;
-                dgFuncionario.Columns[3].HeaderText = "Cargo"; 
-                dgFuncionario.Columns[4].HeaderText = "Data Nascimento";
-                dgFuncionario.Columns[5].HeaderText = "E-mail";
+                dgFuncionario.Columns[3].HeaderText = "CARGO"; 
+                dgFuncionario.Columns[4].HeaderText = "DATA DE NASCIMENTO";
+                dgFuncionario.Columns[5].HeaderText = "E-MAIL";
                 dgFuncionario.Columns[6].Visible = false;
-                dgFuncionario.Columns[7].HeaderText = "Nivel";
-                dgFuncionario.Columns[8].HeaderText = "Data Admissão";
-                dgFuncionario.Columns[9].HeaderText = "Endereço";
-                dgFuncionario.Columns[10].HeaderText = "Telefone";
-                dgFuncionario.Columns[11].HeaderText = "Cep";
-                dgFuncionario.Columns[12].HeaderText = "Status";
-                dgFuncionario.Columns[13].HeaderText = "Foto";
+                dgFuncionario.Columns[7].HeaderText = "NIVEL";
+                dgFuncionario.Columns[8].HeaderText = "DATA DE ADMISSÃO";
+                dgFuncionario.Columns[9].HeaderText = "ENDEREÇO";
+                dgFuncionario.Columns[10].HeaderText = "TELEFONE";
+                dgFuncionario.Columns[11].HeaderText = "CEP";
+                dgFuncionario.Columns[12].HeaderText = "STATUS";
+                dgFuncionario.Columns[13].HeaderText = "FOTO";
                 dgFuncionario.Columns[14].Visible = false;
                 dgFuncionario.Columns[15].Visible = false;
+                dgFuncionario.Columns[16].Visible = false;
 
 
                 dgFuncionario.ClearSelection();

@@ -322,6 +322,7 @@
             this.mkdCadDataNasc.TabIndex = 52;
             this.mkdCadDataNasc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mkdCadDataNasc.ValidatingType = typeof(System.DateTime);
+            this.mkdCadDataNasc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataNasc_KeyPress);
             // 
             // txtCadCargo
             // 
@@ -332,6 +333,7 @@
             this.txtCadCargo.Name = "txtCadCargo";
             this.txtCadCargo.Size = new System.Drawing.Size(277, 26);
             this.txtCadCargo.TabIndex = 53;
+            this.txtCadCargo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadCargo_KeyPress);
             // 
             // txtCadEmail
             // 
@@ -342,6 +344,7 @@
             this.txtCadEmail.Name = "txtCadEmail";
             this.txtCadEmail.Size = new System.Drawing.Size(435, 26);
             this.txtCadEmail.TabIndex = 54;
+            this.txtCadEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadEmail_KeyPress);
             // 
             // txtCadSenha
             // 
@@ -351,6 +354,7 @@
             this.txtCadSenha.Name = "txtCadSenha";
             this.txtCadSenha.Size = new System.Drawing.Size(214, 26);
             this.txtCadSenha.TabIndex = 55;
+            this.txtCadSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadSenha_KeyPress);
             // 
             // cmbCadNivel
             // 
@@ -366,6 +370,7 @@
             this.cmbCadNivel.Name = "cmbCadNivel";
             this.cmbCadNivel.Size = new System.Drawing.Size(435, 26);
             this.cmbCadNivel.TabIndex = 56;
+            this.cmbCadNivel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadNivel_KeyPress);
             // 
             // mkdCadDataAdmissao
             // 
@@ -378,6 +383,7 @@
             this.mkdCadDataAdmissao.TabIndex = 57;
             this.mkdCadDataAdmissao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mkdCadDataAdmissao.ValidatingType = typeof(System.DateTime);
+            this.mkdCadDataAdmissao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataAdmissao_KeyPress);
             // 
             // cmbCadStatus
             // 
@@ -391,6 +397,7 @@
             this.cmbCadStatus.Name = "cmbCadStatus";
             this.cmbCadStatus.Size = new System.Drawing.Size(204, 26);
             this.cmbCadStatus.TabIndex = 58;
+            this.cmbCadStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadStatus_KeyPress);
             // 
             // txtCadEndereco
             // 
@@ -401,6 +408,7 @@
             this.txtCadEndereco.Name = "txtCadEndereco";
             this.txtCadEndereco.Size = new System.Drawing.Size(277, 26);
             this.txtCadEndereco.TabIndex = 59;
+            this.txtCadEndereco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadEndereco_KeyPress);
             // 
             // mkdCadTelefone
             // 
@@ -412,6 +420,7 @@
             this.mkdCadTelefone.Size = new System.Drawing.Size(166, 26);
             this.mkdCadTelefone.TabIndex = 60;
             this.mkdCadTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkdCadTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadTelefone_KeyPress);
             // 
             // mkdCadCep
             // 
@@ -423,6 +432,7 @@
             this.mkdCadCep.Size = new System.Drawing.Size(154, 26);
             this.mkdCadCep.TabIndex = 61;
             this.mkdCadCep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkdCadCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadCep_KeyPress);
             // 
             // txtCadFacebook
             // 
@@ -433,6 +443,7 @@
             this.txtCadFacebook.Name = "txtCadFacebook";
             this.txtCadFacebook.Size = new System.Drawing.Size(245, 26);
             this.txtCadFacebook.TabIndex = 62;
+            this.txtCadFacebook.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadFacebook_KeyPress);
             // 
             // txtCadInstagran
             // 
@@ -443,6 +454,7 @@
             this.txtCadInstagran.Name = "txtCadInstagran";
             this.txtCadInstagran.Size = new System.Drawing.Size(245, 26);
             this.txtCadInstagran.TabIndex = 63;
+            this.txtCadInstagran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadInstagran_KeyPress);
             // 
             // txtCadWhatsap
             // 
@@ -453,6 +465,7 @@
             this.txtCadWhatsap.Name = "txtCadWhatsap";
             this.txtCadWhatsap.Size = new System.Drawing.Size(245, 26);
             this.txtCadWhatsap.TabIndex = 64;
+            this.txtCadWhatsap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadWhatsap_KeyPress);
             // 
             // btnLimpar
             // 
@@ -467,7 +480,6 @@
             this.btnLimpar.TabIndex = 66;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // pctLogo
             // 
@@ -555,7 +567,6 @@
             this.Name = "frmCadFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-           
             ((System.ComponentModel.ISupportInitialize)(this.pctCadFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
