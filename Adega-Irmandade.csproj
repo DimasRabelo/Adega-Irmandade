@@ -112,6 +112,7 @@
     <Compile Include="frmFuncionario.Designer.cs">
       <DependentUpon>frmFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="ftp.cs" />
     <Compile Include="variaveis.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>

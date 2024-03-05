@@ -40,10 +40,10 @@
             this.lblCadDataAdmissao = new System.Windows.Forms.Label();
             this.lblCadStatus = new System.Windows.Forms.Label();
             this.lblCadFacebook = new System.Windows.Forms.Label();
-            this.lblCadInstagram = new System.Windows.Forms.Label();
+            this.lblCadInstagran = new System.Windows.Forms.Label();
             this.lblCadWhatsapp = new System.Windows.Forms.Label();
             this.lblCadEndereco = new System.Windows.Forms.Label();
-            this.lblCep = new System.Windows.Forms.Label();
+            this.lblCadCep = new System.Windows.Forms.Label();
             this.pctCadFoto = new System.Windows.Forms.PictureBox();
             this.btnCadFoto = new System.Windows.Forms.Button();
             this.lblCadFoto = new System.Windows.Forms.Label();
@@ -60,11 +60,11 @@
             this.mkdCadCep = new System.Windows.Forms.MaskedTextBox();
             this.txtCadFacebook = new System.Windows.Forms.TextBox();
             this.txtCadInstagran = new System.Windows.Forms.TextBox();
-            this.txtCadWhatsap = new System.Windows.Forms.TextBox();
+            this.txtCadWhatsapp = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pctFechar = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadSalvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctCadFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
@@ -214,17 +214,17 @@
             this.lblCadFacebook.TabIndex = 42;
             this.lblCadFacebook.Text = "FACEBOOK:";
             // 
-            // lblCadInstagram
+            // lblCadInstagran
             // 
-            this.lblCadInstagram.AutoSize = true;
-            this.lblCadInstagram.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadInstagram.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadInstagram.ForeColor = System.Drawing.Color.White;
-            this.lblCadInstagram.Location = new System.Drawing.Point(338, 548);
-            this.lblCadInstagram.Name = "lblCadInstagram";
-            this.lblCadInstagram.Size = new System.Drawing.Size(147, 27);
-            this.lblCadInstagram.TabIndex = 43;
-            this.lblCadInstagram.Text = "INSTAGRAM:";
+            this.lblCadInstagran.AutoSize = true;
+            this.lblCadInstagran.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadInstagran.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadInstagran.ForeColor = System.Drawing.Color.White;
+            this.lblCadInstagran.Location = new System.Drawing.Point(338, 548);
+            this.lblCadInstagran.Name = "lblCadInstagran";
+            this.lblCadInstagran.Size = new System.Drawing.Size(147, 27);
+            this.lblCadInstagran.TabIndex = 43;
+            this.lblCadInstagran.Text = "INSTAGRAM:";
             // 
             // lblCadWhatsapp
             // 
@@ -250,17 +250,17 @@
             this.lblCadEndereco.TabIndex = 46;
             this.lblCadEndereco.Text = "ENDEREÇO:";
             // 
-            // lblCep
+            // lblCadCep
             // 
-            this.lblCep.AutoSize = true;
-            this.lblCep.BackColor = System.Drawing.Color.Transparent;
-            this.lblCep.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCep.ForeColor = System.Drawing.Color.White;
-            this.lblCep.Location = new System.Drawing.Point(679, 375);
-            this.lblCep.Name = "lblCep";
-            this.lblCep.Size = new System.Drawing.Size(61, 27);
-            this.lblCep.TabIndex = 47;
-            this.lblCep.Text = "CEP:";
+            this.lblCadCep.AutoSize = true;
+            this.lblCadCep.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadCep.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadCep.ForeColor = System.Drawing.Color.White;
+            this.lblCadCep.Location = new System.Drawing.Point(679, 375);
+            this.lblCadCep.Name = "lblCadCep";
+            this.lblCadCep.Size = new System.Drawing.Size(61, 27);
+            this.lblCadCep.TabIndex = 47;
+            this.lblCadCep.Text = "CEP:";
             // 
             // pctCadFoto
             // 
@@ -289,6 +289,7 @@
             this.btnCadFoto.TabIndex = 49;
             this.btnCadFoto.Text = "+";
             this.btnCadFoto.UseVisualStyleBackColor = false;
+            this.btnCadFoto.Click += new System.EventHandler(this.btnCadFoto_Click);
             // 
             // lblCadFoto
             // 
@@ -310,6 +311,7 @@
             this.txtCadNome.Name = "txtCadNome";
             this.txtCadNome.Size = new System.Drawing.Size(750, 26);
             this.txtCadNome.TabIndex = 51;
+            this.txtCadNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadNome_KeyPress);
             // 
             // mkdCadDataNasc
             // 
@@ -427,7 +429,7 @@
             this.mkdCadCep.Enabled = false;
             this.mkdCadCep.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mkdCadCep.Location = new System.Drawing.Point(684, 405);
-            this.mkdCadCep.Mask = "00000-999";
+            this.mkdCadCep.Mask = "99900-000";
             this.mkdCadCep.Name = "mkdCadCep";
             this.mkdCadCep.Size = new System.Drawing.Size(154, 26);
             this.mkdCadCep.TabIndex = 61;
@@ -456,16 +458,16 @@
             this.txtCadInstagran.TabIndex = 63;
             this.txtCadInstagran.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadInstagran_KeyPress);
             // 
-            // txtCadWhatsap
+            // txtCadWhatsapp
             // 
-            this.txtCadWhatsap.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtCadWhatsap.Enabled = false;
-            this.txtCadWhatsap.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadWhatsap.Location = new System.Drawing.Point(593, 578);
-            this.txtCadWhatsap.Name = "txtCadWhatsap";
-            this.txtCadWhatsap.Size = new System.Drawing.Size(245, 26);
-            this.txtCadWhatsap.TabIndex = 64;
-            this.txtCadWhatsap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadWhatsap_KeyPress);
+            this.txtCadWhatsapp.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtCadWhatsapp.Enabled = false;
+            this.txtCadWhatsapp.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCadWhatsapp.Location = new System.Drawing.Point(593, 578);
+            this.txtCadWhatsapp.Name = "txtCadWhatsapp";
+            this.txtCadWhatsapp.Size = new System.Drawing.Size(245, 26);
+            this.txtCadWhatsapp.TabIndex = 64;
+            this.txtCadWhatsapp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadWhatsap_KeyPress);
             // 
             // btnLimpar
             // 
@@ -506,19 +508,20 @@
             this.pctFechar.TabStop = false;
             this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
-            // button1
+            // btnCadSalvar
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(893, 570);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 40);
-            this.button1.TabIndex = 69;
-            this.button1.Text = "SALVAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCadSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCadSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadSalvar.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnCadSalvar.Location = new System.Drawing.Point(893, 570);
+            this.btnCadSalvar.Name = "btnCadSalvar";
+            this.btnCadSalvar.Size = new System.Drawing.Size(125, 40);
+            this.btnCadSalvar.TabIndex = 69;
+            this.btnCadSalvar.Text = "SALVAR";
+            this.btnCadSalvar.UseVisualStyleBackColor = false;
+            this.btnCadSalvar.Click += new System.EventHandler(this.btnCadSalvar_Click);
             // 
             // frmCadFuncionario
             // 
@@ -526,11 +529,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
             this.ClientSize = new System.Drawing.Size(1230, 665);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCadSalvar);
             this.Controls.Add(this.pctFechar);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.txtCadWhatsap);
+            this.Controls.Add(this.txtCadWhatsapp);
             this.Controls.Add(this.txtCadInstagran);
             this.Controls.Add(this.txtCadFacebook);
             this.Controls.Add(this.mkdCadCep);
@@ -547,10 +550,10 @@
             this.Controls.Add(this.lblCadFoto);
             this.Controls.Add(this.btnCadFoto);
             this.Controls.Add(this.pctCadFoto);
-            this.Controls.Add(this.lblCep);
+            this.Controls.Add(this.lblCadCep);
             this.Controls.Add(this.lblCadEndereco);
             this.Controls.Add(this.lblCadWhatsapp);
-            this.Controls.Add(this.lblCadInstagram);
+            this.Controls.Add(this.lblCadInstagran);
             this.Controls.Add(this.lblCadFacebook);
             this.Controls.Add(this.lblCadStatus);
             this.Controls.Add(this.lblCadDataAdmissao);
@@ -567,6 +570,7 @@
             this.Name = "frmCadFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmCadFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctCadFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
@@ -589,10 +593,10 @@
         private System.Windows.Forms.Label lblCadDataAdmissao;
         private System.Windows.Forms.Label lblCadStatus;
         private System.Windows.Forms.Label lblCadFacebook;
-        private System.Windows.Forms.Label lblCadInstagram;
+        private System.Windows.Forms.Label lblCadInstagran;
         private System.Windows.Forms.Label lblCadWhatsapp;
         private System.Windows.Forms.Label lblCadEndereco;
-        private System.Windows.Forms.Label lblCep;
+        private System.Windows.Forms.Label lblCadCep;
         private System.Windows.Forms.PictureBox pctCadFoto;
         private System.Windows.Forms.Button btnCadFoto;
         private System.Windows.Forms.Label lblCadFoto;
@@ -609,10 +613,10 @@
         private System.Windows.Forms.MaskedTextBox mkdCadCep;
         private System.Windows.Forms.TextBox txtCadFacebook;
         private System.Windows.Forms.TextBox txtCadInstagran;
-        private System.Windows.Forms.TextBox txtCadWhatsap;
+        private System.Windows.Forms.TextBox txtCadWhatsapp;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.PictureBox pctFechar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadSalvar;
     }
 }

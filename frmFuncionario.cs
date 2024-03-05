@@ -23,12 +23,7 @@ namespace Adega_Irmandade
             Close();
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            
-            new frmCadFuncionario().Show();
-            Hide();
-        }
+        
 
        
 
@@ -36,6 +31,9 @@ namespace Adega_Irmandade
         {
             banco.dgFuncionario = dgvFuncionario;
             banco.CarregarFuncionario();
+           
+
+
         }
 
         private void dgvFuncionario_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -56,5 +54,71 @@ namespace Adega_Irmandade
                 }
             }
         }
+
+        private void txtCadNome_TextChanged(object sender, EventArgs e)
+        {
+            variaveis.nomeFuncionario = txtCadNome.Text;
+            banco.CarregarFuncionarioNome();
+
+            if (txtCadNome.Text == "")
+            {
+                chkAtivo.Visible = true;
+
+            }
+            else
+            {
+                chkAtivo.Visible = false;
+            }
+        }
+
+        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (chkAtivo.Checked == true)
+            {
+                banco.CarregarStatusFuncionario();
+                txtCadNome.Enabled = false;
+            }
+            else
+            {
+                banco.CarregarFuncionario();
+                txtCadNome.Enabled = true;
+            }
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            variaveis.funcao = "CADASTRAR";
+            new frmCadFuncionario().Show();
+            Hide();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            variaveis.funcao = "ALTERAR";
+            new frmCadFuncionario().Show();
+            Hide();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+            if (variaveis.linhaSelecionada >= 0)
+            {
+                var resposta = MessageBox.Show("Deseja realmente excluir?, Essa ação não poderá ser desfeita.", "EXCLUIR", MessageBoxButtons.YesNo);
+                if (resposta == DialogResult.Yes)
+                {
+                    banco.DesativarFuncionario();
+                    banco.CarregarFuncionario();
+                    dgvFuncionario.ClearSelection();
+                }
+                else
+                {
+                    dgvFuncionario.ClearSelection();
+                }
+
+            }
+        }
+    
     }
 }

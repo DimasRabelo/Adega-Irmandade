@@ -53,9 +53,9 @@ namespace Adega_Irmandade
             lblNumVendas.Text = variaveis.qtdVendas.ToString();
             banco.CarregarNumEmails();
             lblNumEmails.Text = variaveis.qtdEmails.ToString();
-           
             banco.dgContato = dgvContato;
             banco.CarregarContato();
+           
 
 
         }
@@ -121,7 +121,10 @@ namespace Adega_Irmandade
             Hide();
         }
 
-       
+        private void pnlMenuPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     }
 
