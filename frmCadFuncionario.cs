@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Security;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Adega_Irmandade
 {
@@ -354,39 +349,51 @@ namespace Adega_Irmandade
             lblCadastrar.Text = "A\nL\nT\nE\nR\nA\nR";
             banco.CarregarDadosFuncionario();
 
-            txtCadNome.Text = variaveis.nomeInstrutor;
-            mkdCadDataNasc.Text = variaveis.dataNascInstrutor.ToString();
-            txtCadCargo.Text = variaveis.cargoInstrutor;
-            cmbCadEspecialidade.Text = variaveis.especialidadeInstrutor;
-            txtCadEmail.Text = variaveis.emailInstrutor;
-            txtCadSenha.Text = variaveis.senhaInstrutor;
-            cmbCadNivel.Text = variaveis.nivelInstrutor;
-            mkdCadTelefone.Text = variaveis.telefoneInstrutor;
-            mkdCadDataAdmissao.Text = variaveis.dataAdmInstrutor.ToString();
-            cmbCadStatus.Text = variaveis.statusInstrutor;
-            pctCadFoto.Image = banco.ByteToImage(banco.GetImgToByte(variaveis.enderecoServidorFtp + "funcionario/" + variaveis.fotoInstrutor));
-            txtCadFacebook.Text = variaveis.faceInstrutor;
-            txtCadInstagram.Text = variaveis.instaInstrutor;
-            txtCadLinkedin.Text = variaveis.linkedinInstrutor;
-            txtCadWhatsapp.Text = variaveis.whatsInstrutor;
+            txtCadNome.Text = variaveis.nomeFuncionario;
+            txtCadCargo.Text = variaveis.cargoFuncionario;
+            mkdCadDataNasc.Text = variaveis.dataNascFuncionario.ToString();
+            txtCadEmail.Text = variaveis.emailFuncionario;
+            txtCadSenha.Text = variaveis.senhaFuncionario;
+            cmbCadNivel.Text = variaveis.nivelFuncionario;
+            mkdCadDataAdmissao.Text = variaveis.dataAdmissaoFuncionario.ToString();
+            txtCadEndereco.Text = variaveis.enderecoFuncionario;
+            mkdCadCep.Text = variaveis.cepFuncionario;
+            mkdCadTelefone.Text = variaveis.telFuncionario;
+            cmbCadStatus.Text = variaveis.statusFuncionario;
+            pctCadFoto.Image = banco.ByteToImage(banco.GetImgToByte(variaveis.enderecoServidorFtp + "funcionario/" + variaveis.fotoFuncionario));
+            txtCadFacebook.Text = variaveis.linkFaceFuncionario;
+            txtCadInstagran.Text = variaveis.linkInstaFuncionario;
+            txtCadWhatsapp.Text = variaveis.linkWhatsFuncionario;
 
 
-            txtCadNome.Enabled = true;
-            mkdCadDataNasc.Enabled = true;
+
+
+            txtCadNome.Enabled = true;           
             txtCadCargo.Enabled = true;
-            cmbCadEspecialidade.Enabled = true;
+            mkdCadDataNasc.Enabled = true;
             txtCadEmail.Enabled = true;
             txtCadSenha.Enabled = true;
             cmbCadNivel.Enabled = true;
-            mkdCadTelefone.Enabled = true;
             mkdCadDataAdmissao.Enabled = true;
+            txtCadEndereco.Enabled = true;
+            mkdCadCep.Enabled = true;
+            mkdCadTelefone.Enabled = true;
             cmbCadStatus.Enabled = true;
             txtCadFacebook.Enabled = true;
-            txtCadInstagram.Enabled = true;
-            txtCadLinkedin.Enabled = true;
+            txtCadInstagran.Enabled = true;
             txtCadWhatsapp.Enabled = true;
             btnCadSalvar.Enabled = true;
             btnLimpar.Enabled = false;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

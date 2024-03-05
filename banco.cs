@@ -1,11 +1,12 @@
-﻿using MySql.Data.MySqlClient; 
-using System;
+﻿using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Windows.Forms;
-using static System.Net.WebRequestMethods;
+using MySql.Data.MySqlClient;
+
+
 
 namespace Adega_Irmandade
 {
@@ -425,21 +426,21 @@ namespace Adega_Irmandade
                 if (reader.Read())
                 {
                     variaveis.nomeFuncionario = reader.GetString(1);
-                    variaveis.cargoFuncionario = reader.GetString(2);
-                    variaveis.dataNascFuncionario = reader.GetDateTime(3);
-                    variaveis.emailFuncionario = reader.GetString(4);
-                    variaveis.senhaFuncionario = reader.GetString(5);
-                    variaveis.nivelFuncionario = reader.GetString(6);
-                    variaveis.dataAdmissaoFuncionario = reader.GetDateTime(7);
-                    variaveis.enderecoFuncionario = reader.GetString(8);
-                    variaveis.cepFuncionario = reader.GetString(9);
-                    variaveis.fotoFuncionario = reader.GetString(10);
-                    variaveis.fotoFuncionario = variaveis.fotoFuncionario.Remove(0, 12);
-                    variaveis.telFuncionario = reader.GetString(11);
+                    variaveis.cargoFuncionario = reader.GetString(3);
+                    variaveis.dataNascFuncionario = reader.GetDateTime(4);
+                    variaveis.emailFuncionario = reader.GetString(5);
+                    variaveis.senhaFuncionario = reader.GetString(6);
+                    variaveis.nivelFuncionario = reader.GetString(7);
+                    variaveis.dataAdmissaoFuncionario = reader.GetDateTime(8);
+                    variaveis.enderecoFuncionario = reader.GetString(9);
+                    variaveis.telFuncionario = reader.GetString(10);
+                    variaveis.cepFuncionario = reader.GetString(11);
                     variaveis.statusFuncionario = reader.GetString(12);
-                    variaveis.linkFaceFuncionario = reader.GetString(13);
-                    variaveis.linkInstaFuncionario = reader.GetString(14);
-                    variaveis.linkWhatsFuncionario = reader.GetString(15);
+                    variaveis.fotoFuncionario = reader.GetString(13);
+                    variaveis.fotoFuncionario = variaveis.fotoFuncionario.Remove(0, 12);
+                    variaveis.linkFaceFuncionario = reader.GetString(14);
+                    variaveis.linkInstaFuncionario = reader.GetString(15);
+                    variaveis.linkWhatsFuncionario = reader.GetString(16);
                 }
                 conexao.Desconectar();
             }

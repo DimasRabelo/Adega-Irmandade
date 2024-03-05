@@ -1,11 +1,6 @@
-﻿using System.Data.SqlClient;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient; // Importando a biblioteca do MySQL
+using MySql.Data.MySqlClient;
 
 namespace Adega_Irmandade
 {

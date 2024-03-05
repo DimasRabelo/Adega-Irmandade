@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Adega_Irmandade
@@ -119,6 +114,20 @@ namespace Adega_Irmandade
 
             }
         }
-    
+
+        private void dgvFuncionario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            variaveis.linhaSelecionada = e.RowIndex;
+            if (variaveis.linhaSelecionada >= 0)
+            {
+                variaveis.codFuncionario = Convert.ToInt32(dgvFuncionario[0, variaveis.linhaSelecionada].Value);
+            }
+        }
+
+        private void dgvFuncionario_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvFuncionario.Sort(dgvFuncionario.Columns[1], ListSortDirection.Ascending);
+            dgvFuncionario.ClearSelection();
+        }
     }
 }
