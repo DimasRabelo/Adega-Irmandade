@@ -111,8 +111,15 @@ namespace Adega_Irmandade
 
         private void btnFuncionario_Click(object sender, EventArgs e)
         {
-            new frmFuncionario().Show();
-            Hide();
+            if (variaveis.nivel == "ADMINISTRADOR")
+            {
+                new frmFuncionario().Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show(" Você não tem autorização para acessar essa tela");
+            }
         }
 
         private void btnProdutos_Click(object sender, EventArgs e)
