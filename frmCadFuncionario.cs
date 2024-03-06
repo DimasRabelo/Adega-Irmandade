@@ -438,7 +438,26 @@ namespace Adega_Irmandade
             
         }
 
-       
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            {
+                txtCadNome.Text = "";
+                txtCadCargo.Text = "";
+                mkdCadDataNasc.Text = "";
+                txtCadEmail.Text = "";
+                txtCadSenha.Text = "";
+                cmbCadNivel.SelectedIndex = -1;
+                mkdCadDataAdmissao.Text = "";
+                txtCadEndereco.Text = "";
+                mkdCadCep.Text = "";
+                mkdCadTelefone.Text = "";
+                cmbCadStatus.SelectedIndex = -1;
+                txtCadFacebook.Text = "";
+                txtCadInstagran.Text = "";
+                txtCadWhatsapp.Text = "";
+                pctCadFoto.Image = null;
+            }
+        }
     }
 
         

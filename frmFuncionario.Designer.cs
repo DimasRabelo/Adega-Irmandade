@@ -51,7 +51,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 9);
+            this.label1.Location = new System.Drawing.Point(6, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(312, 50);
             this.label1.TabIndex = 3;
@@ -64,7 +64,7 @@
             this.lblFuncNome.BackColor = System.Drawing.Color.Transparent;
             this.lblFuncNome.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFuncNome.ForeColor = System.Drawing.Color.White;
-            this.lblFuncNome.Location = new System.Drawing.Point(145, 518);
+            this.lblFuncNome.Location = new System.Drawing.Point(139, 523);
             this.lblFuncNome.Name = "lblFuncNome";
             this.lblFuncNome.Size = new System.Drawing.Size(82, 27);
             this.lblFuncNome.TabIndex = 69;
@@ -74,7 +74,7 @@
             // 
             this.txtCadNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCadNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadNome.Location = new System.Drawing.Point(233, 518);
+            this.txtCadNome.Location = new System.Drawing.Point(227, 523);
             this.txtCadNome.Name = "txtCadNome";
             this.txtCadNome.Size = new System.Drawing.Size(750, 27);
             this.txtCadNome.TabIndex = 70;
@@ -86,7 +86,7 @@
             this.lblFuncStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblFuncStatus.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFuncStatus.ForeColor = System.Drawing.Color.White;
-            this.lblFuncStatus.Location = new System.Drawing.Point(145, 576);
+            this.lblFuncStatus.Location = new System.Drawing.Point(215, 584);
             this.lblFuncStatus.Name = "lblFuncStatus";
             this.lblFuncStatus.Size = new System.Drawing.Size(103, 27);
             this.lblFuncStatus.TabIndex = 71;
@@ -98,7 +98,7 @@
             this.chkAtivo.BackColor = System.Drawing.Color.Transparent;
             this.chkAtivo.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAtivo.ForeColor = System.Drawing.Color.White;
-            this.chkAtivo.Location = new System.Drawing.Point(254, 575);
+            this.chkAtivo.Location = new System.Drawing.Point(335, 583);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(108, 31);
             this.chkAtivo.TabIndex = 72;
@@ -111,7 +111,7 @@
             this.pctFechar.BackColor = System.Drawing.Color.Transparent;
             this.pctFechar.Image = global::Adega_Irmandade.Properties.Resources.botaoFechar;
             this.pctFechar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pctFechar.Location = new System.Drawing.Point(1163, 9);
+            this.pctFechar.Location = new System.Drawing.Point(1169, 14);
             this.pctFechar.Name = "pctFechar";
             this.pctFechar.Size = new System.Drawing.Size(39, 30);
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -126,7 +126,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Transparent;
-            this.btnExcluir.Location = new System.Drawing.Point(1035, 569);
+            this.btnExcluir.Location = new System.Drawing.Point(1032, 583);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(170, 40);
             this.btnExcluir.TabIndex = 76;
@@ -141,7 +141,7 @@
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAlterar.Location = new System.Drawing.Point(861, 569);
+            this.btnAlterar.Location = new System.Drawing.Point(856, 583);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(170, 40);
             this.btnAlterar.TabIndex = 75;
@@ -156,7 +156,7 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastrar.Location = new System.Drawing.Point(685, 569);
+            this.btnCadastrar.Location = new System.Drawing.Point(680, 583);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(170, 40);
             this.btnCadastrar.TabIndex = 74;
@@ -189,7 +189,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvFuncionario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFuncionario.GridColor = System.Drawing.Color.White;
-            this.dgvFuncionario.Location = new System.Drawing.Point(233, 62);
+            this.dgvFuncionario.Location = new System.Drawing.Point(227, 67);
             this.dgvFuncionario.MultiSelect = false;
             this.dgvFuncionario.Name = "dgvFuncionario";
             this.dgvFuncionario.ReadOnly = true;
@@ -198,7 +198,6 @@
             this.dgvFuncionario.Size = new System.Drawing.Size(750, 430);
             this.dgvFuncionario.TabIndex = 77;
             this.dgvFuncionario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionario_CellClick);
-          
             this.dgvFuncionario.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFuncionario_CellFormatting);
             this.dgvFuncionario.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFuncionario_ColumnHeaderMouseClick);
             // 
@@ -207,7 +206,7 @@
             this.pctLogo.BackColor = System.Drawing.Color.Transparent;
             this.pctLogo.Image = global::Adega_Irmandade.Properties.Resources.adegalogo_2;
             this.pctLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pctLogo.Location = new System.Drawing.Point(989, 45);
+            this.pctLogo.Location = new System.Drawing.Point(983, 67);
             this.pctLogo.Name = "pctLogo";
             this.pctLogo.Size = new System.Drawing.Size(225, 204);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -219,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
-            this.ClientSize = new System.Drawing.Size(1214, 626);
+            this.ClientSize = new System.Drawing.Size(1220, 630);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.dgvFuncionario);
             this.Controls.Add(this.btnExcluir);

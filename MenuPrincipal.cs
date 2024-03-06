@@ -115,9 +115,10 @@ namespace Adega_Irmandade
             Hide();
         }
 
-        private void pnlMenuPrincipal_Paint(object sender, PaintEventArgs e)
+        private void btnProdutos_Click(object sender, EventArgs e)
         {
-
+            new frmProduto().Show();
+            Hide();
         }
     }
     }

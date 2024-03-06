@@ -103,7 +103,6 @@
             this.pnlMenuPrincipal.Controls.Add(this.pnlUsuario);
             resources.ApplyResources(this.pnlMenuPrincipal, "pnlMenuPrincipal");
             this.pnlMenuPrincipal.Name = "pnlMenuPrincipal";
-            this.pnlMenuPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMenuPrincipal_Paint);
             // 
             // label8
             // 
@@ -162,6 +161,7 @@
             resources.ApplyResources(this.btnProdutos, "btnProdutos");
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.TabStop = false;
+            this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
             // btnAjuda
             // 
