@@ -340,50 +340,53 @@ namespace Adega_Irmandade
                         banco.AlterarFotoFuncionario();
                     }
                 }
-                btnLimpar.Enabled = true;
+                btnLimpar.Enabled = false;
             }
         }
 
         private void frmCadFuncionario_Load(object sender, EventArgs e)
         {
-            lblCadCadastrar.Text = "ALTERAR";
-            banco.CarregarDadosFuncionario();
+            if (variaveis.funcao == "ALTERAR")
+            {
+                lblCadCadastrar.Text = "ALTERAR";
+                banco.CarregarDadosFuncionario();
 
-            txtCadNome.Text = variaveis.nomeFuncionario;
-            txtCadCargo.Text = variaveis.cargoFuncionario;
-            mkdCadDataNasc.Text = variaveis.dataNascFuncionario.ToString();
-            txtCadEmail.Text = variaveis.emailFuncionario;
-            txtCadSenha.Text = variaveis.senhaFuncionario;
-            cmbCadNivel.Text = variaveis.nivelFuncionario;
-            mkdCadDataAdmissao.Text = variaveis.dataAdmissaoFuncionario.ToString();
-            txtCadEndereco.Text = variaveis.enderecoFuncionario;
-            mkdCadCep.Text = variaveis.cepFuncionario;
-            mkdCadTelefone.Text = variaveis.telFuncionario;
-            cmbCadStatus.Text = variaveis.statusFuncionario;
-            pctCadFoto.Image = banco.ByteToImage(banco.GetImgToByte(variaveis.enderecoServidorFtp + "funcionario/" + variaveis.fotoFuncionario));
-            txtCadFacebook.Text = variaveis.linkFaceFuncionario;
-            txtCadInstagran.Text = variaveis.linkInstaFuncionario;
-            txtCadWhatsapp.Text = variaveis.linkWhatsFuncionario;
+                txtCadNome.Text = variaveis.nomeFuncionario;
+                txtCadCargo.Text = variaveis.cargoFuncionario;
+                mkdCadDataNasc.Text = variaveis.dataNascFuncionario.ToString();
+                txtCadEmail.Text = variaveis.emailFuncionario;
+                txtCadSenha.Text = variaveis.senhaFuncionario;
+                cmbCadNivel.Text = variaveis.nivelFuncionario;
+                mkdCadDataAdmissao.Text = variaveis.dataAdmissaoFuncionario.ToString();
+                txtCadEndereco.Text = variaveis.enderecoFuncionario;
+                mkdCadCep.Text = variaveis.cepFuncionario;
+                mkdCadTelefone.Text = variaveis.telFuncionario;
+                cmbCadStatus.Text = variaveis.statusFuncionario;
+                pctCadFoto.Image = banco.ByteToImage(banco.GetImgToByte(variaveis.enderecoServidorFtp + "funcionario/" + variaveis.fotoFuncionario));
+                txtCadFacebook.Text = variaveis.linkFaceFuncionario;
+                txtCadInstagran.Text = variaveis.linkInstaFuncionario;
+                txtCadWhatsapp.Text = variaveis.linkWhatsFuncionario;
 
 
 
 
-            txtCadNome.Enabled = true;           
-            txtCadCargo.Enabled = true;
-            mkdCadDataNasc.Enabled = true;
-            txtCadEmail.Enabled = true;
-            txtCadSenha.Enabled = true;
-            cmbCadNivel.Enabled = true;
-            mkdCadDataAdmissao.Enabled = true;
-            txtCadEndereco.Enabled = true;
-            mkdCadCep.Enabled = true;
-            mkdCadTelefone.Enabled = true;
-            cmbCadStatus.Enabled = true;
-            txtCadFacebook.Enabled = true;
-            txtCadInstagran.Enabled = true;
-            txtCadWhatsapp.Enabled = true;
-            btnCadSalvar.Enabled = true;
-            btnLimpar.Enabled = false;
+                txtCadNome.Enabled = true;
+                txtCadCargo.Enabled = true;
+                mkdCadDataNasc.Enabled = true;
+                txtCadEmail.Enabled = true;
+                txtCadSenha.Enabled = true;
+                cmbCadNivel.Enabled = true;
+                mkdCadDataAdmissao.Enabled = true;
+                txtCadEndereco.Enabled = true;
+                mkdCadCep.Enabled = true;
+                mkdCadTelefone.Enabled = true;
+                cmbCadStatus.Enabled = true;
+                txtCadFacebook.Enabled = true;
+                txtCadInstagran.Enabled = true;
+                txtCadWhatsapp.Enabled = true;
+                btnCadSalvar.Enabled = true;
+                btnLimpar.Enabled = false;
+            }
         }
 
         private void pctCadFoto_Click(object sender, EventArgs e)
