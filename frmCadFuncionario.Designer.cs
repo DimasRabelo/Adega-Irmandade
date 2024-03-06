@@ -48,12 +48,10 @@
             this.btnCadFoto = new System.Windows.Forms.Button();
             this.lblCadFoto = new System.Windows.Forms.Label();
             this.txtCadNome = new System.Windows.Forms.TextBox();
-            this.mkdCadDataNasc = new System.Windows.Forms.MaskedTextBox();
             this.txtCadCargo = new System.Windows.Forms.TextBox();
             this.txtCadEmail = new System.Windows.Forms.TextBox();
             this.txtCadSenha = new System.Windows.Forms.TextBox();
             this.cmbCadNivel = new System.Windows.Forms.ComboBox();
-            this.mkdCadDataAdmissao = new System.Windows.Forms.MaskedTextBox();
             this.cmbCadStatus = new System.Windows.Forms.ComboBox();
             this.txtCadEndereco = new System.Windows.Forms.TextBox();
             this.mkdCadTelefone = new System.Windows.Forms.MaskedTextBox();
@@ -65,6 +63,8 @@
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pctFechar = new System.Windows.Forms.PictureBox();
             this.btnCadSalvar = new System.Windows.Forms.Button();
+            this.mkdCadDataNasc = new System.Windows.Forms.MaskedTextBox();
+            this.mkdCadDataAdmissao = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctCadFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
@@ -77,9 +77,9 @@
             this.lblCadCadastrar.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCadastrar.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCadastrar.ForeColor = System.Drawing.Color.White;
-            this.lblCadCadastrar.Location = new System.Drawing.Point(50, 9);
+            this.lblCadCadastrar.Location = new System.Drawing.Point(85, 16);
             this.lblCadCadastrar.Name = "lblCadCadastrar";
-            this.lblCadCadastrar.Size = new System.Drawing.Size(210, 40);
+            this.lblCadCadastrar.Size = new System.Drawing.Size(178, 40);
             this.lblCadCadastrar.TabIndex = 0;
             this.lblCadCadastrar.Text = "CADASTRAR\r\n";
             this.lblCadCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -91,7 +91,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(266, 9);
+            this.label2.Location = new System.Drawing.Point(285, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 32);
             this.label2.TabIndex = 1;
@@ -318,19 +318,6 @@
             this.txtCadNome.TabIndex = 51;
             this.txtCadNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadNome_KeyPress);
             // 
-            // mkdCadDataNasc
-            // 
-            this.mkdCadDataNasc.Enabled = false;
-            this.mkdCadDataNasc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mkdCadDataNasc.Location = new System.Drawing.Point(717, 170);
-            this.mkdCadDataNasc.Mask = "00/00/0000";
-            this.mkdCadDataNasc.Name = "mkdCadDataNasc";
-            this.mkdCadDataNasc.Size = new System.Drawing.Size(121, 26);
-            this.mkdCadDataNasc.TabIndex = 52;
-            this.mkdCadDataNasc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mkdCadDataNasc.ValidatingType = typeof(System.DateTime);
-            this.mkdCadDataNasc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataNasc_KeyPress);
-            // 
             // txtCadCargo
             // 
             this.txtCadCargo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -376,19 +363,6 @@
             this.cmbCadNivel.Size = new System.Drawing.Size(435, 26);
             this.cmbCadNivel.TabIndex = 56;
             this.cmbCadNivel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadNivel_KeyPress);
-            // 
-            // mkdCadDataAdmissao
-            // 
-            this.mkdCadDataAdmissao.Enabled = false;
-            this.mkdCadDataAdmissao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mkdCadDataAdmissao.Location = new System.Drawing.Point(717, 319);
-            this.mkdCadDataAdmissao.Mask = "00/00/0000";
-            this.mkdCadDataAdmissao.Name = "mkdCadDataAdmissao";
-            this.mkdCadDataAdmissao.Size = new System.Drawing.Size(121, 26);
-            this.mkdCadDataAdmissao.TabIndex = 57;
-            this.mkdCadDataAdmissao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mkdCadDataAdmissao.ValidatingType = typeof(System.DateTime);
-            this.mkdCadDataAdmissao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataAdmissao_KeyPress);
             // 
             // cmbCadStatus
             // 
@@ -526,12 +500,38 @@
             this.btnCadSalvar.UseVisualStyleBackColor = false;
             this.btnCadSalvar.Click += new System.EventHandler(this.btnCadSalvar_Click);
             // 
+            // mkdCadDataNasc
+            // 
+            this.mkdCadDataNasc.Enabled = false;
+            this.mkdCadDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdCadDataNasc.Location = new System.Drawing.Point(707, 170);
+            this.mkdCadDataNasc.Mask = "00/00/0000";
+            this.mkdCadDataNasc.Name = "mkdCadDataNasc";
+            this.mkdCadDataNasc.Size = new System.Drawing.Size(131, 26);
+            this.mkdCadDataNasc.TabIndex = 70;
+            this.mkdCadDataNasc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkdCadDataNasc.ValidatingType = typeof(System.DateTime);
+            // 
+            // mkdCadDataAdmissao
+            // 
+            this.mkdCadDataAdmissao.Enabled = false;
+            this.mkdCadDataAdmissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdCadDataAdmissao.Location = new System.Drawing.Point(684, 318);
+            this.mkdCadDataAdmissao.Mask = "00/00/0000";
+            this.mkdCadDataAdmissao.Name = "mkdCadDataAdmissao";
+            this.mkdCadDataAdmissao.Size = new System.Drawing.Size(155, 26);
+            this.mkdCadDataAdmissao.TabIndex = 71;
+            this.mkdCadDataAdmissao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkdCadDataAdmissao.ValidatingType = typeof(System.DateTime);
+            // 
             // frmCadFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
             this.ClientSize = new System.Drawing.Size(1230, 665);
+            this.Controls.Add(this.mkdCadDataAdmissao);
+            this.Controls.Add(this.mkdCadDataNasc);
             this.Controls.Add(this.btnCadSalvar);
             this.Controls.Add(this.pctFechar);
             this.Controls.Add(this.pctLogo);
@@ -543,12 +543,10 @@
             this.Controls.Add(this.mkdCadTelefone);
             this.Controls.Add(this.txtCadEndereco);
             this.Controls.Add(this.cmbCadStatus);
-            this.Controls.Add(this.mkdCadDataAdmissao);
             this.Controls.Add(this.cmbCadNivel);
             this.Controls.Add(this.txtCadSenha);
             this.Controls.Add(this.txtCadEmail);
             this.Controls.Add(this.txtCadCargo);
-            this.Controls.Add(this.mkdCadDataNasc);
             this.Controls.Add(this.txtCadNome);
             this.Controls.Add(this.lblCadFoto);
             this.Controls.Add(this.btnCadFoto);
@@ -604,12 +602,10 @@
         private System.Windows.Forms.Button btnCadFoto;
         private System.Windows.Forms.Label lblCadFoto;
         private System.Windows.Forms.TextBox txtCadNome;
-        private System.Windows.Forms.MaskedTextBox mkdCadDataNasc;
         private System.Windows.Forms.TextBox txtCadCargo;
         private System.Windows.Forms.TextBox txtCadEmail;
         private System.Windows.Forms.TextBox txtCadSenha;
         private System.Windows.Forms.ComboBox cmbCadNivel;
-        private System.Windows.Forms.MaskedTextBox mkdCadDataAdmissao;
         private System.Windows.Forms.ComboBox cmbCadStatus;
         private System.Windows.Forms.TextBox txtCadEndereco;
         private System.Windows.Forms.MaskedTextBox mkdCadTelefone;
@@ -621,5 +617,7 @@
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.PictureBox pctFechar;
         private System.Windows.Forms.Button btnCadSalvar;
+        private System.Windows.Forms.MaskedTextBox mkdCadDataNasc;
+        private System.Windows.Forms.MaskedTextBox mkdCadDataAdmissao;
     }
 }

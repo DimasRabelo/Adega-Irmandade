@@ -4,14 +4,19 @@ namespace Adega_Irmandade
 {
     public static class variaveis
     {
+
+
+
+        public static int linhaSelecionada;
+        public static string funcao;
         // LOGIN
         public static string usuario, senha, nivel;
 
-        public static int codFuncionario;
-        public static string funcao;
-
         // MENU
         public static int maisVendidos, qtdFuncionarios, qtdProdutos, qtdEstoque,qtdCliente,qtdVendas,qtdEmails, codContato;
+
+        public static int codFuncionario;
+
 
         public static string nomeFuncionario,altFuncionario, cargoFuncionario,  emailFuncionario, senhaFuncionario, nivelFuncionario, enderecoFuncionario, cepFuncionario, telFuncionario, statusFuncionario, linkFaceFuncionario, linkInstaFuncionario, linkWhatsFuncionario, fotoFuncionario, atFotoFuncionario, caminhoFotoFuncionario;
 
@@ -22,7 +27,7 @@ namespace Adega_Irmandade
         public static string senhaFtp = "123";
 
 
-        public static int linhaSelecionada;
+        
 
       
 

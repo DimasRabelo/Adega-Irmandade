@@ -195,19 +195,19 @@ namespace Adega_Irmandade
 
         private void btnCadSalvar_Click(object sender, EventArgs e)
         {
-            lblCadNome.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadCargo.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadEmail.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadSenha.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadNivel.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadDataAdmissao.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadEndereco.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadCep.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadTelefone.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadStatus.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadFacebook.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadInstagran.ForeColor = Color.FromArgb(242, 183, 5);
-            lblCadWhatsapp.ForeColor = Color.FromArgb(242, 183, 5);
+            lblCadNome.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadCargo.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadEmail.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadSenha.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadNivel.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadDataAdmissao.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadEndereco.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadCep.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadTelefone.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadStatus.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadFacebook.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadInstagran.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadWhatsapp.ForeColor = Color.FromArgb(128, 128, 128);
 
 
             if (txtCadNome.Text.Length <= 5) // Não aceita menos que 6 caracteres 
@@ -340,13 +340,13 @@ namespace Adega_Irmandade
                         banco.AlterarFotoFuncionario();
                     }
                 }
-                btnLimpar.Enabled = false;
+                btnLimpar.Enabled = true;
             }
         }
 
         private void frmCadFuncionario_Load(object sender, EventArgs e)
         {
-            lblCadCadastrar.Text = "A\nL\nT\nE\nR\nA\nR"; ;
+            lblCadCadastrar.Text = "ALTERAR";
             banco.CarregarDadosFuncionario();
 
             txtCadNome.Text = variaveis.nomeFuncionario;
