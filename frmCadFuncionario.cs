@@ -38,7 +38,6 @@ namespace Adega_Irmandade
                 mkdCadDataNasc.Focus();
             }
         }
-
         private void mkdCadDataNasc_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -47,6 +46,7 @@ namespace Adega_Irmandade
                 txtCadEmail.Focus();
             }
         }
+
 
         private void txtCadEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -74,7 +74,6 @@ namespace Adega_Irmandade
                 mkdCadDataAdmissao.Focus();
             }
         }
-
         private void mkdCadDataAdmissao_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -83,6 +82,7 @@ namespace Adega_Irmandade
                 txtCadEndereco.Focus();
             }
         }
+
 
         private void txtCadEndereco_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -195,19 +195,20 @@ namespace Adega_Irmandade
 
         private void btnCadSalvar_Click(object sender, EventArgs e)
         {
-            lblCadNome.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadCargo.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadEmail.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadSenha.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadNivel.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadDataAdmissao.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadEndereco.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadCep.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadTelefone.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadStatus.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadFacebook.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadInstagran.ForeColor = Color.FromArgb(128, 128, 128);
-            lblCadWhatsapp.ForeColor = Color.FromArgb(128, 128, 128);
+            lblCadNome.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadCargo.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadDataNasc.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadEmail.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadSenha.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadNivel.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadDataAdmissao.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadEndereco.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadCep.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadTelefone.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadStatus.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadFacebook.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadInstagran.ForeColor = Color.FromArgb(0, 0, 255);
+            lblCadWhatsapp.ForeColor = Color.FromArgb(0, 0, 255);
 
 
             if (txtCadNome.Text.Length <= 5) // Não aceita menos que 6 caracteres 
@@ -437,7 +438,7 @@ namespace Adega_Irmandade
             
         }
 
-    
+       
     }
 
         

@@ -503,26 +503,28 @@
             // mkdCadDataNasc
             // 
             this.mkdCadDataNasc.Enabled = false;
-            this.mkdCadDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdCadDataNasc.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mkdCadDataNasc.Location = new System.Drawing.Point(707, 170);
             this.mkdCadDataNasc.Mask = "00/00/0000";
             this.mkdCadDataNasc.Name = "mkdCadDataNasc";
-            this.mkdCadDataNasc.Size = new System.Drawing.Size(131, 26);
+            this.mkdCadDataNasc.Size = new System.Drawing.Size(131, 34);
             this.mkdCadDataNasc.TabIndex = 70;
             this.mkdCadDataNasc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mkdCadDataNasc.ValidatingType = typeof(System.DateTime);
+            this.mkdCadDataNasc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataNasc_KeyPress);
             // 
             // mkdCadDataAdmissao
             // 
             this.mkdCadDataAdmissao.Enabled = false;
-            this.mkdCadDataAdmissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mkdCadDataAdmissao.Location = new System.Drawing.Point(684, 318);
+            this.mkdCadDataAdmissao.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdCadDataAdmissao.Location = new System.Drawing.Point(707, 318);
             this.mkdCadDataAdmissao.Mask = "00/00/0000";
             this.mkdCadDataAdmissao.Name = "mkdCadDataAdmissao";
-            this.mkdCadDataAdmissao.Size = new System.Drawing.Size(155, 26);
+            this.mkdCadDataAdmissao.Size = new System.Drawing.Size(132, 34);
             this.mkdCadDataAdmissao.TabIndex = 71;
             this.mkdCadDataAdmissao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mkdCadDataAdmissao.ValidatingType = typeof(System.DateTime);
+            this.mkdCadDataAdmissao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataAdmissao_KeyPress);
             // 
             // frmCadFuncionario
             // 
