@@ -198,8 +198,8 @@
             this.dgvFuncionario.Size = new System.Drawing.Size(750, 430);
             this.dgvFuncionario.TabIndex = 77;
             this.dgvFuncionario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionario_CellClick);
+          
             this.dgvFuncionario.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFuncionario_CellFormatting);
-           
             this.dgvFuncionario.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFuncionario_ColumnHeaderMouseClick);
             // 
             // pctLogo

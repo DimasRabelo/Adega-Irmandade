@@ -47,7 +47,22 @@ namespace Adega_Irmandade
                     e.CellStyle.ForeColor = Color.FromArgb(0, 0, 0); // Cor Preta
                     e.CellStyle.BackColor = Color.FromArgb(127, 127, 127); // Cor Cinza
                 }
+
+                if (e.Value != null && dgvFuncionario.Columns[e.ColumnIndex].HeaderText != null)
+                {
+                    // Converte o valor da célula para maiúsculas e define o valor formatado
+                    e.Value = e.Value.ToString().ToUpper();
+                    e.FormattingApplied = true; // Indica que a formatação foi aplicada
+                 }
+
+
+
             }
+
+
+
+
+
         }
 
         private void txtCadNome_TextChanged(object sender, EventArgs e)
@@ -129,5 +144,7 @@ namespace Adega_Irmandade
             dgvFuncionario.Sort(dgvFuncionario.Columns[1], ListSortDirection.Ascending);
             dgvFuncionario.ClearSelection();
         }
+
+       
     }
 }
