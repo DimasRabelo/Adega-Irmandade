@@ -346,7 +346,7 @@ namespace Adega_Irmandade
 
         private void frmCadFuncionario_Load(object sender, EventArgs e)
         {
-            lblCadastrar.Text = "A\nL\nT\nE\nR\nA\nR";
+            lblCadCadastrar.Text = "A\nL\nT\nE\nR\nA\nR"; ;
             banco.CarregarDadosFuncionario();
 
             txtCadNome.Text = variaveis.nomeFuncionario;
@@ -386,15 +386,55 @@ namespace Adega_Irmandade
             btnLimpar.Enabled = false;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void pctCadFoto_Click(object sender, EventArgs e)
         {
+         
+                try
+                {
+                    OpenFileDialog ofdFoto = new OpenFileDialog();
+                    ofdFoto.Multiselect = false;
+                    ofdFoto.FileName = "";
+                    ofdFoto.InitialDirectory = @"C:";
+                    ofdFoto.Title = "SELECIONE UMA FOTO";
+                    ofdFoto.Filter = "JPG OU PNG (*.jpg ou *.png)|*.jpg;*.png";
+                    ofdFoto.CheckPathExists = true; // Checar se o caminho Existe
+                    ofdFoto.CheckFileExists = true; // Checar se o arquivo Existe
+                    ofdFoto.RestoreDirectory = true;  // Restaurar ao Diretorio Inicial
 
+                    DialogResult dr = ofdFoto.ShowDialog();
+                    pctCadFoto.Image = Image.FromFile(ofdFoto.FileName); // Colocar a foto na picture box
+                    variaveis.fotoFuncionario = "funcionario/" + Regex.Replace(txtCadNome.Text, @"\s", "").ToLower() + ".png";
+
+                    if (dr == DialogResult.OK)
+                    {
+                        try
+                        {
+                            variaveis.atFotoFuncionario = "S";
+                            variaveis.caminhoFotoFuncionario = ofdFoto.FileName;
+                        }
+                        catch (SecurityException ex)
+                        {
+                            MessageBox.Show("Erro de Segurança - Fale com o Admin. \n Mensagem: " + ex.Message + "\n Detalhe: " + ex.StackTrace);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(" Você Não tem Permissão. \n Mensagem: " + ex.Message);
+                        }
+                    }
+                    btnCadSalvar.Enabled = true;
+                    btnCadSalvar.Focus();
+                }
+
+                catch
+                {
+                    btnCadSalvar.Enabled = true;
+                    btnCadSalvar.Focus();
+                }
+
+            
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 
         

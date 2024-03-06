@@ -365,9 +365,9 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string inserir = "INSERT INTO tblfuncionarios(nomeFuncionario, altFuncionario, cargoFuncionario, dataNascFuncionario, emailFuncionario, senhaFuncionario, nivelFuncionario, dataAdmissaoFuncionario, enderecoFuncionario, cepFuncionario, telFuncionario, statusFuncionario, linkFaceFuncionario, linkInstaFuncionario, linkWhatsFuncionario, fotoFuncionario,) VALUES (@nome,@alt,@cargo,@dataNasc,@email,@senha,@nivel,@dataAdmissao,@endereco,@cep,@telefone,@status,@facebook,@instagram,@whats,@foto); ";
+                string inserir = "INSERT INTO tblfuncionarios (nomeFuncionario, altFuncionario, cargoFuncionario, dataNascFuncionario, emailFuncionario, senhaFuncionario, nivelFuncionario, dataAdmissaoFuncionario, enderecoFuncionario, cepFuncionario, telFuncionario, statusFuncionario, linkFaceFuncionario, linkInstaFuncionario, linkWhatsFuncionario, fotoFuncionario) VALUES (@nome, @alt, @cargo, @dataNasc, @email, @senha, @nivel, @dataAdmissao, @endereco, @cep, @telefone, @status, @facebook, @instagram, @whats, @foto)";
                 MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
-                //parâmetros 
+                // Parâmetros 
                 cmd.Parameters.AddWithValue("@nome", variaveis.nomeFuncionario);
                 cmd.Parameters.AddWithValue("@alt", variaveis.altFuncionario);
                 cmd.Parameters.AddWithValue("@cargo", variaveis.cargoFuncionario);
@@ -384,7 +384,7 @@ namespace Adega_Irmandade
                 cmd.Parameters.AddWithValue("@instagram", variaveis.linkInstaFuncionario);
                 cmd.Parameters.AddWithValue("@whats", variaveis.linkWhatsFuncionario);
                 cmd.Parameters.AddWithValue("@foto", variaveis.fotoFuncionario);
-                //fim parâmetros
+                // Fim parâmetros
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Funcionário Cadastrado Com Sucesso!", "CADASTRO FUNCIONÁRIO");
                 conexao.Desconectar();
@@ -404,9 +404,6 @@ namespace Adega_Irmandade
                         }
                     }
                 }
-
-
-
             }
             catch (Exception erro)
             {
@@ -533,7 +530,7 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string alterar = "UPDATE tblfuncionarios SET statusFuncionario=@status WHERE idFuncionario = @codigo;";
+                string alterar = "UPDATE tblfuncionarios SET statusFuncionario='DESATIVADO' WHERE idFuncionario = @codigo;";
                 MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
                 //parâmetros 
 

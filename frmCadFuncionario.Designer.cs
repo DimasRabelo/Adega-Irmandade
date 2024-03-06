@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCadastrar = new System.Windows.Forms.Label();
+            this.lblCadCadastrar = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCadNome = new System.Windows.Forms.Label();
             this.lblCadDataNasc = new System.Windows.Forms.Label();
@@ -70,21 +70,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblCadastrar
+            // lblCadCadastrar
             // 
-            this.lblCadastrar.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadastrar.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastrar.ForeColor = System.Drawing.Color.White;
-            this.lblCadastrar.Location = new System.Drawing.Point(50, 9);
-            this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(210, 40);
-            this.lblCadastrar.TabIndex = 0;
-            this.lblCadastrar.Text = "CADASTRAR\r\n";
-            this.lblCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblCadastrar.Click += new System.EventHandler(this.label1_Click);
+            this.lblCadCadastrar.AllowDrop = true;
+            this.lblCadCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCadCadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadCadastrar.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadCadastrar.ForeColor = System.Drawing.Color.White;
+            this.lblCadCadastrar.Location = new System.Drawing.Point(50, 9);
+            this.lblCadCadastrar.Name = "lblCadCadastrar";
+            this.lblCadCadastrar.Size = new System.Drawing.Size(210, 40);
+            this.lblCadCadastrar.TabIndex = 0;
+            this.lblCadCadastrar.Text = "CADASTRAR\r\n";
+            this.lblCadCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
+            this.label2.AllowDrop = true;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -275,6 +278,7 @@
             this.pctCadFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctCadFoto.TabIndex = 48;
             this.pctCadFoto.TabStop = false;
+            this.pctCadFoto.Click += new System.EventHandler(this.pctCadFoto_Click);
             // 
             // btnCadFoto
             // 
@@ -365,10 +369,8 @@
             this.cmbCadNivel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCadNivel.FormattingEnabled = true;
             this.cmbCadNivel.Items.AddRange(new object[] {
-            "NIVEL 1\t",
-            "NIVEL 2",
-            "NIVEL 3",
-            "NIVEL 4"});
+            "ADMINISTRADOR",
+            "USUÁRIO"});
             this.cmbCadNivel.Location = new System.Drawing.Point(85, 319);
             this.cmbCadNivel.Name = "cmbCadNivel";
             this.cmbCadNivel.Size = new System.Drawing.Size(435, 26);
@@ -395,7 +397,7 @@
             this.cmbCadStatus.FormattingEnabled = true;
             this.cmbCadStatus.Items.AddRange(new object[] {
             "ATIVO",
-            "INATIVO"});
+            "DESATIVADO"});
             this.cmbCadStatus.Location = new System.Drawing.Point(634, 485);
             this.cmbCadStatus.Name = "cmbCadStatus";
             this.cmbCadStatus.Size = new System.Drawing.Size(204, 26);
@@ -483,7 +485,6 @@
             this.btnLimpar.TabIndex = 66;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // pctLogo
             // 
@@ -567,7 +568,7 @@
             this.Controls.Add(this.lblCadDataNasc);
             this.Controls.Add(this.lblCadNome);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblCadastrar);
+            this.Controls.Add(this.lblCadCadastrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -583,7 +584,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblCadastrar;
+        private System.Windows.Forms.Label lblCadCadastrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCadNome;
         private System.Windows.Forms.Label lblCadDataNasc;
