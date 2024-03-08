@@ -15,8 +15,8 @@ namespace Adega_Irmandade
         // MENU
         public static int maisVendidos, qtdFuncionarios, qtdProdutos, qtdEstoque,qtdCliente,qtdVendas,qtdEmails, codContato;
 
+        // FORMULARIO FUNCIONÁRIOS //
         public static int codFuncionario;
-
 
         public static string nomeFuncionario,altFuncionario, cargoFuncionario,  emailFuncionario, senhaFuncionario, nivelFuncionario, enderecoFuncionario, cepFuncionario, telFuncionario, statusFuncionario, linkFaceFuncionario, linkInstaFuncionario, linkWhatsFuncionario, fotoFuncionario, atFotoFuncionario, caminhoFotoFuncionario;
 
@@ -26,10 +26,19 @@ namespace Adega_Irmandade
         public static string usuarioFtp = "adegairmandade";
         public static string senhaFtp = "123";
 
+        // FIM FORMULÁRIO FUNCIONARIO //
 
+        // INICIO FORMULÁRIO PRODUTOS //
+
+        public static string nomeProduto, descricaoProduto,categoriaProduto,statusProduto,precoCompraProduto,precoVendaProduto,fornecedorProduto;
+        public static DateTime dataReceProduto, horaProduto;
         
 
-      
+
+
+
+
+
 
     }
 }

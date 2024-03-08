@@ -37,7 +37,7 @@ namespace Adega_Irmandade
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
-            banco.dgProdutos = dgvProdutosMaisVendidos;
+            banco.dgProdutosVendidos = dgvProdutosMaisVendidos;
             banco.CarregarVendas();
             banco.CarregarNumFuncionario();
             lblNumFuncionario.Text = variaveis.qtdFuncionarios.ToString();
@@ -125,6 +125,42 @@ namespace Adega_Irmandade
         private void btnProdutos_Click(object sender, EventArgs e)
         {
             new frmProduto().Show();
+            Hide();
+        }
+
+        private void btnEmails_Click(object sender, EventArgs e)
+        {
+            new frmEmails().Show();
+            Hide();
+        }
+
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            new frmEstoque().Show();
+            Hide();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            new frmCliente().Show();
+            Hide();
+        }
+
+        private void btnAjuda_Click(object sender, EventArgs e)
+        {
+            new frmAjudaSuporte().Show();
+            Hide();
+        }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            new frmRelatorio().Show();
+            Hide();
+        }
+
+        private void btnVends_Click(object sender, EventArgs e)
+        {
+            new frmVendas().Show();
             Hide();
         }
     }

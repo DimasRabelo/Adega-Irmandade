@@ -399,6 +399,249 @@
   <data name="&gt;&gt;btnFuncionario.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Name" xml:space="preserve">
+    <value>dgvProdutosMaisVendidos</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;dgvProdutosMaisVendidos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Name" xml:space="preserve">
+    <value>lblHora</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHora.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblHora.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblData.Name" xml:space="preserve">
+    <value>lblData</value>
+  </data>
+  <data name="&gt;&gt;lblData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblData.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblData.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.Name" xml:space="preserve">
+    <value>pctFechar</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;pctFechar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.Name" xml:space="preserve">
+    <value>lblProdutosMaisVendidos</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblProdutosMaisVendidos.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.Name" xml:space="preserve">
+    <value>lblUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 3</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>845, 329</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.Name" xml:space="preserve">
+    <value>lblEmail</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.Parent" xml:space="preserve">
+    <value>pnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblNumEmails.Name" xml:space="preserve">
+    <value>lblNumEmails</value>
+  </data>
+  <data name="&gt;&gt;lblNumEmails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNumEmails.Parent" xml:space="preserve">
+    <value>pnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblNumEmails.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblVendas.Name" xml:space="preserve">
+    <value>lblVendas</value>
+  </data>
+  <data name="&gt;&gt;lblVendas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblVendas.Parent" xml:space="preserve">
+    <value>pnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblVendas.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblProdutos.Name" xml:space="preserve">
+    <value>lblProdutos</value>
+  </data>
+  <data name="&gt;&gt;lblProdutos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblProdutos.Parent" xml:space="preserve">
+    <value>pnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblProdutos.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblNumProdutos.Name" xml:space="preserve">
+    <value>lblNumProdutos</value>
+  </data>
+  <data name="&gt;&gt;lblNumProdutos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNumProdutos.Parent" xml:space="preserve">
+    <value>pnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblNumProdutos.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dgvContato.Name" xml:space="preserve">
+    <value>dgvContato</value>
+  </data>
+  <data name="&gt;&gt;dgvContato.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvContato.Parent" xml:space="preserve">
+    <value>pnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;dgvContato.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblFuncionario.Name" xml:space="preserve">
+    <value>lblFuncionario</value>
+  </data>
+  <data name="&gt;&gt;lblFuncionario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblFuncionario.Parent" xml:space="preserve">
+    <value>pnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblFuncionario.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lblNumFuncionario.Name" xml:space="preserve">
+    <value>lblNumFuncionario</value>
+  </data>
+  <data name="&gt;&gt;lblNumFuncionario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNumFuncionario.Parent" xml:space="preserve">
+    <value>pnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblNumFuncionario.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lblNumVendas.Name" xml:space="preserve">
+    <value>lblNumVendas</value>
+  </data>
+  <data name="&gt;&gt;lblNumVendas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNumVendas.Parent" xml:space="preserve">
+    <value>pnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblNumVendas.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="pnlUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>365, 384</value>
+  </data>
+  <data name="pnlUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>846, 264</value>
+  </data>
+  <data name="pnlUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;pnlUsuario.Name" xml:space="preserve">
+    <value>pnlUsuario</value>
+  </data>
+  <data name="&gt;&gt;pnlUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlUsuario.Parent" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;pnlUsuario.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="pnlMenuPrincipal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="pnlMenuPrincipal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1220, 655</value>
+  </data>
+  <data name="pnlMenuPrincipal.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuPrincipal.Name" xml:space="preserve">
+    <value>pnlMenuPrincipal</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuPrincipal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuPrincipal.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMenuPrincipal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="dgvProdutosMaisVendidos.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
@@ -581,27 +824,6 @@
   </data>
   <data name="&gt;&gt;lblUsuario.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 3</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>845, 329</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>10</value>
   </data>
   <data name="lblEmail.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Black, 9.75pt, style=Bold</value>
@@ -893,48 +1115,6 @@
   </data>
   <data name="&gt;&gt;lblNumVendas.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="pnlUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 384</value>
-  </data>
-  <data name="pnlUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>846, 264</value>
-  </data>
-  <data name="pnlUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;pnlUsuario.Name" xml:space="preserve">
-    <value>pnlUsuario</value>
-  </data>
-  <data name="&gt;&gt;pnlUsuario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlUsuario.Parent" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;pnlUsuario.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="pnlMenuPrincipal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="pnlMenuPrincipal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1220, 655</value>
-  </data>
-  <data name="pnlMenuPrincipal.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuPrincipal.Name" xml:space="preserve">
-    <value>pnlMenuPrincipal</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuPrincipal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuPrincipal.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlMenuPrincipal.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

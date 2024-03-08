@@ -12,7 +12,7 @@ namespace Adega_Irmandade
 {
     public static class banco
     {
-        public static DataGridView dgProdutos, dgContato, dgFuncionario;
+        public static DataGridView dgProdutosVendidos, dgContato, dgFuncionario,dgProdutos, dgEmails;
 
 
         private static bool ValidarFTP()
@@ -58,6 +58,8 @@ namespace Adega_Irmandade
             return bm;
         }
 
+        // Inicio do Menu Principal//
+
         public static void CarregarVendas()
         {
             try
@@ -69,18 +71,18 @@ namespace Adega_Irmandade
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                dgProdutos.DataSource = dt;
-                dgProdutos.Columns[1].DefaultCellStyle.Format = "C2";
+                dgProdutosVendidos.DataSource = dt;
+                dgProdutosVendidos.Columns[1].DefaultCellStyle.Format = "C2";
 
-                dgProdutos.ClearSelection();
+                dgProdutosVendidos.ClearSelection();
 
                 // Renomear a coluna "nomeProduto" para "Produto" no DataGridView
-                dgProdutos.Columns["nomeProduto"].HeaderText = "PRODUTOS";
-                dgProdutos.Columns["precoVendaProduto"].HeaderText = "PREÇO UNITÁRIO";
-                dgProdutos.Columns["precoVendaProduto"].DefaultCellStyle.Format = "c"; // Formato de moeda
-                dgProdutos.Columns["total_vendido"].HeaderText = "VALOR TOTAL";
-                dgProdutos.Columns["total_vendido"].DefaultCellStyle.Format = "c"; // Formato de moeda
-                dgProdutos.Columns["Unidades"].HeaderText = "UNIDADES ";
+                dgProdutosVendidos.Columns["nomeProduto"].HeaderText = "PRODUTOS";
+                dgProdutosVendidos.Columns["precoVendaProduto"].HeaderText = "PREÇO UNITÁRIO";
+                dgProdutosVendidos.Columns["precoVendaProduto"].DefaultCellStyle.Format = "c"; // Formato de moeda
+                dgProdutosVendidos.Columns["total_vendido"].HeaderText = "VALOR TOTAL";
+                dgProdutosVendidos.Columns["total_vendido"].DefaultCellStyle.Format = "c"; // Formato de moeda
+                dgProdutosVendidos.Columns["Unidades"].HeaderText = "UNIDADES ";
 
 
 
@@ -178,6 +180,8 @@ namespace Adega_Irmandade
             }
         }
 
+      
+
         public static void CarregarContato()
         {
             try
@@ -209,6 +213,10 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar os Emails!\n\n" + erro);
             }
         }
+
+      
+
+
         public static void AlterarStatusEmail()
         {
             try
@@ -235,7 +243,9 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao Alterar Status do Emails!\n\n" + erro);
             }
         }
+        // Fim  Menu Principal//
 
+        // Inicio Formulario do Funcionario //
 
         public static void CarregarFuncionario()
         {
@@ -360,6 +370,11 @@ namespace Adega_Irmandade
             }
             }
 
+
+        // Fim do Formulário do Funcionario //
+
+        // Inicio do Cadastro dos Funcionarios//
+
         public static void InserirFuncionario()
         {
             try
@@ -410,6 +425,10 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao Cadastrar o Funcionário!\n\n" + erro.Message, "ERRO");
             }
         }
+
+        // Fim do Cadastro dos Funcionários //
+
+        // Inicio do Alterar Funcionários //
 
         public static void CarregarDadosFuncionario()
         {
@@ -525,6 +544,10 @@ namespace Adega_Irmandade
             }
         }
 
+        // Fim do Alterar Funcionário //
+
+        // Inicio do Excluir Funcionário //
+
         public static void DesativarFuncionario()
         {
             try
@@ -548,7 +571,153 @@ namespace Adega_Irmandade
             }
         }
 
+        // Fim do Excluir Funcionário //
 
+        // Inicio do Formulário Produtos //
+
+        public static void CarregarProdutos()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblprodutos";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgProdutos.DataSource = dt;
+
+                dgProdutos.Columns[0].Visible = false;
+                dgProdutos.Columns[1].HeaderText = "NOME";
+                dgProdutos.Columns[2].HeaderText = "DESCRIÇÃO";
+                dgProdutos.Columns[3].HeaderText = "CATEGORIA";
+                dgProdutos.Columns[4].HeaderText = "STATUS";
+                dgProdutos.Columns[5].HeaderText = "PREÇO DE COMPRA";
+                dgProdutos.Columns[6].HeaderText = "PREÇO DE VENDA";
+                dgProdutos.Columns[7].HeaderText = "FORNECEDOR";
+                dgProdutos.Columns[8].HeaderText = "DATA RECEBIMENTO";
+                dgProdutos.Columns[9].HeaderText = "HORA RECEBIMENTO";
+
+
+
+
+                dgProdutos.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os Produtos!\n\n" + erro);
+            }
+        }
+
+        public static void CarregarProdutosNome()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblprodutos WHERE nomeProduto LIKE '%" + variaveis.nomeProduto + "%' ORDER BY nomeProduto;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgProdutos.DataSource = dt;
+
+                dgProdutos.Columns[0].Visible = false;
+                dgProdutos.Columns[1].HeaderText = "NOME";
+                dgProdutos.Columns[2].HeaderText = "DESCRIÇÃO";
+                dgProdutos.Columns[3].HeaderText = "CATEGORIA";
+                dgProdutos.Columns[4].HeaderText = "STATUS";
+                dgProdutos.Columns[5].HeaderText = "PREÇO DE COMPRA";
+                dgProdutos.Columns[6].HeaderText = "PREÇO DE VENDA";
+                dgProdutos.Columns[7].HeaderText = "FORNECEDOR";
+                dgProdutos.Columns[8].HeaderText = "DATA RECEBIMENTO";
+                dgProdutos.Columns[9].HeaderText = "HORA RECEBIMENTO";
+
+
+                dgProdutos.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os Produtos pelo nome!\n\n" + erro);
+            }
+        }
+
+
+        public static void CarregarStatusProdutos()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblprodutos WHERE statusProduto =  'ATIVO' ORDER BY nomeProduto;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgProdutos.DataSource = dt;
+
+                dgProdutos.Columns[0].Visible = false;
+                dgProdutos.Columns[1].HeaderText = "NOME";
+                dgProdutos.Columns[2].HeaderText = "DESCRIÇÃO";
+                dgProdutos.Columns[3].HeaderText = "CATEGORIA";
+                dgProdutos.Columns[4].HeaderText = "STATUS";
+                dgProdutos.Columns[5].HeaderText = "PREÇO DE COMPRA";
+                dgProdutos.Columns[5].DefaultCellStyle.Format= "C";
+                dgProdutos.Columns[6].HeaderText = "PREÇO DE VENDA";
+                dgProdutos.Columns[7].HeaderText = "FORNECEDOR";
+                dgProdutos.Columns[8].HeaderText = "DATA RECEBIMENTO";
+                dgProdutos.Columns[9].HeaderText = "HORA RECEBIMENTO";
+
+
+                dgProdutos.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os status do produto!\n\n" + erro);
+            }
+        }
+        // Fim Formulário Produtos //
+
+
+        // Inicio Formulário Emails //
+
+        public static void CarregarEmails()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblcontato";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgEmails.DataSource = dt;
+
+                dgEmails.Columns[0].Visible = false;
+                dgEmails.Columns[1].HeaderText = "NOME";
+                dgEmails.Columns[2].HeaderText = "EMAIL";
+                dgEmails.Columns[3].HeaderText = "TELEFONE";
+                dgEmails.Columns[4].HeaderText = "MENSAGEM";
+                dgEmails.Columns[5].HeaderText = "DATA";
+                dgEmails.Columns[5].DefaultCellStyle.Format = "d";
+                dgEmails.Columns[6].HeaderText = "STATUS";
+                dgEmails.Columns[7].HeaderText = "HORA";
+
+
+
+                dgEmails.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os emails!\n\n" + erro);
+            }
+        }
 
 
 

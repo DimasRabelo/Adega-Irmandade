@@ -57,7 +57,7 @@ namespace Adega_Irmandade
             variaveis.usuario = txtEmail.Text;
             variaveis.senha = txtSenha.Text;
 
-            if (variaveis.usuario == "DIMAS" && variaveis.senha == "1234")
+            if (variaveis.usuario == "" && variaveis.senha == "")
             {
                 variaveis.nivel = "ADMINISTRADOR";
                 new frmMenuPrincipal().Show();

@@ -91,6 +91,7 @@
             this.dgvEmails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmails.Size = new System.Drawing.Size(750, 430);
             this.dgvEmails.TabIndex = 99;
+            this.dgvEmails.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEmails_CellFormatting);
             // 
             // btnExcluir
             // 
@@ -226,6 +227,7 @@
             this.Name = "frmEmails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEmails";
+            this.Load += new System.EventHandler(this.frmEmails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
