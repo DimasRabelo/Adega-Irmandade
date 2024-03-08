@@ -12,7 +12,7 @@ namespace Adega_Irmandade
 {
     public static class banco
     {
-        public static DataGridView dgProdutosVendidos, dgContato, dgFuncionario,dgProdutos, dgEmails;
+        public static DataGridView dgProdutosVendidos, dgContato, dgFuncionario, dgProdutos, dgEmails, dgEstoque;
 
 
         private static bool ValidarFTP()
@@ -180,7 +180,7 @@ namespace Adega_Irmandade
             }
         }
 
-      
+
 
         public static void CarregarContato()
         {
@@ -214,7 +214,7 @@ namespace Adega_Irmandade
             }
         }
 
-      
+
 
 
         public static void AlterarStatusEmail()
@@ -368,7 +368,7 @@ namespace Adega_Irmandade
             {
                 MessageBox.Show("Erro ao carregar os Funcionário pelo status!\n\n" + erro);
             }
-            }
+        }
 
 
         // Fim do Formulário do Funcionario //
@@ -489,7 +489,7 @@ namespace Adega_Irmandade
                 cmd.Parameters.AddWithValue("@facebook", variaveis.linkFaceFuncionario);
                 cmd.Parameters.AddWithValue("@instagram", variaveis.linkInstaFuncionario);
                 cmd.Parameters.AddWithValue("@whats", variaveis.linkWhatsFuncionario);
-                cmd.Parameters.AddWithValue("@codigo", variaveis.codFuncionario); 
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codFuncionario);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Funcionário Alterado Com Sucesso!", "CADASTRO FUNCIONÁRIO");
                 conexao.Desconectar();
@@ -559,7 +559,7 @@ namespace Adega_Irmandade
 
                 cmd.Parameters.AddWithValue("@status", variaveis.statusFuncionario);
                 cmd.Parameters.AddWithValue("@codigo", variaveis.codFuncionario); // Correção do parâmetro
-                                                                                //fim parâmetros
+                                                                                  //fim parâmetros
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Funcionário Desativado Com Sucesso!", " DESATIVADO FUNCIONÁRIO");
                 conexao.Desconectar();
@@ -571,7 +571,6 @@ namespace Adega_Irmandade
             }
         }
 
-        // Fim do Excluir Funcionário //
 
         // Inicio do Formulário Produtos //
 
@@ -665,7 +664,7 @@ namespace Adega_Irmandade
                 dgProdutos.Columns[3].HeaderText = "CATEGORIA";
                 dgProdutos.Columns[4].HeaderText = "STATUS";
                 dgProdutos.Columns[5].HeaderText = "PREÇO DE COMPRA";
-                dgProdutos.Columns[5].DefaultCellStyle.Format= "C";
+                dgProdutos.Columns[5].DefaultCellStyle.Format = "C";
                 dgProdutos.Columns[6].HeaderText = "PREÇO DE VENDA";
                 dgProdutos.Columns[7].HeaderText = "FORNECEDOR";
                 dgProdutos.Columns[8].HeaderText = "DATA RECEBIMENTO";
@@ -704,7 +703,6 @@ namespace Adega_Irmandade
                 dgEmails.Columns[3].HeaderText = "TELEFONE";
                 dgEmails.Columns[4].HeaderText = "MENSAGEM";
                 dgEmails.Columns[5].HeaderText = "DATA";
-                dgEmails.Columns[5].DefaultCellStyle.Format = "d";
                 dgEmails.Columns[6].HeaderText = "STATUS";
                 dgEmails.Columns[7].HeaderText = "HORA";
 
@@ -719,8 +717,51 @@ namespace Adega_Irmandade
             }
         }
 
+        public static void CarregarEstoque()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT m.idEstoque, m.nomeEstoque,m.quantidadeEstoque,m.dataCadastroEstoque,m.dataAtualiEstoque, m.statusEstoque, m.horaEstoque,   a.nomeProduto FROM tblestoque m INNER JOIN     tblprodutos a ON m.idProduto = a.idProduto ORDER BY m.idEstoque ASC;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgEstoque.DataSource = dt;
+
+                dgEstoque.Columns[0].Visible = false;
+                dgEstoque.Columns[1].HeaderText = "NOME";
+                dgEstoque.Columns[2].HeaderText = "QUANTIDADE";
+                dgEstoque.Columns[3].HeaderText = "DATA DE CADASTRO";
+                dgEstoque.Columns[4].HeaderText = "DATA DE ATUALIZAÇÃO";
+                dgEstoque.Columns[5].HeaderText = "STATUS";
+                dgEstoque.Columns[6].HeaderText = "HORA";
+                dgEstoque.Columns[7].HeaderText = "PRODUTO";
+               
+
+
+                dgEstoque.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar Estoque!\n\n" + erro);
+            }
+        }
 
 
     }
-}  
+}
+
+
+
+
+
+
+
+
+
+// Fim do Excluir Funcionário //
+
 

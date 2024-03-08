@@ -91,6 +91,7 @@
             this.dgvEstoque.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEstoque.Size = new System.Drawing.Size(750, 430);
             this.dgvEstoque.TabIndex = 95;
+            this.dgvEstoque.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEstoque_CellFormatting);
             // 
             // btnExcluir
             // 
@@ -226,6 +227,7 @@
             this.Name = "frmEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEstoque";
+            this.Load += new System.EventHandler(this.frmEstoque_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
