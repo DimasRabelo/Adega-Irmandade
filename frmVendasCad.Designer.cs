@@ -28,41 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mkdCadDataNasc = new System.Windows.Forms.MaskedTextBox();
+            this.mkdCadDataVenda = new System.Windows.Forms.MaskedTextBox();
             this.btnCadSalvar = new System.Windows.Forms.Button();
             this.pctFechar = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.cmbCadStatus = new System.Windows.Forms.ComboBox();
             this.lblCadStatus = new System.Windows.Forms.Label();
-            this.lblCadDataNasc = new System.Windows.Forms.Label();
+            this.lblCadDataVenda = new System.Windows.Forms.Label();
             this.lblCadNome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCadCadastrar = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
+            this.cmbCadFuncionario = new System.Windows.Forms.ComboBox();
+            this.mskCadHoraVneda = new System.Windows.Forms.MaskedTextBox();
+            this.lblCadHoraVenda = new System.Windows.Forms.Label();
+            this.cmbCadVendasProdutos = new System.Windows.Forms.ComboBox();
+            this.lblCadVendaProdutos = new System.Windows.Forms.Label();
+            this.nudValorVenda = new System.Windows.Forms.NumericUpDown();
+            this.lblCadValorVenda = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValorVenda)).BeginInit();
             this.SuspendLayout();
             // 
-            // mkdCadDataNasc
+            // mkdCadDataVenda
             // 
-            this.mkdCadDataNasc.Enabled = false;
-            this.mkdCadDataNasc.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mkdCadDataNasc.Location = new System.Drawing.Point(39, 287);
-            this.mkdCadDataNasc.Mask = "00/00/0000";
-            this.mkdCadDataNasc.Name = "mkdCadDataNasc";
-            this.mkdCadDataNasc.Size = new System.Drawing.Size(131, 34);
-            this.mkdCadDataNasc.TabIndex = 104;
-            this.mkdCadDataNasc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mkdCadDataNasc.ValidatingType = typeof(System.DateTime);
-         
+            this.mkdCadDataVenda.Enabled = false;
+            this.mkdCadDataVenda.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdCadDataVenda.Location = new System.Drawing.Point(39, 287);
+            this.mkdCadDataVenda.Mask = "00/00/0000";
+            this.mkdCadDataVenda.Name = "mkdCadDataVenda";
+            this.mkdCadDataVenda.Size = new System.Drawing.Size(131, 34);
+            this.mkdCadDataVenda.TabIndex = 104;
+            this.mkdCadDataVenda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkdCadDataVenda.ValidatingType = typeof(System.DateTime);
             // 
             // btnCadSalvar
             // 
@@ -77,7 +76,7 @@
             this.btnCadSalvar.TabIndex = 103;
             this.btnCadSalvar.Text = "SALVAR";
             this.btnCadSalvar.UseVisualStyleBackColor = false;
-           
+            // 
             // pctFechar
             // 
             this.pctFechar.BackColor = System.Drawing.Color.Transparent;
@@ -102,7 +101,6 @@
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogo.TabIndex = 101;
             this.pctLogo.TabStop = false;
-           
             // 
             // btnLimpar
             // 
@@ -117,7 +115,6 @@
             this.btnLimpar.TabIndex = 100;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
-           
             // 
             // cmbCadStatus
             // 
@@ -131,7 +128,6 @@
             this.cmbCadStatus.Name = "cmbCadStatus";
             this.cmbCadStatus.Size = new System.Drawing.Size(204, 26);
             this.cmbCadStatus.TabIndex = 93;
-           
             // 
             // lblCadStatus
             // 
@@ -144,20 +140,19 @@
             this.lblCadStatus.Size = new System.Drawing.Size(103, 27);
             this.lblCadStatus.TabIndex = 82;
             this.lblCadStatus.Text = "STATUS:";
-          
             // 
-            // lblCadDataNasc
+            // lblCadDataVenda
             // 
-            this.lblCadDataNasc.AutoSize = true;
-            this.lblCadDataNasc.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadDataNasc.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadDataNasc.ForeColor = System.Drawing.Color.White;
-            this.lblCadDataNasc.Location = new System.Drawing.Point(34, 240);
-            this.lblCadDataNasc.Name = "lblCadDataNasc";
-            this.lblCadDataNasc.Size = new System.Drawing.Size(154, 27);
-            this.lblCadDataNasc.TabIndex = 75;
-            this.lblCadDataNasc.Text = "DATA VENDA:";
-           
+            this.lblCadDataVenda.AutoSize = true;
+            this.lblCadDataVenda.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadDataVenda.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadDataVenda.ForeColor = System.Drawing.Color.White;
+            this.lblCadDataVenda.Location = new System.Drawing.Point(34, 240);
+            this.lblCadDataVenda.Name = "lblCadDataVenda";
+            this.lblCadDataVenda.Size = new System.Drawing.Size(154, 27);
+            this.lblCadDataVenda.TabIndex = 75;
+            this.lblCadDataVenda.Text = "DATA VENDA:";
+            // 
             // lblCadNome
             // 
             this.lblCadNome.AutoSize = true;
@@ -169,7 +164,7 @@
             this.lblCadNome.Size = new System.Drawing.Size(277, 27);
             this.lblCadNome.TabIndex = 74;
             this.lblCadNome.Text = "NOME DO FUNCIONÁRIO:";
-            
+            // 
             // label2
             // 
             this.label2.AllowDrop = true;
@@ -183,7 +178,7 @@
             this.label2.TabIndex = 73;
             this.label2.Text = "VENDA\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-           
+            // 
             // lblCadCadastrar
             // 
             this.lblCadCadastrar.AllowDrop = true;
@@ -197,87 +192,87 @@
             this.lblCadCadastrar.TabIndex = 72;
             this.lblCadCadastrar.Text = "CADASTRAR\r\n";
             this.lblCadCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-           
-            // comboBox1
             // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            // cmbCadFuncionario
+            // 
+            this.cmbCadFuncionario.Enabled = false;
+            this.cmbCadFuncionario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCadFuncionario.FormattingEnabled = true;
+            this.cmbCadFuncionario.Items.AddRange(new object[] {
             "ADMINISTRADOR",
             "USUÁRIO"});
-            this.comboBox1.Location = new System.Drawing.Point(159, 184);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(475, 26);
-            this.comboBox1.TabIndex = 106;
+            this.cmbCadFuncionario.Location = new System.Drawing.Point(159, 184);
+            this.cmbCadFuncionario.Name = "cmbCadFuncionario";
+            this.cmbCadFuncionario.Size = new System.Drawing.Size(475, 26);
+            this.cmbCadFuncionario.TabIndex = 106;
             // 
-            // maskedTextBox1
+            // mskCadHoraVneda
             // 
-            this.maskedTextBox1.Enabled = false;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(577, 292);
-            this.maskedTextBox1.Mask = "00:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(154, 29);
-            this.maskedTextBox1.TabIndex = 109;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.mskCadHoraVneda.Enabled = false;
+            this.mskCadHoraVneda.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCadHoraVneda.Location = new System.Drawing.Point(577, 292);
+            this.mskCadHoraVneda.Mask = "00:00";
+            this.mskCadHoraVneda.Name = "mskCadHoraVneda";
+            this.mskCadHoraVneda.Size = new System.Drawing.Size(154, 29);
+            this.mskCadHoraVneda.TabIndex = 109;
+            this.mskCadHoraVneda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mskCadHoraVneda.ValidatingType = typeof(System.DateTime);
             // 
-            // label1
+            // lblCadHoraVenda
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(572, 235);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 54);
-            this.label1.TabIndex = 110;
-            this.label1.Text = "HORA \r\nVENDA:";
+            this.lblCadHoraVenda.AutoSize = true;
+            this.lblCadHoraVenda.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadHoraVenda.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadHoraVenda.ForeColor = System.Drawing.Color.White;
+            this.lblCadHoraVenda.Location = new System.Drawing.Point(572, 235);
+            this.lblCadHoraVenda.Name = "lblCadHoraVenda";
+            this.lblCadHoraVenda.Size = new System.Drawing.Size(92, 54);
+            this.lblCadHoraVenda.TabIndex = 110;
+            this.lblCadHoraVenda.Text = "HORA \r\nVENDA:";
             // 
-            // comboBox2
+            // cmbCadVendasProdutos
             // 
-            this.comboBox2.Enabled = false;
-            this.comboBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbCadVendasProdutos.Enabled = false;
+            this.cmbCadVendasProdutos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCadVendasProdutos.FormattingEnabled = true;
+            this.cmbCadVendasProdutos.Items.AddRange(new object[] {
             "ADMINISTRADOR",
             "USUÁRIO"});
-            this.comboBox2.Location = new System.Drawing.Point(159, 502);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(475, 26);
-            this.comboBox2.TabIndex = 111;
+            this.cmbCadVendasProdutos.Location = new System.Drawing.Point(159, 502);
+            this.cmbCadVendasProdutos.Name = "cmbCadVendasProdutos";
+            this.cmbCadVendasProdutos.Size = new System.Drawing.Size(475, 26);
+            this.cmbCadVendasProdutos.TabIndex = 111;
             // 
-            // label3
+            // lblCadVendaProdutos
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(154, 459);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 27);
-            this.label3.TabIndex = 112;
-            this.label3.Text = "PRODUTOS";
+            this.lblCadVendaProdutos.AutoSize = true;
+            this.lblCadVendaProdutos.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadVendaProdutos.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadVendaProdutos.ForeColor = System.Drawing.Color.White;
+            this.lblCadVendaProdutos.Location = new System.Drawing.Point(154, 459);
+            this.lblCadVendaProdutos.Name = "lblCadVendaProdutos";
+            this.lblCadVendaProdutos.Size = new System.Drawing.Size(131, 27);
+            this.lblCadVendaProdutos.TabIndex = 112;
+            this.lblCadVendaProdutos.Text = "PRODUTOS";
             // 
-            // numericUpDown1
+            // nudValorVenda
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(611, 412);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 113;
+            this.nudValorVenda.Location = new System.Drawing.Point(611, 412);
+            this.nudValorVenda.Name = "nudValorVenda";
+            this.nudValorVenda.Size = new System.Drawing.Size(120, 20);
+            this.nudValorVenda.TabIndex = 113;
             // 
-            // label4
+            // lblCadValorVenda
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(606, 355);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 54);
-            this.label4.TabIndex = 114;
-            this.label4.Text = "VALOR \r\nVENDA";
+            this.lblCadValorVenda.AutoSize = true;
+            this.lblCadValorVenda.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadValorVenda.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadValorVenda.ForeColor = System.Drawing.Color.White;
+            this.lblCadValorVenda.Location = new System.Drawing.Point(606, 355);
+            this.lblCadValorVenda.Name = "lblCadValorVenda";
+            this.lblCadValorVenda.Size = new System.Drawing.Size(91, 54);
+            this.lblCadValorVenda.TabIndex = 114;
+            this.lblCadValorVenda.Text = "VALOR \r\nVENDA";
             // 
             // frmVendasCad
             // 
@@ -285,21 +280,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
             this.ClientSize = new System.Drawing.Size(1230, 665);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.mkdCadDataNasc);
+            this.Controls.Add(this.lblCadValorVenda);
+            this.Controls.Add(this.nudValorVenda);
+            this.Controls.Add(this.lblCadVendaProdutos);
+            this.Controls.Add(this.cmbCadVendasProdutos);
+            this.Controls.Add(this.lblCadHoraVenda);
+            this.Controls.Add(this.mskCadHoraVneda);
+            this.Controls.Add(this.cmbCadFuncionario);
+            this.Controls.Add(this.mkdCadDataVenda);
             this.Controls.Add(this.btnCadSalvar);
             this.Controls.Add(this.pctFechar);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.cmbCadStatus);
             this.Controls.Add(this.lblCadStatus);
-            this.Controls.Add(this.lblCadDataNasc);
+            this.Controls.Add(this.lblCadDataVenda);
             this.Controls.Add(this.lblCadNome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCadCadastrar);
@@ -308,30 +303,30 @@
             this.Text = "frmVendasCad";
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValorVenda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MaskedTextBox mkdCadDataNasc;
+        private System.Windows.Forms.MaskedTextBox mkdCadDataVenda;
         private System.Windows.Forms.Button btnCadSalvar;
         private System.Windows.Forms.PictureBox pctFechar;
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.ComboBox cmbCadStatus;
         private System.Windows.Forms.Label lblCadStatus;
-        private System.Windows.Forms.Label lblCadDataNasc;
+        private System.Windows.Forms.Label lblCadDataVenda;
         private System.Windows.Forms.Label lblCadNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCadCadastrar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbCadFuncionario;
+        private System.Windows.Forms.MaskedTextBox mskCadHoraVneda;
+        private System.Windows.Forms.Label lblCadHoraVenda;
+        private System.Windows.Forms.ComboBox cmbCadVendasProdutos;
+        private System.Windows.Forms.Label lblCadVendaProdutos;
+        private System.Windows.Forms.NumericUpDown nudValorVenda;
+        private System.Windows.Forms.Label lblCadValorVenda;
     }
 }
