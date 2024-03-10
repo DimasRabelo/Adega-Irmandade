@@ -16,5 +16,17 @@ namespace Adega_Irmandade
         {
             InitializeComponent();
         }
+
+
+
+
+
+        private void pctFechar_Click(object sender, EventArgs e)
+        {
+            new frmVendas().Show();
+            Close();
+        }
     }
 }
+
+       

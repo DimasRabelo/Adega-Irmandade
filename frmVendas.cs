@@ -75,5 +75,11 @@ namespace Adega_Irmandade
             dgvVendas.Sort(dgvVendas.Columns[1], ListSortDirection.Ascending);
             dgvVendas.ClearSelection();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            new frmVendasCad().Show();
+            Hide();
+        }
     }
 }
