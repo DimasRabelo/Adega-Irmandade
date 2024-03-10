@@ -147,5 +147,7 @@ namespace Adega_Irmandade
             dgvFuncionario.Sort(dgvFuncionario.Columns[1], ListSortDirection.Ascending);
             dgvFuncionario.ClearSelection();
         }
+
+     
     }
 }

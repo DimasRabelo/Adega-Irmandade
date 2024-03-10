@@ -125,6 +125,7 @@
             this.chkAtivo.TabIndex = 94;
             this.chkAtivo.Text = "ATIVO?";
             this.chkAtivo.UseVisualStyleBackColor = false;
+            this.chkAtivo.CheckedChanged += new System.EventHandler(this.chkAtivo_CheckedChanged);
             // 
             // lblEmailsStatus
             // 
@@ -146,6 +147,7 @@
             this.txtEmailsNome.Name = "txtEmailsNome";
             this.txtEmailsNome.Size = new System.Drawing.Size(750, 27);
             this.txtEmailsNome.TabIndex = 92;
+            this.txtEmailsNome.TextChanged += new System.EventHandler(this.txtEmailsNome_TextChanged);
             // 
             // lblEmailsNome
             // 
@@ -205,6 +207,9 @@
             this.dgvEmails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmails.Size = new System.Drawing.Size(902, 430);
             this.dgvEmails.TabIndex = 101;
+            this.dgvEmails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmails_CellClick);
+            this.dgvEmails.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEmails_CellFormatting_1);
+            this.dgvEmails.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEmails_ColumnHeaderMouseClick);
             // 
             // frmEmails
             // 

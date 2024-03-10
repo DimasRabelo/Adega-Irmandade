@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 
 
 
@@ -13,7 +14,7 @@ namespace Adega_Irmandade
     public static class banco
     {
         public static DataGridView dgProdutosVendidos, dgContato, dgFuncionario, dgProdutos, dgEmails, dgEstoque,dgVendas,dgClientes;
-
+        
 
         private static bool ValidarFTP()
         {
@@ -719,9 +720,75 @@ namespace Adega_Irmandade
         }
 
 
-        // Inicio Formulario Estoque
+        public static void CarregarEmailsNome()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblcontato WHERE nomeContato LIKE '%" + variaveis.nomeContato + "%' ORDER BY nomeContato;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgEmails.DataSource = dt;
 
-        public static void CarregarEstoque()
+                dgEmails.Columns[0].Visible = false;
+                dgEmails.Columns[1].HeaderText = "NOME";
+                dgEmails.Columns[2].HeaderText = "EMAIL";
+                dgEmails.Columns[3].HeaderText = "TELEFONE";
+                dgEmails.Columns[4].HeaderText = "MENSAGEM";
+                dgEmails.Columns[5].HeaderText = "DATA";
+                dgEmails.Columns[6].HeaderText = "STATUS";
+                dgEmails.Columns[7].HeaderText = "HORA";
+
+
+
+                dgEmails.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os emails!\n\n" + erro);
+            }
+        }
+
+        public static void CarregarStatusEmails()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblcontato WHERE statusContato =  'ATIVO' ORDER BY nomeContato;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgEmails.DataSource = dt;
+
+                dgEmails.Columns[0].Visible = false;
+                dgEmails.Columns[1].HeaderText = "NOME";
+                dgEmails.Columns[2].HeaderText = "EMAIL";
+                dgEmails.Columns[3].HeaderText = "TELEFONE";
+                dgEmails.Columns[4].HeaderText = "MENSAGEM";
+                dgEmails.Columns[5].HeaderText = "DATA";
+                dgEmails.Columns[6].HeaderText = "STATUS";
+                dgEmails.Columns[7].HeaderText = "HORA";
+
+
+
+                dgEmails.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar Status do email!\n\n" + erro);
+            }
+
+        }
+
+
+            // Inicio Formulario Estoque
+
+            public static void CarregarEstoque()
         {
             try
             {
@@ -844,16 +911,20 @@ namespace Adega_Irmandade
                 // Define o DataSource do DataGridView
                 dgVendas.DataSource = dt;
 
-                // Ajusta manualmente a ordem das colunas e os títulos no DataGridView
-                dgVendas.Columns["idVenda"].Visible = false;
-                dgVendas.Columns["FUNCIONÁRIO"].DisplayIndex = 1;
-                dgVendas.Columns["DATA DA VENDA"].DisplayIndex = 2;
-                dgVendas.Columns["HORA DA VENDA"].DisplayIndex = 3;
-                dgVendas.Columns["STATUS"].DisplayIndex = 4;
-                dgVendas.Columns["VALOR TOTAL"].DisplayIndex = 5;
-                dgVendas.Columns["PRODUTO"].DisplayIndex = 6;
+                
+               
 
-                // Limpa a seleção no DataGridView
+                dgVendas.Columns[0].Visible = false;
+                dgVendas.Columns[1].HeaderText = "FUNCIONÁRIO";
+                dgVendas.Columns[2].HeaderText = "DATA DA VENDA";
+                dgVendas.Columns[3].HeaderText = "HORA DA VENDA";
+                dgVendas.Columns[4].HeaderText = "STATUS";
+                dgVendas.Columns[5].HeaderText = "VALOR TOTAL";
+                dgVendas.Columns[6].HeaderText = "PRODUTO";
+
+
+
+                
                 dgVendas.ClearSelection();
 
                 conexao.Desconectar();
@@ -863,48 +934,7 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar Vendas!\n\n" + erro);
             }
         }
-
-        public static void CarregarVendasNome()
-        {
-
-
-            try
-            {
-                conexao.Conectar();
-                string selecionar = "SELECT tblvendas.*, tblfuncionarios.nomeFuncionario " +
-                                    "FROM tblvendas " +
-                                    "INNER JOIN tblfuncionarios ON tblvendas.idFuncionario = tblfuncionarios.idFuncionario " +
-                                    "WHERE tblfuncionarios.nomeFuncionario LIKE '%" + variaveis.nomeFuncionario + "%' " +
-                                    "ORDER BY tblvendas.idVenda;";
-                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dgVendas.DataSource = dt;
-
-
-
-                dgVendas.Columns["idVenda"].Visible = false;
-                dgVendas.Columns["FUNCIONÁRIO"].DisplayIndex = 1;
-                dgVendas.Columns["DATA DA VENDA"].DisplayIndex = 2;
-                dgVendas.Columns["HORA DA VENDA"].DisplayIndex = 3;
-                dgVendas.Columns["STATUS"].DisplayIndex = 4;
-                dgVendas.Columns["VALOR TOTAL"].DisplayIndex = 5;
-                dgVendas.Columns["PRODUTO"].DisplayIndex = 6;
-
-
-
-
-                dgVendas.ClearSelection();
-                conexao.Desconectar();
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Erro ao carregar os vendas pelo nome!\n\n" + erro);
-            }
-
-
-        }
+      
 
         // Inicio Formulário Cliente-Usuário //
 
@@ -937,6 +967,68 @@ namespace Adega_Irmandade
             catch (Exception erro)
             {
                 MessageBox.Show("Erro ao carregar os clientes!\n\n" + erro);
+            }
+        }
+
+        public static void CarregarClienteNome()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblusuarios WHERE nomeUsuario LIKE '%" + variaveis.nomeUsuario + "%' ORDER BY nomeUsuario;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgClientes.DataSource = dt;
+
+                dgClientes.Columns[0].Visible = false;
+                dgClientes.Columns[1].HeaderText = "NOME";
+                dgClientes.Columns[2].HeaderText = "EMAIL";
+                dgClientes.Columns[3].HeaderText = "SENHA";
+                dgClientes.Columns[4].HeaderText = "FOTO";
+                dgClientes.Columns[5].HeaderText = "STATUS";
+
+
+
+
+                dgClientes.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os clientes pelo nome!\n\n" + erro);
+            }
+        }
+
+        public static void CarregarStatusCliente()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblusuarios WHERE statusUsuario =  'ATIVO' ORDER BY nomeUsuario;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgClientes.DataSource = dt;
+
+                dgClientes.Columns[0].Visible = false;
+                dgClientes.Columns[1].HeaderText = "NOME";
+                dgClientes.Columns[2].HeaderText = "EMAIL";
+                dgClientes.Columns[3].HeaderText = "SENHA";
+                dgClientes.Columns[4].HeaderText = "FOTO";
+                dgClientes.Columns[5].HeaderText = "STATUS";
+
+
+
+
+                dgClientes.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os clientes pelo nome!\n\n" + erro);
             }
         }
 

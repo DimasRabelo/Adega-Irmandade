@@ -37,10 +37,10 @@
             this.pctFechar = new System.Windows.Forms.PictureBox();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.lblVendaStatus = new System.Windows.Forms.Label();
-            this.txtVendaNome = new System.Windows.Forms.TextBox();
             this.lblVendaNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvVendas = new System.Windows.Forms.DataGridView();
+            this.txtVendaNome = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).BeginInit();
@@ -138,16 +138,6 @@
             this.lblVendaStatus.TabIndex = 82;
             this.lblVendaStatus.Text = "STATUS:";
             // 
-            // txtVendaNome
-            // 
-            this.txtVendaNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtVendaNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVendaNome.Location = new System.Drawing.Point(230, 520);
-            this.txtVendaNome.Name = "txtVendaNome";
-            this.txtVendaNome.Size = new System.Drawing.Size(750, 27);
-            this.txtVendaNome.TabIndex = 81;
-            this.txtVendaNome.TextChanged += new System.EventHandler(this.txtVendaNome_TextChanged);
-            // 
             // lblVendaNome
             // 
             this.lblVendaNome.AutoSize = true;
@@ -206,6 +196,18 @@
             this.dgvVendas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVendas.Size = new System.Drawing.Size(890, 430);
             this.dgvVendas.TabIndex = 102;
+            this.dgvVendas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVendas_CellClick);
+            this.dgvVendas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvVendas_CellFormatting);
+            this.dgvVendas.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvVendas_ColumnHeaderMouseClick);
+            // 
+            // txtVendaNome
+            // 
+            this.txtVendaNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtVendaNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVendaNome.Location = new System.Drawing.Point(230, 522);
+            this.txtVendaNome.Name = "txtVendaNome";
+            this.txtVendaNome.Size = new System.Drawing.Size(750, 27);
+            this.txtVendaNome.TabIndex = 103;
             // 
             // frmVendas
             // 
@@ -213,6 +215,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
             this.ClientSize = new System.Drawing.Size(1220, 630);
+            this.Controls.Add(this.txtVendaNome);
             this.Controls.Add(this.dgvVendas);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.btnExcluir);
@@ -221,7 +224,6 @@
             this.Controls.Add(this.pctFechar);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.lblVendaStatus);
-            this.Controls.Add(this.txtVendaNome);
             this.Controls.Add(this.lblVendaNome);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -246,9 +248,9 @@
         private System.Windows.Forms.PictureBox pctFechar;
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.Label lblVendaStatus;
-        private System.Windows.Forms.TextBox txtVendaNome;
         private System.Windows.Forms.Label lblVendaNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvVendas;
+        private System.Windows.Forms.TextBox txtVendaNome;
     }
 }

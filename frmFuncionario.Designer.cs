@@ -211,8 +211,8 @@
             this.dgvFuncionario.Size = new System.Drawing.Size(945, 430);
             this.dgvFuncionario.TabIndex = 79;
             this.dgvFuncionario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionario_CellClick);
+            
             this.dgvFuncionario.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFuncionario_CellFormatting);
-           
             // 
             // frmFuncionario
             // 

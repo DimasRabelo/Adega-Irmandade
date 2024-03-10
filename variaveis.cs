@@ -45,7 +45,21 @@ namespace Adega_Irmandade
 
         public static int codVendas;
 
-        public static string nomeVendas;
+
+        // FORMULÁRIO EMAIL //
+
+        public static int codContatos;
+
+        public static string nomeContato;
+
+        // FORMULARIO CLIENTE-USUÁRIO //
+
+        public static int codUsuario;
+
+        public static string nomeUsuario;
+
+
+
 
 
 
