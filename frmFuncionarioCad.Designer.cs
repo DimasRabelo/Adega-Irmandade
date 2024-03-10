@@ -1,6 +1,6 @@
 ﻿namespace Adega_Irmandade
 {
-    partial class frmCadFuncionario
+    partial class frmFuncionarioCad
     {
         /// <summary>
         /// Required designer variable.

@@ -104,5 +104,11 @@ namespace Adega_Irmandade
             dgvCliente.Sort(dgvCliente.Columns[1], ListSortDirection.Ascending);
             dgvCliente.ClearSelection();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            new frmClienteCad().Show();
+            Hide();
+        }
     }
 }

@@ -106,11 +106,11 @@
     <Compile Include="frmAjudaSuporte.Designer.cs">
       <DependentUpon>frmAjudaSuporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadFuncionario.cs">
+    <Compile Include="frmFuncionarioCad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadFuncionario.Designer.cs">
-      <DependentUpon>frmCadFuncionario.cs</DependentUpon>
+    <Compile Include="frmFuncionarioCad.Designer.cs">
+      <DependentUpon>frmFuncionarioCad.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCliente.cs">
       <SubType>Form</SubType>
@@ -118,17 +118,35 @@
     <Compile Include="frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmClienteCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClienteCad.Designer.cs">
+      <DependentUpon>frmClienteCad.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEmails.Designer.cs">
       <DependentUpon>frmEmails.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEmailsCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmailsCad.Designer.cs">
+      <DependentUpon>frmEmailsCad.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEstoque.Designer.cs">
       <DependentUpon>frmEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstoqueCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstoqueCad.Designer.cs">
+      <DependentUpon>frmEstoqueCad.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFuncionario.cs">
       <SubType>Form</SubType>
@@ -142,6 +160,12 @@
     <Compile Include="frmProduto.Designer.cs">
       <DependentUpon>frmProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProdutoCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdutoCad.Designer.cs">
+      <DependentUpon>frmProdutoCad.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +177,12 @@
     </Compile>
     <Compile Include="frmVendas.Designer.cs">
       <DependentUpon>frmVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendasCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendasCad.Designer.cs">
+      <DependentUpon>frmVendasCad.cs</DependentUpon>
     </Compile>
     <Compile Include="ftp.cs" />
     <Compile Include="variaveis.cs" />
@@ -173,17 +203,26 @@
     <EmbeddedResource Include="frmAjudaSuporte.resx">
       <DependentUpon>frmAjudaSuporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadFuncionario.resx">
-      <DependentUpon>frmCadFuncionario.cs</DependentUpon>
+    <EmbeddedResource Include="frmFuncionarioCad.resx">
+      <DependentUpon>frmFuncionarioCad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmClienteCad.resx">
+      <DependentUpon>frmClienteCad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEmails.resx">
       <DependentUpon>frmEmails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEmailsCad.resx">
+      <DependentUpon>frmEmailsCad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEstoque.resx">
       <DependentUpon>frmEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstoqueCad.resx">
+      <DependentUpon>frmEstoqueCad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFuncionario.resx">
       <DependentUpon>frmFuncionario.cs</DependentUpon>
@@ -191,11 +230,17 @@
     <EmbeddedResource Include="frmProduto.resx">
       <DependentUpon>frmProduto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProdutoCad.resx">
+      <DependentUpon>frmProdutoCad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRelatorio.resx">
       <DependentUpon>frmRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVendas.resx">
       <DependentUpon>frmVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendasCad.resx">
+      <DependentUpon>frmVendasCad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

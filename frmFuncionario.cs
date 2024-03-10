@@ -67,14 +67,14 @@ namespace Adega_Irmandade
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             variaveis.funcao = "CADASTRAR";
-            new frmCadFuncionario().Show();
+            new frmFuncionarioCad().Show();
             Hide();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             variaveis.funcao = "ALTERAR";
-            new frmCadFuncionario().Show();
+            new frmFuncionarioCad().Show();
             Hide();
         }
 

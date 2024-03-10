@@ -132,5 +132,11 @@ namespace Adega_Irmandade
             dgvEmails.Sort(dgvEmails.Columns[1], ListSortDirection.Ascending);
             dgvEmails.ClearSelection();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            new frmEmailsCad().Show();
+            Hide();
+        }
     }
 }

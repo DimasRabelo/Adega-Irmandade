@@ -7,9 +7,9 @@ using System.ComponentModel;
 
 namespace Adega_Irmandade
 {
-    public partial class frmCadFuncionario : Form
+    public partial class frmFuncionarioCad : Form
     {
-        public frmCadFuncionario()
+        public frmFuncionarioCad()
         {
             InitializeComponent();
         }
