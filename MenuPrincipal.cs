@@ -68,6 +68,16 @@ namespace Adega_Irmandade
                     e.CellStyle.ForeColor = Color.FromArgb(0, 0, 0); // Cor Preta
                     e.CellStyle.BackColor = Color.FromArgb(127, 127, 127); // Cor Cinza
                 }
+                if (e.Value != null && e.ColumnIndex >= 0 && dgvProdutosMaisVendidos.Columns[e.ColumnIndex].HeaderText != null)
+                {
+                    // Verifica se a coluna não é uma coluna de data
+                    if (dgvProdutosMaisVendidos.Columns[e.ColumnIndex].ValueType != typeof(DateTime))
+                    {
+                        // Converte o valor da célula para maiúsculas e define o valor formatado
+                        e.Value = e.Value.ToString().ToUpper();
+                        e.FormattingApplied = true; // Indica que a formatação foi aplicada
+                    }
+                }
             }
         }
 
@@ -105,6 +115,16 @@ namespace Adega_Irmandade
                 {
                     e.CellStyle.ForeColor = Color.FromArgb(0, 0, 0); // Cor Preta
                     e.CellStyle.BackColor = Color.FromArgb(127, 127, 127); // Cor Cinza
+                }
+                if (e.Value != null && e.ColumnIndex >= 0 && dgvContato.Columns[e.ColumnIndex].HeaderText != null)
+                {
+                    // Verifica se a coluna não é uma coluna de data
+                    if (dgvContato.Columns[e.ColumnIndex].ValueType != typeof(DateTime))
+                    {
+                        // Converte o valor da célula para maiúsculas e define o valor formatado
+                        e.Value = e.Value.ToString().ToUpper();
+                        e.FormattingApplied = true; // Indica que a formatação foi aplicada
+                    }
                 }
             }
         }

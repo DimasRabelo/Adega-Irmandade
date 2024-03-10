@@ -28,11 +28,24 @@ namespace Adega_Irmandade
 
         // FIM FORMULÁRIO FUNCIONARIO //
 
-        // INICIO FORMULÁRIO PRODUTOS //
+        // FORMULÁRIO PRODUTOS //
+
+        public static int codProduto;
 
         public static string nomeProduto, descricaoProduto,categoriaProduto,statusProduto,precoCompraProduto,precoVendaProduto,fornecedorProduto;
         public static DateTime dataReceProduto, horaProduto;
-        
+
+        // FORMULÁRIO ESTOQUE //
+
+        public static int codEstoque;
+
+        public static string nomeEstoque;
+
+        // FORMULÁRIO VENDAS //
+
+        public static int codVendas;
+
+        public static string nomeVendas;
 
 
 

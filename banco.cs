@@ -12,7 +12,7 @@ namespace Adega_Irmandade
 {
     public static class banco
     {
-        public static DataGridView dgProdutosVendidos, dgContato, dgFuncionario, dgProdutos, dgEmails, dgEstoque;
+        public static DataGridView dgProdutosVendidos, dgContato, dgFuncionario, dgProdutos, dgEmails, dgEstoque,dgVendas,dgClientes;
 
 
         private static bool ValidarFTP()
@@ -570,7 +570,7 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao desativar o Funcionário!\n\n" + erro.Message, "ERRO");
             }
         }
-
+        // Fim do Excluir Funcionário //
 
         // Inicio do Formulário Produtos //
 
@@ -593,9 +593,11 @@ namespace Adega_Irmandade
                 dgProdutos.Columns[3].HeaderText = "CATEGORIA";
                 dgProdutos.Columns[4].HeaderText = "STATUS";
                 dgProdutos.Columns[5].HeaderText = "PREÇO DE COMPRA";
+                dgProdutos.Columns["precoCompraProduto"].DefaultCellStyle.Format = "c";
                 dgProdutos.Columns[6].HeaderText = "PREÇO DE VENDA";
                 dgProdutos.Columns[7].HeaderText = "FORNECEDOR";
                 dgProdutos.Columns[8].HeaderText = "DATA RECEBIMENTO";
+                dgProdutos.Columns["dataReceProduto"].DefaultCellStyle.Format = "d";
                 dgProdutos.Columns[9].HeaderText = "HORA RECEBIMENTO";
 
 
@@ -664,7 +666,6 @@ namespace Adega_Irmandade
                 dgProdutos.Columns[3].HeaderText = "CATEGORIA";
                 dgProdutos.Columns[4].HeaderText = "STATUS";
                 dgProdutos.Columns[5].HeaderText = "PREÇO DE COMPRA";
-                dgProdutos.Columns[5].DefaultCellStyle.Format = "C";
                 dgProdutos.Columns[6].HeaderText = "PREÇO DE VENDA";
                 dgProdutos.Columns[7].HeaderText = "FORNECEDOR";
                 dgProdutos.Columns[8].HeaderText = "DATA RECEBIMENTO";
@@ -717,6 +718,9 @@ namespace Adega_Irmandade
             }
         }
 
+
+        // Inicio Formulario Estoque
+
         public static void CarregarEstoque()
         {
             try
@@ -750,6 +754,193 @@ namespace Adega_Irmandade
             }
         }
 
+        public static void CarregarEstoqueNome()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblestoque WHERE nomeEstoque LIKE '%" + variaveis.nomeEstoque + "%' ORDER BY nomeEstoque;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgEstoque.DataSource = dt;
+
+                dgEstoque.Columns[0].Visible = false;
+                dgEstoque.Columns[1].HeaderText = "NOME";
+                dgEstoque.Columns[2].HeaderText = "QUANTIDADE";
+                dgEstoque.Columns[3].HeaderText = "DATA DE CADASTRO";
+                dgEstoque.Columns[4].HeaderText = "DATA DE ATUALIZAÇÃO";
+                dgEstoque.Columns[5].HeaderText = "STATUS";
+                dgEstoque.Columns[6].HeaderText = "HORA";
+                dgEstoque.Columns[7].HeaderText = "PRODUTO";
+
+
+
+
+                dgEstoque.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os estoque pelo nome!\n\n" + erro);
+            }
+
+
+        }
+
+        public static void CarregarStatusEstoque()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblestoque WHERE statusEstoque =  'ATIVO' ORDER BY nomeEstoque;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgEstoque.DataSource = dt;
+
+                dgEstoque.Columns[0].Visible = false;
+                dgEstoque.Columns[1].HeaderText = "NOME";
+                dgEstoque.Columns[2].HeaderText = "QUANTIDADE";
+                dgEstoque.Columns[3].HeaderText = "DATA DE CADASTRO";
+                dgEstoque.Columns[4].HeaderText = "DATA DE ATUALIZAÇÃO";
+                dgEstoque.Columns[5].HeaderText = "STATUS";
+                dgEstoque.Columns[6].HeaderText = "HORA";
+                dgEstoque.Columns[7].HeaderText = "PRODUTO";
+
+
+
+
+                dgEstoque.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os status do Estoque!\n\n" + erro);
+            }
+        }
+
+
+
+
+
+        // Inicio Formulario Vendas //
+
+        public static void CarregarTblVenda()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT v.idVenda, f.nomeFuncionario AS FUNCIONÁRIO, v.dataVenda AS 'DATA DA VENDA', v.horaVenda AS 'HORA DA VENDA', v.statusVenda AS STATUS, v.valorTotalVenda AS 'VALOR TOTAL', p.nomeProduto AS PRODUTO FROM tblvendas v INNER JOIN tblfuncionarios f ON v.idFuncionario = f.idFuncionario INNER JOIN tblprodutos p ON v.idProduto = p.idProduto ORDER BY v.idVenda ASC;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Define o DataSource do DataGridView
+                dgVendas.DataSource = dt;
+
+                // Ajusta manualmente a ordem das colunas e os títulos no DataGridView
+                dgVendas.Columns["idVenda"].Visible = false;
+                dgVendas.Columns["FUNCIONÁRIO"].DisplayIndex = 1;
+                dgVendas.Columns["DATA DA VENDA"].DisplayIndex = 2;
+                dgVendas.Columns["HORA DA VENDA"].DisplayIndex = 3;
+                dgVendas.Columns["STATUS"].DisplayIndex = 4;
+                dgVendas.Columns["VALOR TOTAL"].DisplayIndex = 5;
+                dgVendas.Columns["PRODUTO"].DisplayIndex = 6;
+
+                // Limpa a seleção no DataGridView
+                dgVendas.ClearSelection();
+
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar Vendas!\n\n" + erro);
+            }
+        }
+
+        public static void CarregarVendasNome()
+        {
+
+
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT tblvendas.*, tblfuncionarios.nomeFuncionario " +
+                                    "FROM tblvendas " +
+                                    "INNER JOIN tblfuncionarios ON tblvendas.idFuncionario = tblfuncionarios.idFuncionario " +
+                                    "WHERE tblfuncionarios.nomeFuncionario LIKE '%" + variaveis.nomeFuncionario + "%' " +
+                                    "ORDER BY tblvendas.idVenda;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgVendas.DataSource = dt;
+
+
+
+                dgVendas.Columns["idVenda"].Visible = false;
+                dgVendas.Columns["FUNCIONÁRIO"].DisplayIndex = 1;
+                dgVendas.Columns["DATA DA VENDA"].DisplayIndex = 2;
+                dgVendas.Columns["HORA DA VENDA"].DisplayIndex = 3;
+                dgVendas.Columns["STATUS"].DisplayIndex = 4;
+                dgVendas.Columns["VALOR TOTAL"].DisplayIndex = 5;
+                dgVendas.Columns["PRODUTO"].DisplayIndex = 6;
+
+
+
+
+                dgVendas.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os vendas pelo nome!\n\n" + erro);
+            }
+
+
+        }
+
+        // Inicio Formulário Cliente-Usuário //
+
+        public static void CarregarCliente()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblusuarios";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgClientes.DataSource = dt;
+
+                dgClientes.Columns[0].Visible = false;
+                dgClientes.Columns[1].HeaderText = "NOME";
+                dgClientes.Columns[2].HeaderText = "EMAIL";
+                dgClientes.Columns[3].HeaderText = "SENHA";
+                dgClientes.Columns[4].HeaderText = "FOTO";
+                dgClientes.Columns[5].HeaderText = "STATUS";
+
+
+
+
+                dgClientes.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os clientes!\n\n" + erro);
+            }
+        }
+
+
 
     }
 }
@@ -762,6 +953,6 @@ namespace Adega_Irmandade
 
 
 
-// Fim do Excluir Funcionário //
+
 
 

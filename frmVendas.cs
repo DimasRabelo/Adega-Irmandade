@@ -22,5 +22,28 @@ namespace Adega_Irmandade
             new frmMenuPrincipal().Show();
             Close();
         }
+
+        private void frmVendas_Load(object sender, EventArgs e)
+        {
+            banco.dgVendas = dgvVendas;
+            banco.CarregarTblVenda(); 
+
+        }
+
+        private void txtVendaNome_TextChanged(object sender, EventArgs e)
+        {
+            variaveis.nomeFuncionario = txtVendaNome.Text;
+            banco.CarregarVendasNome();
+
+            if (txtVendaNome.Text == "")
+            {
+                chkAtivo.Visible = true;
+
+            }
+            else
+            {
+                chkAtivo.Visible = false;
+            }
+        }
     }
 }

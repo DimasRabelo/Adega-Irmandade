@@ -22,5 +22,11 @@ namespace Adega_Irmandade
             new frmMenuPrincipal().Show();
             Close();
         }
+
+        private void frmCliente_Load(object sender, EventArgs e)
+        {
+            banco.dgClientes = dgvCliente;
+            banco.CarregarCliente();
+        }
     }
 }

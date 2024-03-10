@@ -83,13 +83,13 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRelatorios.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRelatorios.GridColor = System.Drawing.Color.White;
-            this.dgvRelatorios.Location = new System.Drawing.Point(230, 64);
+            this.dgvRelatorios.Location = new System.Drawing.Point(52, 64);
             this.dgvRelatorios.MultiSelect = false;
             this.dgvRelatorios.Name = "dgvRelatorios";
             this.dgvRelatorios.ReadOnly = true;
             this.dgvRelatorios.RowHeadersVisible = false;
             this.dgvRelatorios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRelatorios.Size = new System.Drawing.Size(750, 430);
+            this.dgvRelatorios.Size = new System.Drawing.Size(928, 430);
             this.dgvRelatorios.TabIndex = 88;
             // 
             // btnExcluir
