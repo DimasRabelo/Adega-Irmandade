@@ -210,6 +210,7 @@
             this.txtVendaNome.Name = "txtVendaNome";
             this.txtVendaNome.Size = new System.Drawing.Size(750, 27);
             this.txtVendaNome.TabIndex = 103;
+            this.txtVendaNome.TextChanged += new System.EventHandler(this.txtVendaNome_TextChanged);
             // 
             // frmVendas
             // 

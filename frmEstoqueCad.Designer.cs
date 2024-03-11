@@ -47,8 +47,10 @@
             this.lblCadCep = new System.Windows.Forms.Label();
             this.cmbCadProduto = new System.Windows.Forms.ComboBox();
             this.nudQuantidade = new System.Windows.Forms.NumericUpDown();
+            this.pctFechar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // mkdCadDataAtual
@@ -290,12 +292,26 @@
             this.nudQuantidade.Size = new System.Drawing.Size(120, 20);
             this.nudQuantidade.TabIndex = 111;
             // 
+            // pctFechar
+            // 
+            this.pctFechar.BackColor = System.Drawing.Color.Transparent;
+            this.pctFechar.Image = global::Adega_Irmandade.Properties.Resources.botaoFechar;
+            this.pctFechar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pctFechar.Location = new System.Drawing.Point(1151, 12);
+            this.pctFechar.Name = "pctFechar";
+            this.pctFechar.Size = new System.Drawing.Size(39, 30);
+            this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctFechar.TabIndex = 112;
+            this.pctFechar.TabStop = false;
+            this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
+            // 
             // frmEstoqueCad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
             this.ClientSize = new System.Drawing.Size(1230, 665);
+            this.Controls.Add(this.pctFechar);
             this.Controls.Add(this.nudQuantidade);
             this.Controls.Add(this.cmbCadProduto);
             this.Controls.Add(this.lblCadCep);
@@ -321,6 +337,7 @@
             this.Text = "frmEstoqueCad";
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +364,6 @@
         private System.Windows.Forms.Label lblCadCep;
         private System.Windows.Forms.ComboBox cmbCadProduto;
         private System.Windows.Forms.NumericUpDown nudQuantidade;
+        private System.Windows.Forms.PictureBox pctFechar;
     }
 }

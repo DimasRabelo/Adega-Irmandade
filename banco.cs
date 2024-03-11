@@ -1245,8 +1245,9 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string selecionar = "SELECT * FROM tblvendas WHERE idFuncionario LIKE '%" + variaveis.nomeFuncionario + "%' ORDER BY idFuncionario;";
+                string selecionar = "SELECT v.idVenda, f.nomeFuncionario AS FUNCIONÁRIO, v.dataVenda AS 'DATA DA VENDA', v.horaVenda AS 'HORA DA VENDA', v.statusVenda AS STATUS, v.valorTotalVenda AS 'VALOR TOTAL', p.nomeProduto AS PRODUTO FROM tblvendas v INNER JOIN tblfuncionarios f ON v.idFuncionario = f.idFuncionario INNER JOIN tblprodutos p ON v.idProduto = p.idProduto WHERE f.nomeFuncionario LIKE @nomeFuncionario ORDER BY v.idVenda ASC;";
                 MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                cmd.Parameters.AddWithValue("@nomeFuncionario", "%" + variaveis.nomeFuncionario + "%");
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1274,6 +1275,70 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar os Vendas pelo nome!\n\n" + erro);
             }
         }
+
+        public static void CarregarStatusVendas()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT v.idVenda, v.statusVenda, v.valorTotalVenda, v.horaVenda, v.dataVenda, f.nomeFuncionario, p.nomeProduto, p.precoCompraProduto FROM tblvendas v INNER JOIN tblfuncionarios f ON v.idFuncionario = f.idFuncionario INNER JOIN tblprodutos p ON v.idProduto = p.idProduto WHERE v.statusVenda = 'ATIVO';";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgVendas.DataSource = dt;
+
+
+
+
+                dgVendas.Columns[0].Visible = false;
+                dgVendas.Columns[1].HeaderText = "FUNCIONÁRIO";
+                dgVendas.Columns[2].HeaderText = "DATA DA VENDA";
+                dgVendas.Columns[3].HeaderText = "HORA DA VENDA";
+                dgVendas.Columns[4].HeaderText = "STATUS";
+                dgVendas.Columns[5].HeaderText = "VALOR TOTAL";
+                dgVendas.Columns[6].HeaderText = "PRODUTO";
+
+
+
+
+                dgVendas.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os status do Vendas!\n\n" + erro);
+            }
+        }
+
+        public static void InserirVendas()
+        {
+            try
+            {
+                conexao.Conectar();
+                string inserir = "INSERT INTO `tblvendas`(idFuncionario, dataVenda, horaVenda, statusVenda, valorTotalVenda, idProduto) VALUES (@funcionario,@data,@hora,@status,@valor,@produto);";
+                MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
+                // Parâmetros 
+                cmd.Parameters.AddWithValue("@nome", variaveis.nomeUsuario);
+                cmd.Parameters.AddWithValue("@email", variaveis.emailUsuario);
+                cmd.Parameters.AddWithValue("@senha", variaveis.senhaUsuario);
+                cmd.Parameters.AddWithValue("@status", variaveis.statusUsuario);
+                cmd.Parameters.AddWithValue("@foto", variaveis.fotoUsuario);
+
+                // Fim parâmetros
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("USUÁRIO Cadastrado Com Sucesso!", "CADASTRO USUÁRIO");
+                conexao.Desconectar();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Cadastrar o Usuário!\n\n" + erro.Message, "ERRO");
+            }
+        }
+
+
 
 
 

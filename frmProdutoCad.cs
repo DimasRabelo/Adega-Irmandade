@@ -34,7 +34,8 @@ namespace Adega_Irmandade
 
         private void pctFechar_Click(object sender, EventArgs e)
         {
-
+            new frmProduto().Show();
+            Close();
         }
 
         private void pctLogo_Click(object sender, EventArgs e)

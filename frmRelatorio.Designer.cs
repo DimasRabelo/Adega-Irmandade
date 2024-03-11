@@ -133,6 +133,7 @@
             this.btnCadastrar.TabIndex = 85;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+          
             // 
             // pctFechar
             // 

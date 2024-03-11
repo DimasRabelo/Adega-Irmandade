@@ -22,5 +22,7 @@ namespace Adega_Irmandade
             new frmMenuPrincipal().Show();
             Close();
         }
+
+        
     }
 }

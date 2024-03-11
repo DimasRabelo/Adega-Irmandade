@@ -82,7 +82,7 @@ namespace Adega_Irmandade
             Hide();
         }
 
-        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
+        private void txtVendaNome_TextChanged(object sender, EventArgs e)
         {
             variaveis.nomeFuncionario = txtVendaNome.Text;
             banco.CarregarVendasNome();
@@ -95,6 +95,20 @@ namespace Adega_Irmandade
             else
             {
                 chkAtivo.Visible = false;
+            }
+        }
+
+        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkAtivo.Checked == true)
+            {
+                banco.CarregarStatusVendas();
+                txtVendaNome.Enabled = false;
+            }
+            else
+            {
+                banco.CarregarVendas();
+                txtVendaNome.Enabled = true;
             }
         }
     }

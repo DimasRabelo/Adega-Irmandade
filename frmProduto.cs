@@ -100,6 +100,12 @@ namespace Adega_Irmandade
                 variaveis.codProduto = Convert.ToInt32(dgvProdutos[0, variaveis.linhaSelecionada].Value);
             }
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            new frmProdutoCad().Show();
+            Hide();
+        }
     }
  }
     
