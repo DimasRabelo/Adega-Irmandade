@@ -146,9 +146,9 @@ namespace Adega_Irmandade
             else
             {
                 variaveis.nomeUsuario = txtCadNome.Text;
-                variaveis.emailFuncionario = txtCadEmail.Text;
-                variaveis.senhaFuncionario = txtCadSenha.Text;
-                variaveis.statusFuncionario = cmbCadStatus.Text;
+                variaveis.emailUsuario = txtCadEmail.Text;
+                variaveis.senhaUsuario = txtCadSenha.Text;
+                variaveis.statusUsuario = cmbCadStatus.Text;
 
                 if (variaveis.funcao == "CADASTRAR")
                 {
