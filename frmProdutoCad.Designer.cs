@@ -50,14 +50,10 @@
             this.lblCadCadastrar = new System.Windows.Forms.Label();
             this.mksHoraRecebimento = new System.Windows.Forms.MaskedTextBox();
             this.lblCadRecebimento = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.nudPrecoCompra = new System.Windows.Forms.NumericUpDown();
-            this.nudPrecoVenda = new System.Windows.Forms.NumericUpDown();
+            this.txtCadPrecoCompra = new System.Windows.Forms.TextBox();
+            this.txtPrecoVenda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrecoCompra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrecoVenda)).BeginInit();
             this.SuspendLayout();
             // 
             // mkdCadDataRecebimento
@@ -134,7 +130,7 @@
             this.txtCadFornecedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtCadFornecedor.Enabled = false;
             this.txtCadFornecedor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadFornecedor.Location = new System.Drawing.Point(302, 469);
+            this.txtCadFornecedor.Location = new System.Drawing.Point(315, 469);
             this.txtCadFornecedor.Name = "txtCadFornecedor";
             this.txtCadFornecedor.Size = new System.Drawing.Size(245, 26);
             this.txtCadFornecedor.TabIndex = 97;
@@ -163,7 +159,7 @@
             "ALCOOLICO",
             "NÃO ALCOÓLICO",
             "TABACARIA"});
-            this.cmbCadCategoria.Location = new System.Drawing.Point(421, 253);
+            this.cmbCadCategoria.Location = new System.Drawing.Point(432, 253);
             this.cmbCadCategoria.Name = "cmbCadCategoria";
             this.cmbCadCategoria.Size = new System.Drawing.Size(375, 26);
             this.cmbCadCategoria.TabIndex = 92;
@@ -209,7 +205,7 @@
             this.lblCadFornecedor.BackColor = System.Drawing.Color.Transparent;
             this.lblCadFornecedor.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadFornecedor.ForeColor = System.Drawing.Color.White;
-            this.lblCadFornecedor.Location = new System.Drawing.Point(347, 431);
+            this.lblCadFornecedor.Location = new System.Drawing.Point(310, 431);
             this.lblCadFornecedor.Name = "lblCadFornecedor";
             this.lblCadFornecedor.Size = new System.Drawing.Size(167, 27);
             this.lblCadFornecedor.TabIndex = 83;
@@ -348,26 +344,25 @@
             this.lblCadRecebimento.TabIndex = 107;
             this.lblCadRecebimento.Text = "HORA \r\nRECEBIMENTO:";
             // 
-            // numericUpDown1
+            // txtCadPrecoCompra
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(-15, -15);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 108;
+            this.txtCadPrecoCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCadPrecoCompra.Enabled = false;
+            this.txtCadPrecoCompra.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCadPrecoCompra.Location = new System.Drawing.Point(575, 353);
+            this.txtCadPrecoCompra.Name = "txtCadPrecoCompra";
+            this.txtCadPrecoCompra.Size = new System.Drawing.Size(232, 26);
+            this.txtCadPrecoCompra.TabIndex = 109;
             // 
-            // nudPrecoCompra
+            // txtPrecoVenda
             // 
-            this.nudPrecoCompra.Location = new System.Drawing.Point(676, 369);
-            this.nudPrecoCompra.Name = "nudPrecoCompra";
-            this.nudPrecoCompra.Size = new System.Drawing.Size(120, 20);
-            this.nudPrecoCompra.TabIndex = 109;
-            // 
-            // nudPrecoVenda
-            // 
-            this.nudPrecoVenda.Location = new System.Drawing.Point(46, 475);
-            this.nudPrecoVenda.Name = "nudPrecoVenda";
-            this.nudPrecoVenda.Size = new System.Drawing.Size(120, 20);
-            this.nudPrecoVenda.TabIndex = 110;
+            this.txtPrecoVenda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPrecoVenda.Enabled = false;
+            this.txtPrecoVenda.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecoVenda.Location = new System.Drawing.Point(46, 467);
+            this.txtPrecoVenda.Name = "txtPrecoVenda";
+            this.txtPrecoVenda.Size = new System.Drawing.Size(202, 26);
+            this.txtPrecoVenda.TabIndex = 110;
             // 
             // frmProdutoCad
             // 
@@ -375,9 +370,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
             this.ClientSize = new System.Drawing.Size(1230, 665);
-            this.Controls.Add(this.nudPrecoVenda);
-            this.Controls.Add(this.nudPrecoCompra);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.txtPrecoVenda);
+            this.Controls.Add(this.txtCadPrecoCompra);
             this.Controls.Add(this.lblCadRecebimento);
             this.Controls.Add(this.mksHoraRecebimento);
             this.Controls.Add(this.mkdCadDataRecebimento);
@@ -406,9 +400,6 @@
             this.Text = "frmProdutoCad";
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrecoCompra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrecoVenda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,8 +428,7 @@
         private System.Windows.Forms.Label lblCadCadastrar;
         private System.Windows.Forms.MaskedTextBox mksHoraRecebimento;
         private System.Windows.Forms.Label lblCadRecebimento;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown nudPrecoCompra;
-        private System.Windows.Forms.NumericUpDown nudPrecoVenda;
+        private System.Windows.Forms.TextBox txtCadPrecoCompra;
+        private System.Windows.Forms.TextBox txtPrecoVenda;
     }
 }

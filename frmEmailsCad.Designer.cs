@@ -45,7 +45,7 @@
             this.lblCadNome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCadCadastrar = new System.Windows.Forms.Label();
-            this.lblCadCep = new System.Windows.Forms.Label();
+            this.lblCadHora = new System.Windows.Forms.Label();
             this.mkdCadHora = new System.Windows.Forms.MaskedTextBox();
             this.pctFechar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
@@ -63,6 +63,7 @@
             this.mkdCadDataContato.TabIndex = 106;
             this.mkdCadDataContato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mkdCadDataContato.ValidatingType = typeof(System.DateTime);
+            this.mkdCadDataContato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataContato_KeyPress);
             // 
             // btnCadSalvar
             // 
@@ -77,6 +78,7 @@
             this.btnCadSalvar.TabIndex = 105;
             this.btnCadSalvar.Text = "SALVAR";
             this.btnCadSalvar.UseVisualStyleBackColor = false;
+            this.btnCadSalvar.Click += new System.EventHandler(this.btnCadSalvar_Click);
             // 
             // pctLogo
             // 
@@ -114,6 +116,7 @@
             this.mkdCadTelefone.Size = new System.Drawing.Size(166, 26);
             this.mkdCadTelefone.TabIndex = 98;
             this.mkdCadTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkdCadTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadTelefone_KeyPress);
             // 
             // txtCadMensagem
             // 
@@ -127,6 +130,7 @@
             this.txtCadMensagem.Name = "txtCadMensagem";
             this.txtCadMensagem.Size = new System.Drawing.Size(277, 26);
             this.txtCadMensagem.TabIndex = 97;
+            this.txtCadMensagem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadMensagem_KeyPress);
             // 
             // cmbCadStatus
             // 
@@ -140,6 +144,7 @@
             this.cmbCadStatus.Name = "cmbCadStatus";
             this.cmbCadStatus.Size = new System.Drawing.Size(204, 26);
             this.cmbCadStatus.TabIndex = 96;
+            this.cmbCadStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadStatus_KeyPress);
             // 
             // txtCadEmail
             // 
@@ -150,6 +155,7 @@
             this.txtCadEmail.Name = "txtCadEmail";
             this.txtCadEmail.Size = new System.Drawing.Size(435, 26);
             this.txtCadEmail.TabIndex = 93;
+            this.txtCadEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadEmail_KeyPress);
             // 
             // txtCadNome
             // 
@@ -159,6 +165,7 @@
             this.txtCadNome.Name = "txtCadNome";
             this.txtCadNome.Size = new System.Drawing.Size(753, 26);
             this.txtCadNome.TabIndex = 91;
+            this.txtCadNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadNome_KeyPress);
             // 
             // lblCadMensagem
             // 
@@ -171,7 +178,6 @@
             this.lblCadMensagem.Size = new System.Drawing.Size(143, 27);
             this.lblCadMensagem.TabIndex = 86;
             this.lblCadMensagem.Text = "MENSAGEM:";
-          
             // 
             // lblCadStatus
             // 
@@ -261,17 +267,17 @@
             this.lblCadCadastrar.Text = "CADASTRO";
             this.lblCadCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblCadCep
+            // lblCadHora
             // 
-            this.lblCadCep.AutoSize = true;
-            this.lblCadCep.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadCep.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCep.ForeColor = System.Drawing.Color.White;
-            this.lblCadCep.Location = new System.Drawing.Point(678, 413);
-            this.lblCadCep.Name = "lblCadCep";
-            this.lblCadCep.Size = new System.Drawing.Size(121, 54);
-            this.lblCadCep.TabIndex = 87;
-            this.lblCadCep.Text = "HORA \r\nCONTATO:";
+            this.lblCadHora.AutoSize = true;
+            this.lblCadHora.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadHora.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadHora.ForeColor = System.Drawing.Color.White;
+            this.lblCadHora.Location = new System.Drawing.Point(678, 413);
+            this.lblCadHora.Name = "lblCadHora";
+            this.lblCadHora.Size = new System.Drawing.Size(121, 54);
+            this.lblCadHora.TabIndex = 87;
+            this.lblCadHora.Text = "HORA \r\nCONTATO:";
             // 
             // mkdCadHora
             // 
@@ -284,6 +290,7 @@
             this.mkdCadHora.TabIndex = 99;
             this.mkdCadHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mkdCadHora.ValidatingType = typeof(System.DateTime);
+            this.mkdCadHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadHora_KeyPress);
             // 
             // pctFechar
             // 
@@ -315,7 +322,7 @@
             this.Controls.Add(this.cmbCadStatus);
             this.Controls.Add(this.txtCadEmail);
             this.Controls.Add(this.txtCadNome);
-            this.Controls.Add(this.lblCadCep);
+            this.Controls.Add(this.lblCadHora);
             this.Controls.Add(this.lblCadMensagem);
             this.Controls.Add(this.lblCadStatus);
             this.Controls.Add(this.lblCadTelefone);
@@ -354,7 +361,7 @@
         private System.Windows.Forms.Label lblCadNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCadCadastrar;
-        private System.Windows.Forms.Label lblCadCep;
+        private System.Windows.Forms.Label lblCadHora;
         private System.Windows.Forms.MaskedTextBox mkdCadHora;
         private System.Windows.Forms.PictureBox pctFechar;
     }

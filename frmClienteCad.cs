@@ -248,6 +248,11 @@ namespace Adega_Irmandade
                 btnLimpar.Enabled = false;
             }
         }
+
+        private void txtCadNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -76,11 +76,7 @@ namespace Adega_Irmandade
             dgvVendas.ClearSelection();
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            new frmVendasCad().Show();
-            Hide();
-        }
+      
 
         private void txtVendaNome_TextChanged(object sender, EventArgs e)
         {
@@ -109,6 +105,39 @@ namespace Adega_Irmandade
             {
                 banco.CarregarVendas();
                 txtVendaNome.Enabled = true;
+            }
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            variaveis.funcao = "CADASTRAR";
+            new frmVendasCad().Show();
+            Hide();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            variaveis.funcao = "ALTERAR";
+            new frmVendasCad().Show();
+            Hide();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (variaveis.linhaSelecionada >= 0)
+            {
+                var resposta = MessageBox.Show("Deseja realmente excluir?, Essa ação não poderá ser desfeita.", "EXCLUIR", MessageBoxButtons.YesNo);
+                if (resposta == DialogResult.Yes)
+                {
+                    banco.DesativarVendas();
+                    banco.CarregarVendas();
+                    dgvVendas.ClearSelection();
+                }
+                else
+                {
+                    dgvVendas.ClearSelection();
+                }
+
             }
         }
     }
