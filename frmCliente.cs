@@ -127,7 +127,7 @@ namespace Adega_Irmandade
                 var resposta = MessageBox.Show("Deseja realmente excluir?, Essa ação não poderá ser desfeita.", "EXCLUIR", MessageBoxButtons.YesNo);
                 if (resposta == DialogResult.Yes)
                 {
-                    banco.desativarCliente();
+                    banco.DesativarCliente();
                     banco.CarregarCliente();
                     dgvCliente.ClearSelection();
                 }

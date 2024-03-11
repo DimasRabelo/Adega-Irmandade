@@ -135,8 +135,35 @@ namespace Adega_Irmandade
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            variaveis.funcao = "CADASTRAR";
             new frmEmailsCad().Show();
             Hide();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            variaveis.funcao = "ALTERAR";
+            new frmEmailsCad().Show();
+            Hide();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (variaveis.linhaSelecionada >= 0)
+            {
+                var resposta = MessageBox.Show("Deseja realmente excluir?, Essa ação não poderá ser desfeita.", "EXCLUIR", MessageBoxButtons.YesNo);
+                if (resposta == DialogResult.Yes)
+                {
+                    banco.DesativarEmails();
+                    banco.CarregarEmails();
+                    dgvEmails.ClearSelection();
+                }
+                else
+                {
+                    dgvEmails.ClearSelection();
+                }
+
+            }
         }
     }
 }

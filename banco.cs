@@ -372,11 +372,6 @@ namespace Adega_Irmandade
             }
         }
 
-
-        // Fim do Formulário do Funcionario //
-
-        // Inicio do Cadastro dos Funcionarios//
-
         public static void InserirFuncionario()
         {
             try
@@ -427,11 +422,7 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao Cadastrar o Funcionário!\n\n" + erro.Message, "ERRO");
             }
         }
-
-        // Fim do Cadastro dos Funcionários //
-
-        // Inicio do Alterar Funcionários //
-
+      
         public static void CarregarDadosFuncionario()
         {
             try
@@ -464,7 +455,7 @@ namespace Adega_Irmandade
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao carregar os Instrutores!\n\n" + erro);
+                MessageBox.Show("Erro ao carregar os Funcionários!\n\n" + erro);
             }
         }
 
@@ -499,7 +490,7 @@ namespace Adega_Irmandade
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao Alterado o Funcionário!\n\n" + erro.Message, "ERRO");
+                MessageBox.Show("Erro ao Alterar o Funcionário!\n\n" + erro.Message, "ERRO");
             }
         }
 
@@ -545,11 +536,7 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao Alterar a Foto do Funcionario! \n\n" + erro.Message, "Erro");
             }
         }
-
-        // Fim do Alterar Funcionário //
-
-        // Inicio do Excluir Funcionário //
-
+      
         public static void DesativarFuncionario()
         {
             try
@@ -572,7 +559,7 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao desativar o Funcionário!\n\n" + erro.Message, "ERRO");
             }
         }
-        // Fim do Excluir Funcionário //
+        // Fim do Formulário Funcionário //
 
         // Inicio do Formulário Produtos //
 
@@ -768,7 +755,29 @@ namespace Adega_Irmandade
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao Alterado o produto!\n\n" + erro.Message, "ERRO");
+                MessageBox.Show("Erro ao Alterado o Produto!\n\n" + erro.Message, "ERRO");
+            }
+        }
+        public static void DesativarProdutos()
+        {
+            try
+            {
+                conexao.Conectar();
+                string alterar = "UPDATE tblprodutos SET statusProduto='DESATIVADO' WHERE idProduto = @codigo;";
+                MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
+                //parâmetros 
+
+                cmd.Parameters.AddWithValue("@status", variaveis.statusProduto);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codProduto); // Correção do parâmetro
+                                                                                  //fim parâmetros
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Produto Desativado Com Sucesso!", " DESATIVADO PRODUTO");
+                conexao.Desconectar();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao desativar o Produto!\n\n" + erro.Message, "ERRO");
             }
         }
 
@@ -929,7 +938,7 @@ namespace Adega_Irmandade
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao carregar os Instrutores!\n\n" + erro);
+                MessageBox.Show("Erro ao carregar os Emails!\n\n" + erro);
             }
         }
 
@@ -980,27 +989,11 @@ namespace Adega_Irmandade
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao desativar o Email!\n\n" + erro.Message, "ERRO");
+                MessageBox.Show("Erro ao Desativar o Email!\n\n" + erro.Message, "ERRO");
             }
         }
 
         // Fim métodos do Email //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         // Inicio Formulario Estoque
@@ -1068,7 +1061,7 @@ namespace Adega_Irmandade
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao carregar os estoque pelo nome!\n\n" + erro);
+                MessageBox.Show("Erro ao carregar os estoques pelo nome!\n\n" + erro);
             }
 
 
@@ -1161,7 +1154,7 @@ namespace Adega_Irmandade
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao carregar os Instrutores!\n\n" + erro);
+                MessageBox.Show("Erro ao carregar dados do Estoque!\n\n" + erro);
             }
         }
 
@@ -1194,10 +1187,30 @@ namespace Adega_Irmandade
             }
         }
 
+        public static void DesativarEstoque()
+        {
+            try
+            {
+                conexao.Conectar();
+                string alterar = "UPDATE tblestoque SET statusEstoque='DESATIVADO' WHERE idEstoque = @codigo;";
+                MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
+                //parâmetros 
+
+                cmd.Parameters.AddWithValue("@status", variaveis.statusEstoque);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codEstoque); 
+                                                                             
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Estoque Desativado Com Sucesso!", " DESATIVADO ESTOQUE");
+                conexao.Desconectar();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao desativar o Estoque!\n\n" + erro.Message, "ERRO");
+            }
+        }
+
         // Fim Formulário Estoque //
-
-
-
 
 
         // Inicio Formulario Vendas //
@@ -1213,11 +1226,8 @@ namespace Adega_Irmandade
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                // Define o DataSource do DataGridView
-                dgVendas.DataSource = dt;
-
                 
-               
+                dgVendas.DataSource = dt;
 
                 dgVendas.Columns[0].Visible = false;
                 dgVendas.Columns[1].HeaderText = "FUNCIONÁRIO";
@@ -1226,10 +1236,7 @@ namespace Adega_Irmandade
                 dgVendas.Columns[4].HeaderText = "STATUS";
                 dgVendas.Columns[5].HeaderText = "VALOR TOTAL";
                 dgVendas.Columns[6].HeaderText = "PRODUTO";
-
-
-
-                
+               
                 dgVendas.ClearSelection();
 
                 conexao.Desconectar();
@@ -1289,9 +1296,6 @@ namespace Adega_Irmandade
 
                 dgVendas.DataSource = dt;
 
-
-
-
                 dgVendas.Columns[0].Visible = false;
                 dgVendas.Columns[1].HeaderText = "FUNCIONÁRIO";
                 dgVendas.Columns[2].HeaderText = "DATA DA VENDA";
@@ -1300,15 +1304,12 @@ namespace Adega_Irmandade
                 dgVendas.Columns[5].HeaderText = "VALOR TOTAL";
                 dgVendas.Columns[6].HeaderText = "PRODUTO";
 
-
-
-
                 dgVendas.ClearSelection();
                 conexao.Desconectar();
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao carregar os status do Vendas!\n\n" + erro);
+                MessageBox.Show("Erro ao carregar os status da Vendas!\n\n" + erro);
             }
         }
 
@@ -1317,35 +1318,105 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string inserir = "INSERT INTO `tblvendas`(idFuncionario, dataVenda, horaVenda, statusVenda, valorTotalVenda, idProduto) VALUES (@funcionario,@data,@hora,@status,@valor,@produto);";
+                string inserir = "INSERT INTO tblvendas(idFuncionario, dataVenda, horaVenda, statusVenda, valorTotalVenda, idProduto) VALUES (@funcionario,@data,@hora,@status,@valor,@produto);";
                 MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
                 // Parâmetros 
-                cmd.Parameters.AddWithValue("@nome", variaveis.nomeUsuario);
-                cmd.Parameters.AddWithValue("@email", variaveis.emailUsuario);
-                cmd.Parameters.AddWithValue("@senha", variaveis.senhaUsuario);
-                cmd.Parameters.AddWithValue("@status", variaveis.statusUsuario);
-                cmd.Parameters.AddWithValue("@foto", variaveis.fotoUsuario);
+                cmd.Parameters.AddWithValue("@funcionario", variaveis.idFuncionario);
+                cmd.Parameters.AddWithValue("@data", variaveis.dataVenda);
+                cmd.Parameters.AddWithValue("@hora", variaveis.horaVenda);
+                cmd.Parameters.AddWithValue("@status", variaveis.statusVenda);
+                cmd.Parameters.AddWithValue("@valor", variaveis.valorTotalVenda);
+                cmd.Parameters.AddWithValue("@produto", variaveis.idProduto);
 
                 // Fim parâmetros
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("USUÁRIO Cadastrado Com Sucesso!", "CADASTRO USUÁRIO");
+                MessageBox.Show("Vendas Cadastradada Com Sucesso!", "CADASTRO VENDAS");
                 conexao.Desconectar();
 
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao Cadastrar o Usuário!\n\n" + erro.Message, "ERRO");
+                MessageBox.Show("Erro ao Cadastrar o Vendas!\n\n" + erro.Message, "ERRO");
             }
         }
 
+        public static void CarregarDadosVendas()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblvendas WHERE idVenda = @codigo;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codVendas);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    variaveis.nomeFuncionario = reader.GetString(1);
+                    variaveis.dataVenda = reader.GetDateTime(2);
+                    variaveis.horaVenda = reader.GetDateTime(3);
+                    variaveis.statusVenda = reader.GetString(4);
+                    variaveis.valorTotalVenda = reader.GetString(5);
+                    variaveis.idProduto = reader.GetString(6);
 
 
+                }
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar vendas!\n\n" + erro);
+            }
+        }
 
+        public static void AlterarVendas()
+        {
+            try
+            {
+                conexao.Conectar();
+                string alterar = "UPDATE tblvendas SET idFuncionario=@funcionario, dataVenda=@data, horaVenda=@hora, statusVenda=@status, valorTotalVenda=@valorVenda, idProduto=@produto WHERE idVenda=@codigo;";
+                MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
+                //parâmetros 
+                cmd.Parameters.AddWithValue("@funcionario", variaveis.nomeFuncionario);
+                cmd.Parameters.AddWithValue("@data", variaveis.dataVenda);
+                cmd.Parameters.AddWithValue("@hora", variaveis.horaVenda);
+                cmd.Parameters.AddWithValue("@status", variaveis.statusVenda);
+                cmd.Parameters.AddWithValue("@valorVenda",variaveis.valorTotalVenda);
+                cmd.Parameters.AddWithValue("@produto", variaveis.nomeProduto);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codVendas);
 
+                //fim parâmetros
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Vendas Alterado Com Sucesso!", "CADASTRO VENDAS");
+                conexao.Desconectar();
 
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Alterar as Vendas!\n\n" + erro.Message, "ERRO");
+            }
+        }
 
+        public static void DesativarVendas()
+        {
+            try
+            {
+                conexao.Conectar();
+                string alterar = "UPDATE tblvendas SET statusVenda='DESATIVADO' WHERE idVenda = @codigo;";
+                MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
+                
+                cmd.Parameters.AddWithValue("@status", variaveis.statusVenda);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codVendas);
 
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Vendas Desativado Com Sucesso!", " DESATIVADO VENDAS");
+                conexao.Desconectar();
 
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao desativar o Vendas!\n\n" + erro.Message, "ERRO");
+            }
+        }
 
         // Inicio Formulário Cliente-Usuário Menu Principal //
 
@@ -1368,10 +1439,6 @@ namespace Adega_Irmandade
                 dgClientes.Columns[3].HeaderText = "SENHA";
                 dgClientes.Columns[4].HeaderText = "STATUS";
                 dgClientes.Columns[5].HeaderText = "FOTO";
-
-
-
-
 
                 dgClientes.ClearSelection();
                 conexao.Desconectar();
@@ -1401,10 +1468,6 @@ namespace Adega_Irmandade
                 dgClientes.Columns[4].HeaderText = "STATUS";
                 dgClientes.Columns[5].HeaderText = "FOTO";
 
-
-
-
-
                 dgClientes.ClearSelection();
                 conexao.Desconectar();
             }
@@ -1433,19 +1496,13 @@ namespace Adega_Irmandade
                 dgClientes.Columns[4].HeaderText = "STATUS";
                 dgClientes.Columns[5].HeaderText = "FOTO";
                
-
-
-
-
                 dgClientes.ClearSelection();
                 conexao.Desconectar();
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao carregar os clientes pelo nome!\n\n" + erro);
+                MessageBox.Show("Erro ao carregar status do Cliente!\n\n" + erro);
             }
-
-            // Fim do Menu Principal //
 
             // Inicio Cadastro Usuario Alteração e Exclusão //
 
@@ -1457,14 +1514,14 @@ namespace Adega_Irmandade
                 conexao.Conectar();
                 string inserir = "INSERT INTO tblusuarios (nomeUsuario,emailUsuario, senhaUsuario, statusUsuario, fotoUsuario) VALUES (@nome, @email, @senha, @status, @foto)";
                 MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
-                // Parâmetros 
+                
                 cmd.Parameters.AddWithValue("@nome", variaveis.nomeUsuario);
                 cmd.Parameters.AddWithValue("@email", variaveis.emailUsuario);
                 cmd.Parameters.AddWithValue("@senha", variaveis.senhaUsuario);
                 cmd.Parameters.AddWithValue("@status", variaveis.statusUsuario);
                 cmd.Parameters.AddWithValue("@foto", variaveis.fotoUsuario);
                
-                // Fim parâmetros
+               
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("USUÁRIO Cadastrado Com Sucesso!", "CADASTRO USUÁRIO");
                 conexao.Desconectar();
@@ -1545,9 +1602,6 @@ namespace Adega_Irmandade
             try
             {
 
-
-
-
                 conexao.Conectar();
                 string alterar = "UPDATE tblusuarios SET fotoUsuario = @foto WHERE idUsuario = @codigo";
                 MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
@@ -1581,7 +1635,7 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao Alterar a Foto do Cliente! \n\n" + erro.Message, "Erro");
             }
         }
-        public static void desativarCliente()
+        public static void DesativarCliente()
         {
             try
             {
@@ -1591,8 +1645,8 @@ namespace Adega_Irmandade
                 //parâmetros 
 
                 cmd.Parameters.AddWithValue("@status", variaveis.statusUsuario);
-                cmd.Parameters.AddWithValue("@codigo", variaveis.codUsuario); // Correção do parâmetro
-                                                                                  //fim parâmetros
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codUsuario); 
+                                                                                 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Cliente Desativado Com Sucesso!", " DESATIVADO CLIENTE");
                 conexao.Desconectar();
