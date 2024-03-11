@@ -160,8 +160,9 @@
             this.cmbCadCategoria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCadCategoria.FormattingEnabled = true;
             this.cmbCadCategoria.Items.AddRange(new object[] {
-            "ADMINISTRADOR",
-            "USUÁRIO"});
+            "ALCOOLICO",
+            "NÃO ALCOÓLICO",
+            "TABACARIA"});
             this.cmbCadCategoria.Location = new System.Drawing.Point(421, 253);
             this.cmbCadCategoria.Name = "cmbCadCategoria";
             this.cmbCadCategoria.Size = new System.Drawing.Size(375, 26);

@@ -56,7 +56,7 @@ namespace Adega_Irmandade
 
         public static int codUsuario;
 
-        public static string nomeUsuario;
+        public static string nomeUsuario, emailUsuario, senhaUsuario, fotoUsuario, statusUsuario, atFotoUsuario, caminhoFotoUsuario;
 
 
 

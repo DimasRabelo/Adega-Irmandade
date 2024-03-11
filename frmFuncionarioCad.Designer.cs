@@ -77,7 +77,7 @@
             this.lblCadCadastrar.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCadastrar.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCadastrar.ForeColor = System.Drawing.Color.White;
-            this.lblCadCadastrar.Location = new System.Drawing.Point(85, 16);
+            this.lblCadCadastrar.Location = new System.Drawing.Point(66, 16);
             this.lblCadCadastrar.Name = "lblCadCadastrar";
             this.lblCadCadastrar.Size = new System.Drawing.Size(178, 40);
             this.lblCadCadastrar.TabIndex = 0;
@@ -316,6 +316,7 @@
             this.txtCadNome.Name = "txtCadNome";
             this.txtCadNome.Size = new System.Drawing.Size(750, 26);
             this.txtCadNome.TabIndex = 51;
+            
             this.txtCadNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadNome_KeyPress);
             // 
             // txtCadCargo
@@ -527,7 +528,7 @@
             this.mkdCadDataAdmissao.ValidatingType = typeof(System.DateTime);
             this.mkdCadDataAdmissao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataAdmissao_KeyPress);
             // 
-            // frmCadFuncionario
+            // frmFuncionarioCad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -571,7 +572,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCadCadastrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCadFuncionario";
+            this.Name = "frmFuncionarioCad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmCadFuncionario_Load);

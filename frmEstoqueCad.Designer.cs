@@ -267,8 +267,17 @@
             this.cmbCadProduto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCadProduto.FormattingEnabled = true;
             this.cmbCadProduto.Items.AddRange(new object[] {
-            "ADMINISTRADOR",
-            "USUÁRIO"});
+            "ORIGINAL269ML",
+            "GATORADE500ML",
+            "REDLABEL1LT",
+            "COCACOLA2LT",
+            "SPATEN269ML",
+            "WHITEHORSE1LT",
+            "CARVÃODECOCOZOMO",
+            "AMSTEL269ML",
+            "FANTA350ML",
+            "H2O500ML",
+            "JACK DANIELS"});
             this.cmbCadProduto.Location = new System.Drawing.Point(51, 460);
             this.cmbCadProduto.Name = "cmbCadProduto";
             this.cmbCadProduto.Size = new System.Drawing.Size(435, 26);

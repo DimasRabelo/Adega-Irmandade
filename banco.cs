@@ -46,9 +46,6 @@ namespace Adega_Irmandade
                 return imageToByte;
             }
         }
-
-        // Converter a Imagem de Byte para IMGSystem.Net.WebException: 'O servidor remoto retornou um erro: (530) Não conectado(a).'
-
         public static Bitmap ByteToImage(byte[] blob)
         {
             MemoryStream memoryStream = new MemoryStream();
@@ -58,6 +55,10 @@ namespace Adega_Irmandade
             memoryStream.Dispose();
             return bm;
         }
+        // Tratamento de imagem do Cliente Usuario //
+
+
+
 
         // Inicio do Menu Principal//
 
@@ -955,8 +956,9 @@ namespace Adega_Irmandade
                 dgClientes.Columns[1].HeaderText = "NOME";
                 dgClientes.Columns[2].HeaderText = "EMAIL";
                 dgClientes.Columns[3].HeaderText = "SENHA";
-                dgClientes.Columns[4].HeaderText = "FOTO";
-                dgClientes.Columns[5].HeaderText = "STATUS";
+                dgClientes.Columns[4].HeaderText = "STATUS";
+                dgClientes.Columns[5].HeaderText = "FOTO";
+
 
 
 
@@ -986,8 +988,9 @@ namespace Adega_Irmandade
                 dgClientes.Columns[1].HeaderText = "NOME";
                 dgClientes.Columns[2].HeaderText = "EMAIL";
                 dgClientes.Columns[3].HeaderText = "SENHA";
-                dgClientes.Columns[4].HeaderText = "FOTO";
-                dgClientes.Columns[5].HeaderText = "STATUS";
+                dgClientes.Columns[4].HeaderText = "STATUS";
+                dgClientes.Columns[5].HeaderText = "FOTO";
+
 
 
 
@@ -1017,8 +1020,9 @@ namespace Adega_Irmandade
                 dgClientes.Columns[1].HeaderText = "NOME";
                 dgClientes.Columns[2].HeaderText = "EMAIL";
                 dgClientes.Columns[3].HeaderText = "SENHA";
-                dgClientes.Columns[4].HeaderText = "FOTO";
-                dgClientes.Columns[5].HeaderText = "STATUS";
+                dgClientes.Columns[4].HeaderText = "STATUS";
+                dgClientes.Columns[5].HeaderText = "FOTO";
+               
 
 
 
@@ -1030,7 +1034,165 @@ namespace Adega_Irmandade
             {
                 MessageBox.Show("Erro ao carregar os clientes pelo nome!\n\n" + erro);
             }
+
+            // Inicio Cadastro Usuario //
+
         }
+        public static void InserirCliente()
+        {
+            try
+            {
+                conexao.Conectar();
+                string inserir = "INSERT INTO tblusuarios (nomeUsuario,emailUsuario, senhaUsuario, statusUsuario, fotoUsuario) VALUES (@nome, @email, @senha, @status, @foto)";
+                MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
+                // Parâmetros 
+                cmd.Parameters.AddWithValue("@nome", variaveis.nomeUsuario);
+                cmd.Parameters.AddWithValue("@email", variaveis.emailUsuario);
+                cmd.Parameters.AddWithValue("@senha", variaveis.senhaUsuario);
+                cmd.Parameters.AddWithValue("@status", variaveis.statusUsuario);
+                cmd.Parameters.AddWithValue("@foto", variaveis.fotoUsuario);
+               
+                // Fim parâmetros
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("USUÁRIO Cadastrado Com Sucesso!", "CADASTRO USUÁRIO");
+                conexao.Desconectar();
+
+                if (ValidarFTP())
+                {
+                    if (!string.IsNullOrEmpty(variaveis.fotoUsuario))
+                    {
+                        string urlEnviarArquivo = variaveis.enderecoServidorFtp + "Usuario/" + Path.GetFileName(variaveis.fotoUsuario);
+                        try
+                        {
+                            ftp.EnviarArquivoFtp(variaveis.caminhoFotoUsuario, urlEnviarArquivo, variaveis.usuarioFtp, variaveis.senhaFtp);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Foto não Selecionada ou Existente.", "FOTO");
+                        }
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Cadastrar o Usuário!\n\n" + erro.Message, "ERRO");
+            }
+        }
+
+        public static void CarregarDadosCliente()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblusuarios WHERE idUsuario = @codigo;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codUsuario);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read()) // Lê a próxima linha do resultado da consulta
+                {
+                    variaveis.nomeUsuario = reader.GetString(1);
+                    variaveis.emailUsuario = reader.GetString(2);
+                    variaveis.senhaUsuario = reader.GetString(3);
+                    variaveis.statusUsuario = reader.GetString(4);
+                }
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os Usuários!\n\n" + erro);
+            }
+        }
+
+        public static void AlterarCliente()
+        {
+            try
+            {
+                conexao.Conectar();
+                string alterar = "UPDATE tblusuarios SET nomeUsuario = @nome, emailUsuario = @email, senhaUsuario = @senha, statusUsuario = @status WHERE idUsuario = @codigo";
+                MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
+
+                // Parâmetros
+                cmd.Parameters.AddWithValue("@nome", variaveis.nomeUsuario);
+                cmd.Parameters.AddWithValue("@email", variaveis.emailUsuario);
+                cmd.Parameters.AddWithValue("@senha", variaveis.senhaUsuario);
+                cmd.Parameters.AddWithValue("@status", variaveis.statusUsuario);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codUsuario);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Usuário Alterado Com Sucesso!", "CADASTRO Cliente");
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Alterar o Usuário!\n\n" + erro.Message, "ERRO");
+            }
+        }
+
+        public static void AlterarFotoCliente()
+        {
+            try
+            {
+
+
+
+
+                conexao.Conectar();
+                string alterar = "UPDATE tblusuarios SET fotoUsuario = @foto WHERE idUsuario = @codigo";
+                MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
+                cmd.Parameters.AddWithValue("@foto", variaveis.fotoUsuario);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codUsuario);
+                cmd.ExecuteNonQuery();
+                conexao.Desconectar();
+
+                if (ValidarFTP())
+                {
+                    if (!string.IsNullOrEmpty(variaveis.fotoUsuario))
+                    {
+                        string urlEnviarArquivo = variaveis.enderecoServidorFtp + "Usuario/" + Path.GetFileName(variaveis.fotoUsuario);
+                        try
+                        {
+                            ftp.EnviarArquivoFtp(variaveis.caminhoFotoUsuario, urlEnviarArquivo, variaveis.usuarioFtp, variaveis.senhaFtp);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Foto não Selecionada ou foto já existente no servidor.\n\n " + ex.Message, "Foto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+
+                    }
+
+
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Alterar a Foto do Cliente! \n\n" + erro.Message, "Erro");
+            }
+        }
+        public static void desativarCliente()
+        {
+            try
+            {
+                conexao.Conectar();
+                string alterar = "UPDATE tblusuarios SET statusUsuario='DESATIVADO' WHERE idUsuario = @codigo;";
+                MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
+                //parâmetros 
+
+                cmd.Parameters.AddWithValue("@status", variaveis.statusUsuario);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codUsuario); // Correção do parâmetro
+                                                                                  //fim parâmetros
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Cliente Desativado Com Sucesso!", " DESATIVADO CLIENTE");
+                conexao.Desconectar();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao desativar o cliente!\n\n" + erro.Message, "ERRO");
+            }
+        }
+
+
 
 
 

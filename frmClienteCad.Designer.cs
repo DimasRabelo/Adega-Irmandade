@@ -63,7 +63,8 @@
             this.btnCadSalvar.TabIndex = 105;
             this.btnCadSalvar.Text = "SALVAR";
             this.btnCadSalvar.UseVisualStyleBackColor = false;
-           
+            this.btnCadSalvar.Click += new System.EventHandler(this.btnCadSalvar_Click);
+            // 
             // pctLogo
             // 
             this.pctLogo.BackColor = System.Drawing.Color.Transparent;
@@ -75,7 +76,6 @@
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogo.TabIndex = 104;
             this.pctLogo.TabStop = false;
-           
             // 
             // btnLimpar
             // 
@@ -90,7 +90,7 @@
             this.btnLimpar.TabIndex = 103;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
-          
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // cmbCadStatus
             // 
@@ -104,7 +104,7 @@
             this.cmbCadStatus.Name = "cmbCadStatus";
             this.cmbCadStatus.Size = new System.Drawing.Size(204, 26);
             this.cmbCadStatus.TabIndex = 96;
-          
+            this.cmbCadStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadStatus_KeyPress);
             // 
             // txtCadSenha
             // 
@@ -114,7 +114,8 @@
             this.txtCadSenha.Name = "txtCadSenha";
             this.txtCadSenha.Size = new System.Drawing.Size(214, 26);
             this.txtCadSenha.TabIndex = 94;
-          
+            this.txtCadSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadSenha_KeyPress);
+            // 
             // txtCadEmail
             // 
             this.txtCadEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
@@ -124,7 +125,7 @@
             this.txtCadEmail.Name = "txtCadEmail";
             this.txtCadEmail.Size = new System.Drawing.Size(435, 26);
             this.txtCadEmail.TabIndex = 93;
-           
+            this.txtCadEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadEmail_KeyPress);
             // 
             // txtCadNome
             // 
@@ -134,7 +135,8 @@
             this.txtCadNome.Name = "txtCadNome";
             this.txtCadNome.Size = new System.Drawing.Size(664, 26);
             this.txtCadNome.TabIndex = 91;
-           
+            this.txtCadNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadNome_KeyPress);
+            // 
             // lblCadFoto
             // 
             this.lblCadFoto.AutoSize = true;
@@ -146,7 +148,7 @@
             this.lblCadFoto.Size = new System.Drawing.Size(76, 27);
             this.lblCadFoto.TabIndex = 90;
             this.lblCadFoto.Text = "FOTO:";
-          
+            // 
             // btnCadFoto
             // 
             this.btnCadFoto.BackColor = System.Drawing.Color.Transparent;
@@ -161,7 +163,7 @@
             this.btnCadFoto.TabIndex = 89;
             this.btnCadFoto.Text = "+";
             this.btnCadFoto.UseVisualStyleBackColor = false;
-           
+            this.btnCadFoto.Click += new System.EventHandler(this.btnCadFoto_Click);
             // 
             // pctCadFoto
             // 
@@ -175,7 +177,7 @@
             this.pctCadFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctCadFoto.TabIndex = 88;
             this.pctCadFoto.TabStop = false;
-            
+            this.pctCadFoto.Click += new System.EventHandler(this.pctCadFoto_Click);
             // 
             // lblCadStatus
             // 
@@ -188,7 +190,6 @@
             this.lblCadStatus.Size = new System.Drawing.Size(103, 27);
             this.lblCadStatus.TabIndex = 82;
             this.lblCadStatus.Text = "STATUS:";
-            
             // 
             // lblCadSenha
             // 
@@ -201,7 +202,7 @@
             this.lblCadSenha.Size = new System.Drawing.Size(93, 27);
             this.lblCadSenha.TabIndex = 78;
             this.lblCadSenha.Text = "SENHA:";
-          
+            // 
             // lblCadEmail
             // 
             this.lblCadEmail.AutoSize = true;
@@ -213,7 +214,7 @@
             this.lblCadEmail.Size = new System.Drawing.Size(85, 27);
             this.lblCadEmail.TabIndex = 77;
             this.lblCadEmail.Text = "EMAIL:";
-          
+            // 
             // lblCadNome
             // 
             this.lblCadNome.AutoSize = true;
@@ -225,7 +226,6 @@
             this.lblCadNome.Size = new System.Drawing.Size(82, 27);
             this.lblCadNome.TabIndex = 74;
             this.lblCadNome.Text = "NOME:";
-            
             // 
             // label2
             // 
@@ -254,7 +254,6 @@
             this.lblCadCadastrar.TabIndex = 72;
             this.lblCadCadastrar.Text = "CADASTRAR\r\n";
             this.lblCadCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-           
             // 
             // pctFechar
             // 
@@ -296,7 +295,7 @@
             this.Name = "frmClienteCad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmClienteCad";
-            
+            this.Load += new System.EventHandler(this.frmClienteCad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCadFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();

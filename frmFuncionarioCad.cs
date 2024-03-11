@@ -458,6 +458,8 @@ namespace Adega_Irmandade
                 pctCadFoto.Image = null;
             }
         }
+
+       
     }
 
         

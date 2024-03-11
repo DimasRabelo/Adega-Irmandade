@@ -199,8 +199,24 @@
             this.cmbCadFuncionario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCadFuncionario.FormattingEnabled = true;
             this.cmbCadFuncionario.Items.AddRange(new object[] {
-            "ADMINISTRADOR",
-            "USUÁRIO"});
+            "ALAN COELHO BUENO",
+            "WAGNITON COELHO",
+            "ENZO GOUVEIA",
+            "RENATO OCELA",
+            "MARLENE RABELO",
+            "ARTUR ALVIM",
+            "BENEOBENES SILVA",
+            "LUDMILA RIBEIRO",
+            "EMILLY RIBEIRO",
+            "GORETE MILAGRES",
+            "FERNANDA MELLO",
+            "JOÃO ALVARES",
+            "DIEGO DA COSTA SILVA",
+            "SESHOMARU YAKASHAKY",
+            "ZÉ DO CAIXÃO",
+            "DIMAS APARECIDO",
+            "GABRIEL JESUS",
+            "RAMÓN VALDEZ"});
             this.cmbCadFuncionario.Location = new System.Drawing.Point(159, 184);
             this.cmbCadFuncionario.Name = "cmbCadFuncionario";
             this.cmbCadFuncionario.Size = new System.Drawing.Size(475, 26);
@@ -236,8 +252,17 @@
             this.cmbCadVendasProdutos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCadVendasProdutos.FormattingEnabled = true;
             this.cmbCadVendasProdutos.Items.AddRange(new object[] {
-            "ADMINISTRADOR",
-            "USUÁRIO"});
+            "ORIGINAL269ML",
+            "GATORADE500ML",
+            "REDLABEL1LT",
+            "COCACOLA2LT",
+            "SPATEN269ML",
+            "WHITEHORSE1LT",
+            "CARVÃODECOCOZOMO",
+            "AMSTEL269ML",
+            "FANTA350ML",
+            "H2O500ML",
+            "JACK DANIELS"});
             this.cmbCadVendasProdutos.Location = new System.Drawing.Point(159, 502);
             this.cmbCadVendasProdutos.Name = "cmbCadVendasProdutos";
             this.cmbCadVendasProdutos.Size = new System.Drawing.Size(475, 26);
