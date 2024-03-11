@@ -171,7 +171,7 @@
             this.lblCadMensagem.Size = new System.Drawing.Size(143, 27);
             this.lblCadMensagem.TabIndex = 86;
             this.lblCadMensagem.Text = "MENSAGEM:";
-            this.lblCadMensagem.Click += new System.EventHandler(this.lblCadEndereco_Click);
+          
             // 
             // lblCadStatus
             // 
@@ -328,6 +328,7 @@
             this.Name = "frmEmailsCad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEmailsCad";
+            this.Load += new System.EventHandler(this.frmEmailsCad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             this.ResumeLayout(false);

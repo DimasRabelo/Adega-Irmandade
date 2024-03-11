@@ -682,6 +682,96 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar os status do produto!\n\n" + erro);
             }
         }
+
+        public static void InserirProdutos()
+        {
+            try
+            {
+                conexao.Conectar();
+                string inserir = "INSERT INTO tblprodutos(nomeProduto, descricaoProduto, categoriaProduto, statusProduto, precoCompraProduto, precoVendaProduto, fornecedorProduto, dataReceProduto, horaProduto) VALUES (@nome,@descricao,@categoria,@status,@precoCompra,@precoVenda,@fornecedor,@data,@hora); ";
+                MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
+                //parâmetros 
+                cmd.Parameters.AddWithValue("@nome", variaveis.nomeProduto);
+                cmd.Parameters.AddWithValue("@descricao", variaveis.descricaoProduto);
+                cmd.Parameters.AddWithValue("@categoria", variaveis.categoriaProduto);
+                cmd.Parameters.AddWithValue("@@status", variaveis.statusProduto);
+                cmd.Parameters.AddWithValue("@precoCompra", variaveis.precoCompraProduto);
+                cmd.Parameters.AddWithValue("@precoVenda", variaveis.precoVendaProduto);
+                cmd.Parameters.AddWithValue("@fornecedor", variaveis.fornecedorProduto);
+                cmd.Parameters.AddWithValue("@data", variaveis.dataReceProduto);
+                cmd.Parameters.AddWithValue("@hora", variaveis.horaProduto);
+
+                //fim parâmetros
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Produto Cadastrado Com Sucesso!", "CADASTRO PRODUTO");
+                conexao.Desconectar();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Cadastrar o produto!\n\n" + erro.Message, "ERRO");
+            }
+        }
+
+        public static void CarregarDadosProdutos()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblprodutos WHERE idProduto = @codigo;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codContatos);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    variaveis.nomeProduto = reader.GetString(1);
+                    variaveis.descricaoProduto = reader.GetString(2);
+                    variaveis.categoriaProduto = reader.GetString(3);
+                    variaveis.statusProduto = reader.GetString(4);
+                    variaveis.precoCompraProduto = reader.GetString(5);
+                    variaveis.precoVendaProduto = reader.GetString(6);
+                    variaveis.fornecedorProduto = reader.GetString(7);
+                    variaveis.dataReceProduto = reader.GetDateTime(5);
+                    variaveis.horaProduto = reader.GetDateTime(7);
+                }
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os Produtos!\n\n" + erro);
+            }
+        }
+
+        public static void AlterarProdutos()
+        {
+            try
+            {
+                conexao.Conectar();
+                string alterar = "UPDATE tblprodutos SET nomeProduto=@nome,descricaoProduto=@descricao, categoriaProduto=@categoria, statusProduto=@status, precoCompraProduto=@precoCompra, precoVendaProduto=@precoVenda, fornecedorProduto=@fornecedor,dataReceProduto=@dataRecebimento, horaProduto=@hora WHERE idProduto=@codigo;";
+                MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
+                //parâmetros 
+                cmd.Parameters.AddWithValue("@nome", variaveis.nomeProduto);
+                cmd.Parameters.AddWithValue("@descricao", variaveis.descricaoProduto);
+                cmd.Parameters.AddWithValue("@categoria", variaveis.categoriaProduto);
+                cmd.Parameters.AddWithValue("@status", variaveis.statusProduto);
+                cmd.Parameters.AddWithValue("@precoCompra", variaveis.precoCompraProduto);
+                cmd.Parameters.AddWithValue("@precoVenda", variaveis.precoVendaProduto);
+                cmd.Parameters.AddWithValue("@fornecedor", variaveis.fornecedorProduto);
+                cmd.Parameters.AddWithValue("@dataRecebimento", variaveis.dataReceProduto);
+                cmd.Parameters.AddWithValue("@hora", variaveis.horaProduto);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codProduto);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Produto Alterado Com Sucesso!", "CADASTRO PRODUTO");
+                conexao.Desconectar();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Alterado o produto!\n\n" + erro.Message, "ERRO");
+            }
+        }
+
         // Fim Formulário Produtos //
 
 
@@ -786,10 +876,136 @@ namespace Adega_Irmandade
 
         }
 
+        public static void InserirEmails()
+        {
+            try
+            {
+                conexao.Conectar();
+                string inserir = "INSERT INTO tblcontato(nomeContato, emailContato, telefoneContato, mensagemContato, dataContato, statusContato, horaContato) VALUES (@nome,@email,@telefone,@mensagem,@data,@hora); ";
+                MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
+                //parâmetros 
+                cmd.Parameters.AddWithValue("@nome", variaveis.nomeContato);
+                cmd.Parameters.AddWithValue("@email", variaveis.emailContato);
+                cmd.Parameters.AddWithValue("@telefone", variaveis.telefoneContato);
+                cmd.Parameters.AddWithValue("@mensagem", variaveis.mensagemContato);
+                cmd.Parameters.AddWithValue("@data", variaveis.dataContato);
+                cmd.Parameters.AddWithValue("@status", variaveis.statusContato);
+                cmd.Parameters.AddWithValue("@hora", variaveis.horaContato);
+               
+                //fim parâmetros
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Email Cadastrado Com Sucesso!", "Emails");
+                conexao.Desconectar();
 
-            // Inicio Formulario Estoque
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Cadastrar o Email!\n\n" + erro.Message, "ERRO");
+            }
 
-            public static void CarregarEstoque()
+        }
+
+        public static void CarregarDadosEmails()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblcontato WHERE idContato = @codigo; ";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codContatos);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    variaveis.nomeContato = reader.GetString(1);
+                    variaveis.emailContato = reader.GetString(2);
+                    variaveis.telefoneContato = reader.GetString(3);
+                    variaveis.mensagemContato = reader.GetString(4);
+                    variaveis.dataContato = reader.GetDateTime(5);
+                    variaveis.statusContato = reader.GetString(6);
+                    variaveis.horaContato= reader.GetDateTime(7);
+
+                }
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os Instrutores!\n\n" + erro);
+            }
+        }
+
+        public static void AlterarEmails()
+        {
+            try
+            {
+                conexao.Conectar();
+                string alterar = "UPDATE tblcontato SET nomeContato = @nome, emailContato = @email, telefoneContato = @telefone, mensagemContato = @mensagem, dataContato = @data  statusContato = @status, horaContato = @hora WHERE idContato = @codigo;";
+                MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
+                //parâmetros 
+                cmd.Parameters.AddWithValue("@nome", variaveis.nomeContato);
+                cmd.Parameters.AddWithValue("@email", variaveis.emailContato);
+                cmd.Parameters.AddWithValue("@telefone", variaveis.telefoneContato);
+                cmd.Parameters.AddWithValue("@mensagem", variaveis.mensagemContato);
+                cmd.Parameters.AddWithValue("@data", variaveis.dataContato);
+                cmd.Parameters.AddWithValue("@statusContato", variaveis.statusContato);
+                cmd.Parameters.AddWithValue("@hora", variaveis.horaContato);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codContatos);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Email Alterado Com Sucesso!", "CADASTRO EMAILS");
+                conexao.Desconectar();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Alterado o E-mails!\n\n" + erro.Message, "ERRO");
+            }
+        }
+
+
+        public static void DesativarEmails()
+        {
+            try
+            {
+                conexao.Conectar();
+                string alterar = "UPDATE tblcontato SET statusContato=@status WHERE idContato = @codigo;";
+                MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
+                //parâmetros 
+
+                cmd.Parameters.AddWithValue("@status", variaveis.statusContato);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codContatos); 
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Emails Desativado Com Sucesso!", " DESATIVADO EMAIL");
+                conexao.Desconectar();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao desativar o Email!\n\n" + erro.Message, "ERRO");
+            }
+        }
+
+        // Fim métodos do Email //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Inicio Formulario Estoque
+
+        public static void CarregarEstoque()
         {
             try
             {
@@ -892,6 +1108,94 @@ namespace Adega_Irmandade
             }
         }
 
+        public static void InserirEstoque()
+        {
+            try
+            {
+                conexao.Conectar();
+                string inserir = "INSERT INTO tblestoque(nomeEstoque, quantidadeEstoque, dataCadastroEstoque, dataAtualiEstoque, statusEstoque, horaEstoque, idProduto) VALUES (@nome,@quantidade,@data,@dataAtual,@status,@hora,@produto); ";
+                MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
+                //parâmetros 
+                cmd.Parameters.AddWithValue("@nome", variaveis.nomeEstoque);
+                cmd.Parameters.AddWithValue("@quantidade", variaveis.quantidadeEstoque);
+                cmd.Parameters.AddWithValue("@data", variaveis.dataCadastroEstoque);
+                cmd.Parameters.AddWithValue("@dataAtual", variaveis.dataAtualiEstoque);
+                cmd.Parameters.AddWithValue("@status", variaveis.statusEstoque);
+                cmd.Parameters.AddWithValue("@hora", variaveis.horaEstoque);
+                cmd.Parameters.AddWithValue("@produto", variaveis.idProduto);
+               
+                //fim parâmetros
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("ESTOQUE Cadastrado Com Sucesso!", "CADASTRO ESTOQUE");
+                conexao.Desconectar();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Cadastrar o estoque!\n\n" + erro.Message, "ERRO");
+            }
+        }
+
+        public static void CarregarDadosEstoque()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblestoque WHERE idEstoque = @codigo; ";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codEstoque);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    variaveis.nomeEstoque = reader.GetString(1);
+                    variaveis.quantidadeEstoque = reader.GetString(2);
+                    variaveis.dataCadastroEstoque = reader.GetDateTime(3);
+                    variaveis.dataAtualiEstoque = reader.GetDateTime(4);
+                    variaveis.statusEstoque = reader.GetString(5);
+                    variaveis.horaEstoque = reader.GetDateTime(6);
+                    variaveis.idProduto = reader.GetString(7);
+
+
+                }
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os Instrutores!\n\n" + erro);
+            }
+        }
+
+        public static void AlterarEstoque()
+        {
+            try
+            {
+                conexao.Conectar();
+                string alterar = "UPDATE tblestoque SET nomeEstoque= @nome, quantidadeEstoque=@quantidade, dataCadastroEstoque=@data, dataAtualiEstoque=@dataAtual, statusEstoque=@status, horaEstoque=@hora, idProduto=@produto WHERE idEstoque =@codigo;";
+                MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
+                //parâmetros 
+                cmd.Parameters.AddWithValue("@nome", variaveis.nomeEstoque);
+                cmd.Parameters.AddWithValue("@alt", variaveis.quantidadeEstoque);
+                cmd.Parameters.AddWithValue("@dataNasc", variaveis.dataCadastroEstoque);
+                cmd.Parameters.AddWithValue("@cargo", variaveis.dataAtualiEstoque);
+                cmd.Parameters.AddWithValue("@especialidade", variaveis.statusEstoque);
+                cmd.Parameters.AddWithValue("@email", variaveis.horaEstoque);
+                cmd.Parameters.AddWithValue("@senha", variaveis.idProduto);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codEstoque);
+               
+                //fim parâmetros
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Estoque Alterado Com Sucesso!", "CADASTRO ESTOQUE");
+                conexao.Desconectar();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Alterado o ESTOQUE!\n\n" + erro.Message, "ERRO");
+            }
+        }
+
+        // Fim Formulário Estoque //
+
 
 
 
@@ -935,9 +1239,50 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar Vendas!\n\n" + erro);
             }
         }
-      
 
-        // Inicio Formulário Cliente-Usuário //
+        public static void CarregarVendasNome()
+        {
+            try
+            {
+                conexao.Conectar();
+                string selecionar = "SELECT * FROM tblvendas WHERE idFuncionario LIKE '%" + variaveis.nomeFuncionario + "%' ORDER BY idFuncionario;";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgVendas.DataSource = dt;
+
+
+
+
+                dgVendas.Columns[0].Visible = false;
+                dgVendas.Columns[1].HeaderText = "FUNCIONÁRIO";
+                dgVendas.Columns[2].HeaderText = "DATA DA VENDA";
+                dgVendas.Columns[3].HeaderText = "HORA DA VENDA";
+                dgVendas.Columns[4].HeaderText = "STATUS";
+                dgVendas.Columns[5].HeaderText = "VALOR TOTAL";
+                dgVendas.Columns[6].HeaderText = "PRODUTO";
+
+
+
+
+                dgVendas.ClearSelection();
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os Vendas pelo nome!\n\n" + erro);
+            }
+        }
+
+
+
+
+
+
+
+
+        // Inicio Formulário Cliente-Usuário Menu Principal //
 
         public static void CarregarCliente()
         {
@@ -1035,7 +1380,9 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar os clientes pelo nome!\n\n" + erro);
             }
 
-            // Inicio Cadastro Usuario //
+            // Fim do Menu Principal //
+
+            // Inicio Cadastro Usuario Alteração e Exclusão //
 
         }
         public static void InserirCliente()
@@ -1192,7 +1539,7 @@ namespace Adega_Irmandade
             }
         }
 
-
+        // Fim Métodos do Clientes //
 
 
 

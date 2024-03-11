@@ -18,7 +18,9 @@ namespace Adega_Irmandade
             Close();
         }
 
-        private void lblCadEndereco_Click(object sender, EventArgs e)
+       
+
+        private void frmEmailsCad_Load(object sender, EventArgs e)
         {
 
         }

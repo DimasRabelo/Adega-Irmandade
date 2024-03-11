@@ -260,7 +260,7 @@
             this.pctFechar.BackColor = System.Drawing.Color.Transparent;
             this.pctFechar.Image = global::Adega_Irmandade.Properties.Resources.botaoFechar;
             this.pctFechar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pctFechar.Location = new System.Drawing.Point(1179, -1);
+            this.pctFechar.Location = new System.Drawing.Point(1179, 12);
             this.pctFechar.Name = "pctFechar";
             this.pctFechar.Size = new System.Drawing.Size(39, 30);
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

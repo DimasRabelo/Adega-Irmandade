@@ -81,5 +81,21 @@ namespace Adega_Irmandade
             new frmVendasCad().Show();
             Hide();
         }
+
+        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+            variaveis.nomeFuncionario = txtVendaNome.Text;
+            banco.CarregarVendasNome();
+
+            if (txtVendaNome.Text == "")
+            {
+                chkAtivo.Visible = true;
+
+            }
+            else
+            {
+                chkAtivo.Visible = false;
+            }
+        }
     }
 }

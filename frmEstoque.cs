@@ -99,5 +99,11 @@ namespace Adega_Irmandade
                 variaveis.codEstoque = Convert.ToInt32(dgvEstoque[0, variaveis.linhaSelecionada].Value);
             }
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            new frmEstoqueCad().Show();
+            Hide();
+        }
     }
 }

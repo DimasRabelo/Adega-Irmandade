@@ -126,6 +126,7 @@
             this.chkAtivo.TabIndex = 83;
             this.chkAtivo.Text = "ATIVO?";
             this.chkAtivo.UseVisualStyleBackColor = false;
+            this.chkAtivo.CheckedChanged += new System.EventHandler(this.chkAtivo_CheckedChanged);
             // 
             // lblVendaStatus
             // 

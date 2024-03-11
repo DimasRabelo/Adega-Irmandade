@@ -39,7 +39,8 @@ namespace Adega_Irmandade
 
         public static int codEstoque;
 
-        public static string nomeEstoque;
+        public static string nomeEstoque,quantidadeEstoque, statusEstoque,  idProduto;
+        public static DateTime dataCadastroEstoque, dataAtualiEstoque, horaEstoque;
 
         // FORMULÁRIO VENDAS //
 
@@ -50,13 +51,17 @@ namespace Adega_Irmandade
 
         public static int codContatos;
 
-        public static string nomeContato;
+        public static string nomeContato,emailContato, telefoneContato, mensagemContato,statusContato;
+
+        public static DateTime dataContato, horaContato;
 
         // FORMULARIO CLIENTE-USUÁRIO //
 
         public static int codUsuario;
 
         public static string nomeUsuario, emailUsuario, senhaUsuario, fotoUsuario, statusUsuario, atFotoUsuario, caminhoFotoUsuario;
+
+        
 
 
 
