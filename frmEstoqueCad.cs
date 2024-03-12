@@ -30,13 +30,42 @@ namespace Adega_Irmandade
                 nudQuantidade.Enabled = true;
                 nudQuantidade.Focus();
             }
+
         }
 
-       
+        private void nudQuantidade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                cmbCadStatus.Enabled = true;
+                cmbCadStatus.Focus();
+            }
 
-      
+        }
 
-      
+        private void cmbCadStatus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                cmbCadProduto.Enabled = true;
+                cmbCadProduto.Focus();
+            }
+
+        }
+
+        private void cmbCadProduto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnCadSalvar.Enabled = true;
+                btnCadSalvar.Focus();
+            }
+
+        }
+
+
+
+
 
         private void btnCadSalvar_Click(object sender, EventArgs e)
         {
@@ -140,5 +169,7 @@ namespace Adega_Irmandade
                 btnLimpar.Enabled = false;
             }
         }
+
+       
     }
 }

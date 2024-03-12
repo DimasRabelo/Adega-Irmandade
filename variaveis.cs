@@ -42,8 +42,7 @@ namespace Adega_Irmandade
         // FORMULÁRIO VENDAS //
 
         public static string statusVenda, valorTotalVenda;
-        public static DateTime dataVenda, horaVenda;
-
+        
         
         // FORMULÁRIO EMAIL //
 

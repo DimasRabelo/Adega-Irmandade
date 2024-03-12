@@ -1105,7 +1105,7 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string inserir = "INSERT INTO tblestoque(nomeEstoque, quantidadeEstoque, dataCadastroEstoque, dataAtualiEstoque, statusEstoque, horaEstoque, idProduto) SELECT @nome, @quantidade, @data, @dataAtual, @status, @hora, p.idProduto FROM tblprodutos p WHERE p.nomeProduto = @nomeDoProduto; ";
+                string inserir = "INSERT INTO tblestoque(nomeEstoque, quantidadeEstoque, statusEstoque, idProduto) SELECT @nome, @quantidade, @status p.idProduto FROM tblprodutos p WHERE p.nomeProduto = @nomeDoProduto; ";
                 MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
                 //parâmetros 
                 cmd.Parameters.AddWithValue("@nome", variaveis.nomeEstoque);
@@ -1136,11 +1136,11 @@ namespace Adega_Irmandade
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    variaveis.nomeEstoque = reader.GetString(1);
-                    variaveis.quantidadeEstoque = reader.GetInt32(2);
-                    
-                    variaveis.statusEstoque = reader.GetString(5);                   
-                    variaveis.nomeProduto = reader.GetString(7);
+                    variaveis.nomeEstoque = reader.GetString(1); // Assumindo que o nome do estoque está na coluna de índice 1
+                    variaveis.quantidadeEstoque = reader.GetInt32(2); // Assumindo que a quantidade está na coluna de índice 2
+                    variaveis.statusEstoque = reader.GetString(5); // Assumindo que o status está na coluna de índice 5
+                    variaveis.nomeProduto = reader.GetString(7).ToString(); // Assumindo que o nome do produto está na coluna de índice 7
+
 
 
                 }
@@ -1161,9 +1161,9 @@ namespace Adega_Irmandade
                 MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
                 //parâmetros 
                 cmd.Parameters.AddWithValue("@nome", variaveis.nomeEstoque);
-                cmd.Parameters.AddWithValue("@alt", variaveis.quantidadeEstoque); 
-                cmd.Parameters.AddWithValue("@especialidade", variaveis.statusEstoque);
-                cmd.Parameters.AddWithValue("@senha", variaveis.idProduto);
+                cmd.Parameters.AddWithValue("@quantidade", variaveis.quantidadeEstoque); 
+                cmd.Parameters.AddWithValue("@status", variaveis.statusEstoque);
+                cmd.Parameters.AddWithValue("@produto", variaveis.idProduto);
                 cmd.Parameters.AddWithValue("@codigo", variaveis.codEstoque);
                
                 //fim parâmetros
@@ -1309,12 +1309,10 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string inserir = "INSERT INTO tblvendas(idFuncionario, dataVenda, horaVenda, statusVenda, valorTotalVenda, idProduto) VALUES (@funcionario,@data,@hora,@status,@valor,@produto);";
+                string inserir = "INSERT INTO tblvendas(idFuncionario,statusVenda, valorTotalVenda, idProduto) VALUES (@funcionario,@status,@valor,@produto);";
                 MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
                 // Parâmetros 
                 cmd.Parameters.AddWithValue("@funcionario", variaveis.idFuncionario);
-                cmd.Parameters.AddWithValue("@data", variaveis.dataVenda);
-                cmd.Parameters.AddWithValue("@hora", variaveis.horaVenda);
                 cmd.Parameters.AddWithValue("@status", variaveis.statusVenda);
                 cmd.Parameters.AddWithValue("@valor", variaveis.valorTotalVenda);
                 cmd.Parameters.AddWithValue("@produto", variaveis.idProduto);
@@ -1343,8 +1341,6 @@ namespace Adega_Irmandade
                 if (reader.Read())
                 {
                     variaveis.nomeFuncionario = reader.GetString(1);
-                    variaveis.dataVenda = reader.GetDateTime(2);
-                    variaveis.horaVenda = reader.GetDateTime(3);
                     variaveis.statusVenda = reader.GetString(4);
                     variaveis.valorTotalVenda = reader.GetString(5);
                     variaveis.idProduto = reader.GetString(6);
@@ -1364,12 +1360,10 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string alterar = "UPDATE tblvendas SET idFuncionario=@funcionario, dataVenda=@data, horaVenda=@hora, statusVenda=@status, valorTotalVenda=@valorVenda, idProduto=@produto WHERE idVenda=@codigo;";
+                string alterar = "UPDATE tblvendas SET idFuncionario=@funcionario, statusVenda=@status, valorTotalVenda=@valorVenda, idProduto=@produto WHERE idVenda=@codigo;";
                 MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
                 //parâmetros 
                 cmd.Parameters.AddWithValue("@funcionario", variaveis.nomeFuncionario);
-                cmd.Parameters.AddWithValue("@data", variaveis.dataVenda);
-                cmd.Parameters.AddWithValue("@hora", variaveis.horaVenda);
                 cmd.Parameters.AddWithValue("@status", variaveis.statusVenda);
                 cmd.Parameters.AddWithValue("@valorVenda",variaveis.valorTotalVenda);
                 cmd.Parameters.AddWithValue("@produto", variaveis.nomeProduto);

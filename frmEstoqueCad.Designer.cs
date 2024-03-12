@@ -100,7 +100,7 @@
             this.cmbCadStatus.Name = "cmbCadStatus";
             this.cmbCadStatus.Size = new System.Drawing.Size(204, 26);
             this.cmbCadStatus.TabIndex = 96;
-            
+            this.cmbCadStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadStatus_KeyPress);
             // 
             // txtCadNome
             // 
@@ -209,14 +209,15 @@
             this.cmbCadProduto.Name = "cmbCadProduto";
             this.cmbCadProduto.Size = new System.Drawing.Size(435, 26);
             this.cmbCadProduto.TabIndex = 110;
-          
+            this.cmbCadProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadProduto_KeyPress);
+            // 
             // nudQuantidade
             // 
             this.nudQuantidade.Location = new System.Drawing.Point(46, 246);
             this.nudQuantidade.Name = "nudQuantidade";
             this.nudQuantidade.Size = new System.Drawing.Size(120, 20);
             this.nudQuantidade.TabIndex = 111;
-           
+            this.nudQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nudQuantidade_KeyPress);
             // 
             // pctFechar
             // 
