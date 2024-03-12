@@ -316,7 +316,7 @@
             this.txtCadNome.Name = "txtCadNome";
             this.txtCadNome.Size = new System.Drawing.Size(750, 26);
             this.txtCadNome.TabIndex = 51;
-            
+          
             this.txtCadNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadNome_KeyPress);
             // 
             // txtCadCargo

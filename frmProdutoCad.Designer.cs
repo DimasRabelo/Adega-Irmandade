@@ -48,8 +48,8 @@
             this.lblCadProduto = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCadCadastrar = new System.Windows.Forms.Label();
-            this.mksHoraRecebimento = new System.Windows.Forms.MaskedTextBox();
-            this.lblCadRecebimento = new System.Windows.Forms.Label();
+            this.mkdCadHoraRecebimento = new System.Windows.Forms.MaskedTextBox();
+            this.lblCadHoraRecebimento = new System.Windows.Forms.Label();
             this.txtCadPrecoCompra = new System.Windows.Forms.TextBox();
             this.txtPrecoVenda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
@@ -67,7 +67,7 @@
             this.mkdCadDataRecebimento.TabIndex = 104;
             this.mkdCadDataRecebimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mkdCadDataRecebimento.ValidatingType = typeof(System.DateTime);
-            this.mkdCadDataRecebimento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mkdCadDataNasc_MaskInputRejected);
+            this.mkdCadDataRecebimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataRecebimento_KeyPress);
             // 
             // btnCadSalvar
             // 
@@ -108,7 +108,6 @@
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogo.TabIndex = 101;
             this.pctLogo.TabStop = false;
-            this.pctLogo.Click += new System.EventHandler(this.pctLogo_Click);
             // 
             // btnLimpar
             // 
@@ -123,7 +122,6 @@
             this.btnLimpar.TabIndex = 100;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // txtCadFornecedor
             // 
@@ -134,7 +132,7 @@
             this.txtCadFornecedor.Name = "txtCadFornecedor";
             this.txtCadFornecedor.Size = new System.Drawing.Size(245, 26);
             this.txtCadFornecedor.TabIndex = 97;
-            this.txtCadFornecedor.TextChanged += new System.EventHandler(this.txtCadFacebook_TextChanged);
+            this.txtCadFornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadFornecedor_KeyPress);
             // 
             // cmbCadStatus
             // 
@@ -148,7 +146,7 @@
             this.cmbCadStatus.Name = "cmbCadStatus";
             this.cmbCadStatus.Size = new System.Drawing.Size(204, 26);
             this.cmbCadStatus.TabIndex = 93;
-            this.cmbCadStatus.SelectedIndexChanged += new System.EventHandler(this.cmbCadStatus_SelectedIndexChanged);
+            this.cmbCadStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadStatus_KeyPress);
             // 
             // cmbCadCategoria
             // 
@@ -163,7 +161,7 @@
             this.cmbCadCategoria.Name = "cmbCadCategoria";
             this.cmbCadCategoria.Size = new System.Drawing.Size(375, 26);
             this.cmbCadCategoria.TabIndex = 92;
-            this.cmbCadCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCadNivel_SelectedIndexChanged);
+            this.cmbCadCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadCategoria_KeyPress);
             // 
             // txtCadDescricao
             // 
@@ -174,7 +172,7 @@
             this.txtCadDescricao.Name = "txtCadDescricao";
             this.txtCadDescricao.Size = new System.Drawing.Size(277, 26);
             this.txtCadDescricao.TabIndex = 89;
-            this.txtCadDescricao.TextChanged += new System.EventHandler(this.txtCadCargo_TextChanged);
+            this.txtCadDescricao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadDescricao_KeyPress);
             // 
             // txtCadProduto
             // 
@@ -184,7 +182,7 @@
             this.txtCadProduto.Name = "txtCadProduto";
             this.txtCadProduto.Size = new System.Drawing.Size(750, 26);
             this.txtCadProduto.TabIndex = 88;
-            this.txtCadProduto.TextChanged += new System.EventHandler(this.txtCadNome_TextChanged);
+            this.txtCadProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadProduto_KeyPress);
             // 
             // lblCadPrecoVenda
             // 
@@ -197,7 +195,6 @@
             this.lblCadPrecoVenda.Size = new System.Drawing.Size(207, 27);
             this.lblCadPrecoVenda.TabIndex = 86;
             this.lblCadPrecoVenda.Text = "PREÇO DE VENDA:";
-            this.lblCadPrecoVenda.Click += new System.EventHandler(this.lblCadEndereco_Click);
             // 
             // lblCadFornecedor
             // 
@@ -210,7 +207,6 @@
             this.lblCadFornecedor.Size = new System.Drawing.Size(167, 27);
             this.lblCadFornecedor.TabIndex = 83;
             this.lblCadFornecedor.Text = "FORNECEDOR:";
-            this.lblCadFornecedor.Click += new System.EventHandler(this.lblCadFacebook_Click);
             // 
             // lblCadStatus
             // 
@@ -223,7 +219,6 @@
             this.lblCadStatus.Size = new System.Drawing.Size(103, 27);
             this.lblCadStatus.TabIndex = 82;
             this.lblCadStatus.Text = "STATUS:";
-            this.lblCadStatus.Click += new System.EventHandler(this.lblCadStatus_Click);
             // 
             // lblCadCategoria
             // 
@@ -236,7 +231,6 @@
             this.lblCadCategoria.Size = new System.Drawing.Size(144, 27);
             this.lblCadCategoria.TabIndex = 79;
             this.lblCadCategoria.Text = "CATEGORIA:";
-            this.lblCadCategoria.Click += new System.EventHandler(this.lblCadNivel_Click);
             // 
             // lblCadPrecoCompra
             // 
@@ -249,7 +243,6 @@
             this.lblCadPrecoCompra.Size = new System.Drawing.Size(226, 27);
             this.lblCadPrecoCompra.TabIndex = 77;
             this.lblCadPrecoCompra.Text = "PREÇO DE COMPRA:";
-            this.lblCadPrecoCompra.Click += new System.EventHandler(this.lblCadEmail_Click);
             // 
             // lblCadDescricao
             // 
@@ -262,7 +255,6 @@
             this.lblCadDescricao.Size = new System.Drawing.Size(144, 27);
             this.lblCadDescricao.TabIndex = 76;
             this.lblCadDescricao.Text = "DESCRIÇÃO:";
-            this.lblCadDescricao.Click += new System.EventHandler(this.lblCadCargo_Click);
             // 
             // lblCadDataRecebimento
             // 
@@ -275,7 +267,6 @@
             this.lblCadDataRecebimento.Size = new System.Drawing.Size(237, 27);
             this.lblCadDataRecebimento.TabIndex = 75;
             this.lblCadDataRecebimento.Text = "DATA RECEBIMENTO:";
-            this.lblCadDataRecebimento.Click += new System.EventHandler(this.lblCadDataNasc_Click);
             // 
             // lblCadProduto
             // 
@@ -288,7 +279,6 @@
             this.lblCadProduto.Size = new System.Drawing.Size(230, 27);
             this.lblCadProduto.TabIndex = 74;
             this.lblCadProduto.Text = "NOME DO PRODUTO:";
-            this.lblCadProduto.Click += new System.EventHandler(this.lblCadNome_Click);
             // 
             // label2
             // 
@@ -303,7 +293,6 @@
             this.label2.TabIndex = 73;
             this.label2.Text = "PRODUTOS\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblCadCadastrar
             // 
@@ -318,31 +307,31 @@
             this.lblCadCadastrar.TabIndex = 72;
             this.lblCadCadastrar.Text = "CADASTRAR\r\n";
             this.lblCadCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblCadCadastrar.Click += new System.EventHandler(this.lblCadCadastrar_Click);
             // 
-            // mksHoraRecebimento
+            // mkdCadHoraRecebimento
             // 
-            this.mksHoraRecebimento.Enabled = false;
-            this.mksHoraRecebimento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mksHoraRecebimento.Location = new System.Drawing.Point(46, 571);
-            this.mksHoraRecebimento.Mask = "00:00";
-            this.mksHoraRecebimento.Name = "mksHoraRecebimento";
-            this.mksHoraRecebimento.Size = new System.Drawing.Size(154, 26);
-            this.mksHoraRecebimento.TabIndex = 106;
-            this.mksHoraRecebimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mksHoraRecebimento.ValidatingType = typeof(System.DateTime);
+            this.mkdCadHoraRecebimento.Enabled = false;
+            this.mkdCadHoraRecebimento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdCadHoraRecebimento.Location = new System.Drawing.Point(46, 571);
+            this.mkdCadHoraRecebimento.Mask = "00:00";
+            this.mkdCadHoraRecebimento.Name = "mkdCadHoraRecebimento";
+            this.mkdCadHoraRecebimento.Size = new System.Drawing.Size(154, 26);
+            this.mkdCadHoraRecebimento.TabIndex = 106;
+            this.mkdCadHoraRecebimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkdCadHoraRecebimento.ValidatingType = typeof(System.DateTime);
+            this.mkdCadHoraRecebimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadHoraRecebimento_KeyPress);
             // 
-            // lblCadRecebimento
+            // lblCadHoraRecebimento
             // 
-            this.lblCadRecebimento.AutoSize = true;
-            this.lblCadRecebimento.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadRecebimento.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadRecebimento.ForeColor = System.Drawing.Color.White;
-            this.lblCadRecebimento.Location = new System.Drawing.Point(46, 514);
-            this.lblCadRecebimento.Name = "lblCadRecebimento";
-            this.lblCadRecebimento.Size = new System.Drawing.Size(175, 54);
-            this.lblCadRecebimento.TabIndex = 107;
-            this.lblCadRecebimento.Text = "HORA \r\nRECEBIMENTO:";
+            this.lblCadHoraRecebimento.AutoSize = true;
+            this.lblCadHoraRecebimento.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadHoraRecebimento.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadHoraRecebimento.ForeColor = System.Drawing.Color.White;
+            this.lblCadHoraRecebimento.Location = new System.Drawing.Point(46, 514);
+            this.lblCadHoraRecebimento.Name = "lblCadHoraRecebimento";
+            this.lblCadHoraRecebimento.Size = new System.Drawing.Size(175, 54);
+            this.lblCadHoraRecebimento.TabIndex = 107;
+            this.lblCadHoraRecebimento.Text = "HORA \r\nRECEBIMENTO:";
             // 
             // txtCadPrecoCompra
             // 
@@ -353,6 +342,7 @@
             this.txtCadPrecoCompra.Name = "txtCadPrecoCompra";
             this.txtCadPrecoCompra.Size = new System.Drawing.Size(232, 26);
             this.txtCadPrecoCompra.TabIndex = 109;
+            this.txtCadPrecoCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadPrecoCompra_KeyPress);
             // 
             // txtPrecoVenda
             // 
@@ -363,6 +353,7 @@
             this.txtPrecoVenda.Name = "txtPrecoVenda";
             this.txtPrecoVenda.Size = new System.Drawing.Size(202, 26);
             this.txtPrecoVenda.TabIndex = 110;
+            this.txtPrecoVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecoVenda_KeyPress);
             // 
             // frmProdutoCad
             // 
@@ -372,8 +363,8 @@
             this.ClientSize = new System.Drawing.Size(1230, 665);
             this.Controls.Add(this.txtPrecoVenda);
             this.Controls.Add(this.txtCadPrecoCompra);
-            this.Controls.Add(this.lblCadRecebimento);
-            this.Controls.Add(this.mksHoraRecebimento);
+            this.Controls.Add(this.lblCadHoraRecebimento);
+            this.Controls.Add(this.mkdCadHoraRecebimento);
             this.Controls.Add(this.mkdCadDataRecebimento);
             this.Controls.Add(this.btnCadSalvar);
             this.Controls.Add(this.pctFechar);
@@ -426,8 +417,8 @@
         private System.Windows.Forms.Label lblCadProduto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCadCadastrar;
-        private System.Windows.Forms.MaskedTextBox mksHoraRecebimento;
-        private System.Windows.Forms.Label lblCadRecebimento;
+        private System.Windows.Forms.MaskedTextBox mkdCadHoraRecebimento;
+        private System.Windows.Forms.Label lblCadHoraRecebimento;
         private System.Windows.Forms.TextBox txtCadPrecoCompra;
         private System.Windows.Forms.TextBox txtPrecoVenda;
     }
