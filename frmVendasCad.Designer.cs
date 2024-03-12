@@ -41,7 +41,7 @@
             this.cmbCadVendasProdutos = new System.Windows.Forms.ComboBox();
             this.lblCadVendaProdutos = new System.Windows.Forms.Label();
             this.lblCadValorVenda = new System.Windows.Forms.Label();
-            this.txtCadPrecoCompra = new System.Windows.Forms.TextBox();
+            this.txtCadValor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
@@ -168,7 +168,6 @@
             // 
             // cmbCadFuncionario
             // 
-            this.cmbCadFuncionario.Enabled = false;
             this.cmbCadFuncionario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCadFuncionario.FormattingEnabled = true;
             this.cmbCadFuncionario.Items.AddRange(new object[] {
@@ -243,15 +242,16 @@
             this.lblCadValorVenda.TabIndex = 114;
             this.lblCadValorVenda.Text = "VALOR  VENDA:\r\n\r\n";
             // 
-            // txtCadPrecoCompra
+            // txtCadValor
             // 
-            this.txtCadPrecoCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCadPrecoCompra.Enabled = false;
-            this.txtCadPrecoCompra.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadPrecoCompra.Location = new System.Drawing.Point(534, 327);
-            this.txtCadPrecoCompra.Name = "txtCadPrecoCompra";
-            this.txtCadPrecoCompra.Size = new System.Drawing.Size(232, 26);
-            this.txtCadPrecoCompra.TabIndex = 115;
+            this.txtCadValor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCadValor.Enabled = false;
+            this.txtCadValor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCadValor.Location = new System.Drawing.Point(490, 336);
+            this.txtCadValor.Name = "txtCadValor";
+            this.txtCadValor.Size = new System.Drawing.Size(232, 26);
+            this.txtCadValor.TabIndex = 115;
+            this.txtCadValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadValor_KeyPress);
             // 
             // frmVendasCad
             // 
@@ -259,7 +259,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
             this.ClientSize = new System.Drawing.Size(1230, 665);
-            this.Controls.Add(this.txtCadPrecoCompra);
+            this.Controls.Add(this.txtCadValor);
             this.Controls.Add(this.lblCadValorVenda);
             this.Controls.Add(this.lblCadVendaProdutos);
             this.Controls.Add(this.cmbCadVendasProdutos);
@@ -298,6 +298,6 @@
         private System.Windows.Forms.ComboBox cmbCadVendasProdutos;
         private System.Windows.Forms.Label lblCadVendaProdutos;
         private System.Windows.Forms.Label lblCadValorVenda;
-        private System.Windows.Forms.TextBox txtCadPrecoCompra;
+        private System.Windows.Forms.TextBox txtCadValor;
     }
 }

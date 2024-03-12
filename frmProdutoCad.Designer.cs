@@ -161,6 +161,7 @@
             this.cmbCadCategoria.Name = "cmbCadCategoria";
             this.cmbCadCategoria.Size = new System.Drawing.Size(375, 26);
             this.cmbCadCategoria.TabIndex = 92;
+           
             this.cmbCadCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadCategoria_KeyPress);
             // 
             // txtCadDescricao

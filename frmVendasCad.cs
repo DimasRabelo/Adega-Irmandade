@@ -26,27 +26,26 @@ namespace Adega_Irmandade
             new frmVendas().Show();
             Close();
         }
-
         private void cmbCadFuncionario_KeyPress(object sender, KeyPressEventArgs e)
         {
+
             if (e.KeyChar == (char)Keys.Enter)
             {
                 cmbCadStatus.Enabled = true;
                 cmbCadStatus.Focus();
             }
-
         }
 
         private void cmbCadStatus_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                nudValorVenda.Enabled = true;
-                nudValorVenda.Focus();
+                txtCadValor.Enabled = true;
+                txtCadValor.Focus();
             }
         }
 
-        private void nudValorVenda_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtCadValor_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -63,6 +62,7 @@ namespace Adega_Irmandade
                 btnCadSalvar.Focus();
             }
         }
+
 
         private void btnCadSalvar_Click(object sender, EventArgs e)
         {
@@ -86,16 +86,17 @@ namespace Adega_Irmandade
                 cmbCadStatus.Focus();
                 lblCadStatus.ForeColor = Color.Red;
             }
-            else if (string.IsNullOrWhiteSpace(nudValorVenda.Value.ToString())) // Não Aceita Campo Vazio
+
+            else if (string.IsNullOrWhiteSpace(txtCadValor.Text))// Não Aceita Campo Vazio
             {
-                MessageBox.Show("Favor Preencher a Quantidade ");
-                nudValorVenda.Value = 0; // Limpa definindo o valor para zero
-                nudValorVenda.Focus();
+                MessageBox.Show("Favor Preencher o Link do Facebook");
+                txtCadValor.Clear();
+                txtCadValor.Focus();
                 lblCadValorVenda.ForeColor = Color.Red;
             }
-            if (string.IsNullOrWhiteSpace(cmbCadVendasProdutos.Text))// Não Aceita Campo Vazio
+            else if (string.IsNullOrWhiteSpace(cmbCadVendasProdutos.Text))// Não Aceita Campo Vazio
             {
-                MessageBox.Show("Favor Escolha o Nivel ");
+                MessageBox.Show("Favor Escolha o Status ");
                 cmbCadVendasProdutos.SelectedIndex = -1;
                 cmbCadVendasProdutos.Focus();
                 lblCadVendaProdutos.ForeColor = Color.Red;
@@ -104,8 +105,7 @@ namespace Adega_Irmandade
             {
                 variaveis.nomeFuncionario = cmbCadFuncionario.Text;
                 variaveis.statusVenda = cmbCadStatus.Text;
-                variaveis.valorTotalVenda = nudValorVenda.Text;
-                variaveis.statusEstoque = cmbCadStatus.Text;
+                variaveis.valorTotalVenda = txtCadValor.Text;
                 variaveis.idProduto = cmbCadVendasProdutos.Text;
 
                 if (variaveis.funcao == "CADASTRAR")
@@ -136,9 +136,17 @@ namespace Adega_Irmandade
                 banco.CarregarDadosVendas();
 
 
-                cmbCadFuncionario.Text = variaveis.nomeFuncionario;                            
-                cmbCadStatus.Text = variaveis.statusVenda;
-                cmbCadVendasProdutos.Text = variaveis.nomeProduto;
+                cmbCadFuncionario.SelectedItem = variaveis.nomeFuncionario;
+                cmbCadStatus.SelectedItem = variaveis.statusVenda;
+                txtCadValor.Text = variaveis.valorTotalVenda;
+                cmbCadVendasProdutos.SelectedItem = variaveis.idProduto;
+                btnCadSalvar.Enabled = true;
+                btnLimpar.Enabled = false;
+
+                cmbCadFuncionario.Enabled = true;
+                cmbCadStatus.Enabled = true;
+                txtCadValor.Enabled = true;
+                cmbCadVendasProdutos.Enabled = true;
                 btnCadSalvar.Enabled = true;
                 btnLimpar.Enabled = false;
 
@@ -148,6 +156,8 @@ namespace Adega_Irmandade
 
             }
         }
+
+       
     }
     
 }
