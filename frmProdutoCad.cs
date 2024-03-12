@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -128,12 +129,128 @@ namespace Adega_Irmandade
                 txtCadProduto.Focus();
                 lblCadProduto.ForeColor = Color.Red;
             }
+            else if (string.IsNullOrWhiteSpace(txtCadDescricao.Text))// Não Aceita Campo Vazio
+            {
+                MessageBox.Show("Favor Preencher o Cargo ");
+                txtCadDescricao.Clear();
+                txtCadDescricao.Focus();
+                lblCadDescricao.ForeColor = Color.Red;
+            }
+            else if (string.IsNullOrWhiteSpace(cmbCadCategoria.Text))// Não Aceita Campo Vazio
+            {
+                MessageBox.Show("Favor Escolha o Nivel ");
+                cmbCadCategoria.SelectedIndex = -1;
+                cmbCadCategoria.Focus();
+                lblCadCategoria.ForeColor = Color.Red;
+            }
+            else if (string.IsNullOrWhiteSpace(cmbCadStatus.Text))// Não Aceita Campo Vazio
+            {
+                MessageBox.Show("Favor Escolha o Status ");
+                cmbCadStatus.SelectedIndex = -1;
+                cmbCadStatus.Focus();
+                lblCadStatus.ForeColor = Color.Red;
+            }
+            else if (string.IsNullOrWhiteSpace(txtCadPrecoCompra.Text))// Não Aceita Campo Vazio
+            {
+                MessageBox.Show("Favor Preencher o Cargo ");
+                txtCadPrecoCompra.Clear();
+                txtCadPrecoCompra.Focus();
+                lblCadPrecoCompra.ForeColor = Color.Red;
+            }
+            else if (string.IsNullOrWhiteSpace(txtPrecoVenda.Text))// Não Aceita Campo Vazio
+            {
+                MessageBox.Show("Favor Preencher o Cargo ");
+                txtPrecoVenda.Clear();
+                txtPrecoVenda.Focus();
+                lblCadPrecoVenda.ForeColor = Color.Red;
+            }
+            else if (string.IsNullOrWhiteSpace(txtCadFornecedor.Text))// Não Aceita Campo Vazio
+            {
+                MessageBox.Show("Favor Preencher o Cargo ");
+                txtCadFornecedor.Clear();
+                txtCadFornecedor.Focus();
+                lblCadFornecedor.ForeColor = Color.Red;
+            }
+            else if (!mkdCadDataRecebimento.MaskCompleted)// Não Aceita Campo Vazio
+            {
+                MessageBox.Show("Favor digite a Data de Admissão ");
+                mkdCadDataRecebimento.Clear();
+                mkdCadDataRecebimento.Focus();
+                lblCadDataRecebimento.ForeColor = Color.Red;
+            }
+            else if (!mkdCadHoraRecebimento.MaskCompleted)// Não Aceita Campo Vazio
+            {
+                MessageBox.Show("Favor digite a Data de Admissão ");
+                mkdCadHoraRecebimento.Clear();
+                mkdCadHoraRecebimento.Focus();
+                lblCadHoraRecebimento.ForeColor = Color.Red;
+            }
+            else
+            {
+                variaveis.nomeProduto = txtCadProduto.Text;
+                variaveis.descricaoProduto = txtCadDescricao.Text;
+                variaveis.categoriaProduto = cmbCadCategoria.Text;
+                variaveis.statusProduto = cmbCadStatus.Text;
+                variaveis.precoCompraProduto = (int)Convert.ToDecimal(txtCadPrecoCompra.Text);
+                variaveis.precoVendaProduto = (int)Convert.ToDecimal(txtPrecoVenda.Text);
+                variaveis.fornecedorProduto = txtCadFornecedor.Text;
+                variaveis.dataReceProduto = DateTime.Parse(mkdCadDataRecebimento.Text);
+                variaveis.horaProduto = DateTime.Parse(mkdCadHoraRecebimento.Text);
 
+                if (variaveis.funcao == "CADASTRAR")
+                {
+                    banco.InserirProdutos();
+                    btnCadSalvar.Enabled = false;
+                    btnLimpar.PerformClick();
+                }
+                else if (variaveis.funcao == "ALTERAR")
+                {
+                    banco.AlterarProdutos();
+                    banco.CarregarDadosProdutos();
 
-
+                }
+                btnLimpar.Enabled = false;
+            }
         }
 
+        private void frmProdutoCad_Load(object sender, EventArgs e)
+        {
+
+            if (variaveis.funcao == "ALTERAR")
+            {
+                lblCadCadastrar.Text = "ALTERAR";
+                banco.CarregarDadosProdutos();
 
 
+                txtCadProduto.Text = variaveis.nomeProduto;
+                txtCadDescricao.Text = variaveis.descricaoProduto;
+                cmbCadCategoria.Text = variaveis.categoriaProduto;
+                cmbCadStatus.Text = variaveis.statusProduto;
+                txtCadPrecoCompra.Text = variaveis.precoCompraProduto.ToString();
+                txtPrecoVenda.Text = variaveis.precoVendaProduto.ToString();
+                txtCadFornecedor.Text = variaveis.fornecedorProduto;
+                mkdCadDataRecebimento.Text = variaveis.dataReceProduto.ToString();
+                mkdCadHoraRecebimento.Text = variaveis.horaProduto.ToString();
+
+                txtCadProduto.Enabled = true;
+                txtCadDescricao.Enabled = true;
+                cmbCadCategoria.Enabled = true;
+                cmbCadStatus.Enabled = true;
+                txtCadPrecoCompra.Enabled = true;
+                txtPrecoVenda.Enabled = true;
+                txtCadFornecedor.Enabled = true;
+                mkdCadDataRecebimento.Enabled = true;
+                mkdCadHoraRecebimento.Enabled = true;
+                btnCadSalvar.Enabled = true;
+                btnLimpar.Enabled = false;
+
+
+
+
+
+            }
+        }
     }
+
+    
 }

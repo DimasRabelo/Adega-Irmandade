@@ -29,7 +29,8 @@ namespace Adega_Irmandade
 
         // FORMULÁRIO PRODUTOS //
 
-        public static string nomeProduto, descricaoProduto,categoriaProduto,statusProduto,precoCompraProduto,precoVendaProduto,fornecedorProduto;
+        public static int precoCompraProduto, precoVendaProduto;
+        public static string nomeProduto, descricaoProduto,categoriaProduto,statusProduto,fornecedorProduto;
         public static DateTime dataReceProduto, horaProduto;
 
       

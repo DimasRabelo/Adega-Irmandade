@@ -389,6 +389,7 @@
             this.Name = "frmProdutoCad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProdutoCad";
+            this.Load += new System.EventHandler(this.frmProdutoCad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);

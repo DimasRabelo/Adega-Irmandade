@@ -707,7 +707,7 @@ namespace Adega_Irmandade
                 conexao.Conectar();
                 string selecionar = "SELECT * FROM tblprodutos WHERE idProduto = @codigo;";
                 MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
-                cmd.Parameters.AddWithValue("@codigo", variaveis.codContatos);
+                cmd.Parameters.AddWithValue("@codigo", variaveis.codProduto);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
@@ -715,11 +715,11 @@ namespace Adega_Irmandade
                     variaveis.descricaoProduto = reader.GetString(2);
                     variaveis.categoriaProduto = reader.GetString(3);
                     variaveis.statusProduto = reader.GetString(4);
-                    variaveis.precoCompraProduto = reader.GetString(5);
-                    variaveis.precoVendaProduto = reader.GetString(6);
+                    variaveis.precoCompraProduto = (int)reader.GetDecimal(5);
+                    variaveis.precoVendaProduto = (int)reader.GetDecimal(6);
                     variaveis.fornecedorProduto = reader.GetString(7);
-                    variaveis.dataReceProduto = reader.GetDateTime(5);
-                    variaveis.horaProduto = reader.GetDateTime(7);
+                    variaveis.dataReceProduto = reader.GetDateTime(8);
+                    variaveis.horaProduto = reader.GetDateTime(9);
                 }
                 conexao.Desconectar();
             }
@@ -728,7 +728,6 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar os Produtos!\n\n" + erro);
             }
         }
-
         public static void AlterarProdutos()
         {
             try
