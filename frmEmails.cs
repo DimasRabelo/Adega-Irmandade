@@ -142,9 +142,19 @@ namespace Adega_Irmandade
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            variaveis.funcao = "ALTERAR";
-            new frmEmailsCad().Show();
-            Hide();
+            if (variaveis.linhaSelecionada >= 0)
+            {
+                variaveis.funcao = "ALTERAR";
+                variaveis.codContatos = Convert.ToInt32(dgvEmails.Rows[variaveis.linhaSelecionada].Cells["idContato"].Value);
+
+                // Abrir o formulário de cadastro de e-mails
+                new frmEmailsCad().Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um e-mail para alterar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

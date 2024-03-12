@@ -114,9 +114,19 @@ namespace Adega_Irmandade
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            variaveis.funcao = "ALTERAR";
-            new frmClienteCad().Show();
-            Hide();
+            if (variaveis.linhaSelecionada >= 0)
+            {
+                variaveis.funcao = "ALTERAR";
+                variaveis.codUsuario = Convert.ToInt32(dgvCliente.Rows[variaveis.linhaSelecionada].Cells["idUsuario"].Value);
+
+                // Abrir o formulário de cadastro de clientes
+                new frmClienteCad().Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cliente para alterar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

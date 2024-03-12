@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mkdCadDataContato = new System.Windows.Forms.MaskedTextBox();
             this.btnCadSalvar = new System.Windows.Forms.Button();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.btnLimpar = new System.Windows.Forms.Button();
@@ -41,29 +40,13 @@
             this.lblCadStatus = new System.Windows.Forms.Label();
             this.lblCadTelefone = new System.Windows.Forms.Label();
             this.lblCadEmail = new System.Windows.Forms.Label();
-            this.lblCadDataContato = new System.Windows.Forms.Label();
             this.lblCadNome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCadCadastrar = new System.Windows.Forms.Label();
-            this.lblCadHora = new System.Windows.Forms.Label();
-            this.mkdCadHora = new System.Windows.Forms.MaskedTextBox();
             this.pctFechar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // mkdCadDataContato
-            // 
-            this.mkdCadDataContato.Enabled = false;
-            this.mkdCadDataContato.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mkdCadDataContato.Location = new System.Drawing.Point(668, 316);
-            this.mkdCadDataContato.Mask = "00/00/0000";
-            this.mkdCadDataContato.Name = "mkdCadDataContato";
-            this.mkdCadDataContato.Size = new System.Drawing.Size(131, 34);
-            this.mkdCadDataContato.TabIndex = 106;
-            this.mkdCadDataContato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mkdCadDataContato.ValidatingType = typeof(System.DateTime);
-            this.mkdCadDataContato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataContato_KeyPress);
             // 
             // btnCadSalvar
             // 
@@ -85,7 +68,7 @@
             this.pctLogo.BackColor = System.Drawing.Color.Transparent;
             this.pctLogo.Image = global::Adega_Irmandade.Properties.Resources.adegalogo_2;
             this.pctLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pctLogo.Location = new System.Drawing.Point(869, 54);
+            this.pctLogo.Location = new System.Drawing.Point(853, 105);
             this.pctLogo.Name = "pctLogo";
             this.pctLogo.Size = new System.Drawing.Size(349, 324);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -105,6 +88,7 @@
             this.btnLimpar.TabIndex = 103;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // mkdCadTelefone
             // 
@@ -140,7 +124,7 @@
             this.cmbCadStatus.Items.AddRange(new object[] {
             "ATIVO",
             "DESATIVADO"});
-            this.cmbCadStatus.Location = new System.Drawing.Point(46, 468);
+            this.cmbCadStatus.Location = new System.Drawing.Point(595, 324);
             this.cmbCadStatus.Name = "cmbCadStatus";
             this.cmbCadStatus.Size = new System.Drawing.Size(204, 26);
             this.cmbCadStatus.TabIndex = 96;
@@ -165,6 +149,7 @@
             this.txtCadNome.Name = "txtCadNome";
             this.txtCadNome.Size = new System.Drawing.Size(753, 26);
             this.txtCadNome.TabIndex = 91;
+           
             this.txtCadNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadNome_KeyPress);
             // 
             // lblCadMensagem
@@ -185,7 +170,7 @@
             this.lblCadStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblCadStatus.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadStatus.ForeColor = System.Drawing.Color.White;
-            this.lblCadStatus.Location = new System.Drawing.Point(41, 432);
+            this.lblCadStatus.Location = new System.Drawing.Point(590, 294);
             this.lblCadStatus.Name = "lblCadStatus";
             this.lblCadStatus.Size = new System.Drawing.Size(103, 27);
             this.lblCadStatus.TabIndex = 82;
@@ -214,18 +199,6 @@
             this.lblCadEmail.Size = new System.Drawing.Size(85, 27);
             this.lblCadEmail.TabIndex = 77;
             this.lblCadEmail.Text = "EMAIL:";
-            // 
-            // lblCadDataContato
-            // 
-            this.lblCadDataContato.AutoSize = true;
-            this.lblCadDataContato.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadDataContato.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadDataContato.ForeColor = System.Drawing.Color.White;
-            this.lblCadDataContato.Location = new System.Drawing.Point(678, 259);
-            this.lblCadDataContato.Name = "lblCadDataContato";
-            this.lblCadDataContato.Size = new System.Drawing.Size(121, 54);
-            this.lblCadDataContato.TabIndex = 75;
-            this.lblCadDataContato.Text = "DATA \r\nCONTATO:";
             // 
             // lblCadNome
             // 
@@ -267,31 +240,6 @@
             this.lblCadCadastrar.Text = "CADASTRO";
             this.lblCadCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblCadHora
-            // 
-            this.lblCadHora.AutoSize = true;
-            this.lblCadHora.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadHora.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadHora.ForeColor = System.Drawing.Color.White;
-            this.lblCadHora.Location = new System.Drawing.Point(678, 413);
-            this.lblCadHora.Name = "lblCadHora";
-            this.lblCadHora.Size = new System.Drawing.Size(121, 54);
-            this.lblCadHora.TabIndex = 87;
-            this.lblCadHora.Text = "HORA \r\nCONTATO:";
-            // 
-            // mkdCadHora
-            // 
-            this.mkdCadHora.Enabled = false;
-            this.mkdCadHora.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mkdCadHora.Location = new System.Drawing.Point(645, 470);
-            this.mkdCadHora.Mask = "00:00";
-            this.mkdCadHora.Name = "mkdCadHora";
-            this.mkdCadHora.Size = new System.Drawing.Size(154, 26);
-            this.mkdCadHora.TabIndex = 99;
-            this.mkdCadHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mkdCadHora.ValidatingType = typeof(System.DateTime);
-            this.mkdCadHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadHora_KeyPress);
-            // 
             // pctFechar
             // 
             this.pctFechar.BackColor = System.Drawing.Color.Transparent;
@@ -312,22 +260,18 @@
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
             this.ClientSize = new System.Drawing.Size(1230, 665);
             this.Controls.Add(this.pctFechar);
-            this.Controls.Add(this.mkdCadDataContato);
             this.Controls.Add(this.btnCadSalvar);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.mkdCadHora);
             this.Controls.Add(this.mkdCadTelefone);
             this.Controls.Add(this.txtCadMensagem);
             this.Controls.Add(this.cmbCadStatus);
             this.Controls.Add(this.txtCadEmail);
             this.Controls.Add(this.txtCadNome);
-            this.Controls.Add(this.lblCadHora);
             this.Controls.Add(this.lblCadMensagem);
             this.Controls.Add(this.lblCadStatus);
             this.Controls.Add(this.lblCadTelefone);
             this.Controls.Add(this.lblCadEmail);
-            this.Controls.Add(this.lblCadDataContato);
             this.Controls.Add(this.lblCadNome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCadCadastrar);
@@ -344,7 +288,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.MaskedTextBox mkdCadDataContato;
         private System.Windows.Forms.Button btnCadSalvar;
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Button btnLimpar;
@@ -357,12 +300,9 @@
         private System.Windows.Forms.Label lblCadStatus;
         private System.Windows.Forms.Label lblCadTelefone;
         private System.Windows.Forms.Label lblCadEmail;
-        private System.Windows.Forms.Label lblCadDataContato;
         private System.Windows.Forms.Label lblCadNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCadCadastrar;
-        private System.Windows.Forms.Label lblCadHora;
-        private System.Windows.Forms.MaskedTextBox mkdCadHora;
         private System.Windows.Forms.PictureBox pctFechar;
     }
 }

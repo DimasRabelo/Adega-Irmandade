@@ -276,7 +276,7 @@ namespace Adega_Irmandade
             }
             else if (!mkdCadTelefone.MaskCompleted)// Não Aceita Campo Vazio
             {
-                MessageBox.Show("Favor digite a Data de Admissão ");
+                MessageBox.Show("Favor digite o Telefone ");
                 mkdCadTelefone.Clear();
                 mkdCadTelefone.Focus();
                 lblCadTelefone.ForeColor = Color.Red;

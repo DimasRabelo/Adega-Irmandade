@@ -37,14 +37,14 @@
             this.txtCadNome = new System.Windows.Forms.TextBox();
             this.lblCadProdutos = new System.Windows.Forms.Label();
             this.lblCadStatus = new System.Windows.Forms.Label();
-            this.lblCadDataAdmissao = new System.Windows.Forms.Label();
+            this.lblCadDataAtual = new System.Windows.Forms.Label();
             this.lblCadQuantidade = new System.Windows.Forms.Label();
             this.lblCadDataCadastro = new System.Windows.Forms.Label();
             this.lblCadNome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCadCadastrar = new System.Windows.Forms.Label();
             this.mkdCadHora = new System.Windows.Forms.MaskedTextBox();
-            this.lblCadCep = new System.Windows.Forms.Label();
+            this.lblCadhora = new System.Windows.Forms.Label();
             this.cmbCadProduto = new System.Windows.Forms.ComboBox();
             this.nudQuantidade = new System.Windows.Forms.NumericUpDown();
             this.pctFechar = new System.Windows.Forms.PictureBox();
@@ -64,6 +64,7 @@
             this.mkdCadDataAtual.TabIndex = 107;
             this.mkdCadDataAtual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mkdCadDataAtual.ValidatingType = typeof(System.DateTime);
+            this.mkdCadDataAtual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataAtual_KeyPress);
             // 
             // mkdCadDataCadastro
             // 
@@ -76,6 +77,7 @@
             this.mkdCadDataCadastro.TabIndex = 106;
             this.mkdCadDataCadastro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mkdCadDataCadastro.ValidatingType = typeof(System.DateTime);
+            this.mkdCadDataCadastro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadDataCadastro_KeyPress);
             // 
             // btnCadSalvar
             // 
@@ -90,6 +92,7 @@
             this.btnCadSalvar.TabIndex = 105;
             this.btnCadSalvar.Text = "SALVAR";
             this.btnCadSalvar.UseVisualStyleBackColor = false;
+            this.btnCadSalvar.Click += new System.EventHandler(this.btnCadSalvar_Click);
             // 
             // pctLogo
             // 
@@ -129,6 +132,7 @@
             this.cmbCadStatus.Name = "cmbCadStatus";
             this.cmbCadStatus.Size = new System.Drawing.Size(204, 26);
             this.cmbCadStatus.TabIndex = 96;
+            this.cmbCadStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadStatus_KeyPress);
             // 
             // txtCadNome
             // 
@@ -138,6 +142,7 @@
             this.txtCadNome.Name = "txtCadNome";
             this.txtCadNome.Size = new System.Drawing.Size(750, 26);
             this.txtCadNome.TabIndex = 91;
+            this.txtCadNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadNome_KeyPress);
             // 
             // lblCadProdutos
             // 
@@ -163,17 +168,17 @@
             this.lblCadStatus.TabIndex = 82;
             this.lblCadStatus.Text = "STATUS:";
             // 
-            // lblCadDataAdmissao
+            // lblCadDataAtual
             // 
-            this.lblCadDataAdmissao.AutoSize = true;
-            this.lblCadDataAdmissao.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadDataAdmissao.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadDataAdmissao.ForeColor = System.Drawing.Color.White;
-            this.lblCadDataAdmissao.Location = new System.Drawing.Point(46, 271);
-            this.lblCadDataAdmissao.Name = "lblCadDataAdmissao";
-            this.lblCadDataAdmissao.Size = new System.Drawing.Size(171, 54);
-            this.lblCadDataAdmissao.TabIndex = 81;
-            this.lblCadDataAdmissao.Text = "DATA \r\nATUALIZAÇÃO:";
+            this.lblCadDataAtual.AutoSize = true;
+            this.lblCadDataAtual.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadDataAtual.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadDataAtual.ForeColor = System.Drawing.Color.White;
+            this.lblCadDataAtual.Location = new System.Drawing.Point(46, 271);
+            this.lblCadDataAtual.Name = "lblCadDataAtual";
+            this.lblCadDataAtual.Size = new System.Drawing.Size(171, 54);
+            this.lblCadDataAtual.TabIndex = 81;
+            this.lblCadDataAtual.Text = "DATA \r\nATUALIZAÇÃO:";
             // 
             // lblCadQuantidade
             // 
@@ -250,18 +255,19 @@
             this.mkdCadHora.TabIndex = 108;
             this.mkdCadHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mkdCadHora.ValidatingType = typeof(System.DateTime);
+            this.mkdCadHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mkdCadHora_KeyPress);
             // 
-            // lblCadCep
+            // lblCadhora
             // 
-            this.lblCadCep.AutoSize = true;
-            this.lblCadCep.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadCep.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCep.ForeColor = System.Drawing.Color.White;
-            this.lblCadCep.Location = new System.Drawing.Point(640, 270);
-            this.lblCadCep.Name = "lblCadCep";
-            this.lblCadCep.Size = new System.Drawing.Size(136, 54);
-            this.lblCadCep.TabIndex = 109;
-            this.lblCadCep.Text = "HORA \r\nCADASTRO:";
+            this.lblCadhora.AutoSize = true;
+            this.lblCadhora.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadhora.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadhora.ForeColor = System.Drawing.Color.White;
+            this.lblCadhora.Location = new System.Drawing.Point(640, 270);
+            this.lblCadhora.Name = "lblCadhora";
+            this.lblCadhora.Size = new System.Drawing.Size(136, 54);
+            this.lblCadhora.TabIndex = 109;
+            this.lblCadhora.Text = "HORA \r\nCADASTRO:";
             // 
             // cmbCadProduto
             // 
@@ -284,6 +290,7 @@
             this.cmbCadProduto.Name = "cmbCadProduto";
             this.cmbCadProduto.Size = new System.Drawing.Size(435, 26);
             this.cmbCadProduto.TabIndex = 110;
+            this.cmbCadProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadProduto_KeyPress);
             // 
             // nudQuantidade
             // 
@@ -291,6 +298,7 @@
             this.nudQuantidade.Name = "nudQuantidade";
             this.nudQuantidade.Size = new System.Drawing.Size(120, 20);
             this.nudQuantidade.TabIndex = 111;
+            this.nudQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nudQuantidade_KeyPress);
             // 
             // pctFechar
             // 
@@ -314,7 +322,7 @@
             this.Controls.Add(this.pctFechar);
             this.Controls.Add(this.nudQuantidade);
             this.Controls.Add(this.cmbCadProduto);
-            this.Controls.Add(this.lblCadCep);
+            this.Controls.Add(this.lblCadhora);
             this.Controls.Add(this.mkdCadHora);
             this.Controls.Add(this.mkdCadDataAtual);
             this.Controls.Add(this.mkdCadDataCadastro);
@@ -325,7 +333,7 @@
             this.Controls.Add(this.txtCadNome);
             this.Controls.Add(this.lblCadProdutos);
             this.Controls.Add(this.lblCadStatus);
-            this.Controls.Add(this.lblCadDataAdmissao);
+            this.Controls.Add(this.lblCadDataAtual);
             this.Controls.Add(this.lblCadQuantidade);
             this.Controls.Add(this.lblCadDataCadastro);
             this.Controls.Add(this.lblCadNome);
@@ -335,6 +343,7 @@
             this.Name = "frmEstoqueCad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEstoqueCad";
+            this.Load += new System.EventHandler(this.frmEstoqueCad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
@@ -354,14 +363,14 @@
         private System.Windows.Forms.TextBox txtCadNome;
         private System.Windows.Forms.Label lblCadProdutos;
         private System.Windows.Forms.Label lblCadStatus;
-        private System.Windows.Forms.Label lblCadDataAdmissao;
+        private System.Windows.Forms.Label lblCadDataAtual;
         private System.Windows.Forms.Label lblCadQuantidade;
         private System.Windows.Forms.Label lblCadDataCadastro;
         private System.Windows.Forms.Label lblCadNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCadCadastrar;
         private System.Windows.Forms.MaskedTextBox mkdCadHora;
-        private System.Windows.Forms.Label lblCadCep;
+        private System.Windows.Forms.Label lblCadhora;
         private System.Windows.Forms.ComboBox cmbCadProduto;
         private System.Windows.Forms.NumericUpDown nudQuantidade;
         private System.Windows.Forms.PictureBox pctFechar;

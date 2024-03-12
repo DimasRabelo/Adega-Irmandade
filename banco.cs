@@ -890,16 +890,15 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string inserir = "INSERT INTO tblcontato(nomeContato, emailContato, telefoneContato, mensagemContato, dataContato, statusContato, horaContato) VALUES (@nome,@email,@telefone,@mensagem,@data,@hora); ";
+                string inserir = "INSERT INTO tblcontato(nomeContato, emailContato, telefoneContato, mensagemContato, statusContato) VALUES (@nome,@email,@telefone,@mensagem,@status); ";
                 MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
                 //parâmetros 
                 cmd.Parameters.AddWithValue("@nome", variaveis.nomeContato);
                 cmd.Parameters.AddWithValue("@email", variaveis.emailContato);
                 cmd.Parameters.AddWithValue("@telefone", variaveis.telefoneContato);
                 cmd.Parameters.AddWithValue("@mensagem", variaveis.mensagemContato);
-                cmd.Parameters.AddWithValue("@data", variaveis.dataContato);
                 cmd.Parameters.AddWithValue("@status", variaveis.statusContato);
-                cmd.Parameters.AddWithValue("@hora", variaveis.horaContato);
+               
                
                 //fim parâmetros
                 cmd.ExecuteNonQuery();
@@ -929,9 +928,8 @@ namespace Adega_Irmandade
                     variaveis.emailContato = reader.GetString(2);
                     variaveis.telefoneContato = reader.GetString(3);
                     variaveis.mensagemContato = reader.GetString(4);
-                    variaveis.dataContato = reader.GetDateTime(5);
                     variaveis.statusContato = reader.GetString(6);
-                    variaveis.horaContato= reader.GetDateTime(7);
+                   
 
                 }
                 conexao.Desconectar();
@@ -947,16 +945,14 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string alterar = "UPDATE tblcontato SET nomeContato = @nome, emailContato = @email, telefoneContato = @telefone, mensagemContato = @mensagem, dataContato = @data  statusContato = @status, horaContato = @hora WHERE idContato = @codigo;";
+                string alterar = "UPDATE tblcontato SET nomeContato = @nome, emailContato = @email, telefoneContato = @telefone, mensagemContato = @mensagem, statusContato = @status WHERE idContato = @codigo;";
                 MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
                 //parâmetros 
                 cmd.Parameters.AddWithValue("@nome", variaveis.nomeContato);
                 cmd.Parameters.AddWithValue("@email", variaveis.emailContato);
                 cmd.Parameters.AddWithValue("@telefone", variaveis.telefoneContato);
                 cmd.Parameters.AddWithValue("@mensagem", variaveis.mensagemContato);
-                cmd.Parameters.AddWithValue("@data", variaveis.dataContato);
-                cmd.Parameters.AddWithValue("@statusContato", variaveis.statusContato);
-                cmd.Parameters.AddWithValue("@hora", variaveis.horaContato);
+                cmd.Parameters.AddWithValue("@status", variaveis.statusContato);
                 cmd.Parameters.AddWithValue("@codigo", variaveis.codContatos);
 
                 cmd.ExecuteNonQuery();
@@ -976,20 +972,19 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string alterar = "UPDATE tblcontato SET statusContato=@status WHERE idContato = @codigo;";
+                string alterar = "UPDATE tblcontato SET statusContato='DESATIVADO' WHERE idContato = @codigo;";
                 MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
                 //parâmetros 
 
                 cmd.Parameters.AddWithValue("@status", variaveis.statusContato);
                 cmd.Parameters.AddWithValue("@codigo", variaveis.codContatos); 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Emails Desativado Com Sucesso!", " DESATIVADO EMAIL");
+                MessageBox.Show("Contato Desativado Com Sucesso!", " DESATIVADO CONTATO");
                 conexao.Desconectar();
-
-            }
+             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao Desativar o Email!\n\n" + erro.Message, "ERRO");
+                MessageBox.Show("Erro ao desativar o Email!\n\n" + erro.Message, "ERRO");
             }
         }
 
@@ -1106,7 +1101,7 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string inserir = "INSERT INTO tblestoque(nomeEstoque, quantidadeEstoque, dataCadastroEstoque, dataAtualiEstoque, statusEstoque, horaEstoque, idProduto) VALUES (@nome,@quantidade,@data,@dataAtual,@status,@hora,@produto); ";
+                string inserir = "INSERT INTO tblestoque(nomeEstoque, quantidadeEstoque, dataCadastroEstoque, dataAtualiEstoque, statusEstoque, horaEstoque, idProduto) SELECT @nome, @quantidade, @data, @dataAtual, @status, @hora, p.idProduto FROM tblprodutos p WHERE p.nomeProduto = @nomeDoProduto; ";
                 MySqlCommand cmd = new MySqlCommand(inserir, conexao.conn);
                 //parâmetros 
                 cmd.Parameters.AddWithValue("@nome", variaveis.nomeEstoque);
@@ -1115,7 +1110,7 @@ namespace Adega_Irmandade
                 cmd.Parameters.AddWithValue("@dataAtual", variaveis.dataAtualiEstoque);
                 cmd.Parameters.AddWithValue("@status", variaveis.statusEstoque);
                 cmd.Parameters.AddWithValue("@hora", variaveis.horaEstoque);
-                cmd.Parameters.AddWithValue("@produto", variaveis.idProduto);
+                cmd.Parameters.AddWithValue("@nomeDoproduto", variaveis.nomeProduto);
                
                 //fim parâmetros
                 cmd.ExecuteNonQuery();
@@ -1134,7 +1129,7 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string selecionar = "SELECT * FROM tblestoque WHERE idEstoque = @codigo; ";
+                string selecionar = "SELECT e.*, p.nomeProduto FROM tblestoque e INNER JOIN tblprodutos p ON e.idProduto = p.idProduto WHERE e.idEstoque = @codigo;";
                 MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
                 cmd.Parameters.AddWithValue("@codigo", variaveis.codEstoque);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -1146,7 +1141,7 @@ namespace Adega_Irmandade
                     variaveis.dataAtualiEstoque = reader.GetDateTime(4);
                     variaveis.statusEstoque = reader.GetString(5);
                     variaveis.horaEstoque = reader.GetDateTime(6);
-                    variaveis.idProduto = reader.GetString(7);
+                    variaveis.nomeProduto = reader.GetString(7);
 
 
                 }

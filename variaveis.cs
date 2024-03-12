@@ -48,7 +48,7 @@ namespace Adega_Irmandade
 
         public static string nomeContato,emailContato, telefoneContato, mensagemContato,statusContato;
 
-        public static DateTime dataContato, horaContato;
+       
 
         // FORMULARIO CLIENTE-USUÁRIO //
 
