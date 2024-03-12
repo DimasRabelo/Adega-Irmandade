@@ -719,7 +719,12 @@ namespace Adega_Irmandade
                     variaveis.precoVendaProduto = (int)reader.GetDecimal(6);
                     variaveis.fornecedorProduto = reader.GetString(7);
                     variaveis.dataReceProduto = reader.GetDateTime(8);
-                    variaveis.horaProduto = reader.GetDateTime(9);
+
+                    // Obter valor TimeSpan da coluna 9
+                    TimeSpan horaRecebida = reader.GetTimeSpan(9);
+
+                    // Atribuir valor a variável
+                    variaveis.horaProduto = DateTime.Today.Add(horaRecebida);
                 }
                 conexao.Desconectar();
             }
@@ -1105,10 +1110,7 @@ namespace Adega_Irmandade
                 //parâmetros 
                 cmd.Parameters.AddWithValue("@nome", variaveis.nomeEstoque);
                 cmd.Parameters.AddWithValue("@quantidade", variaveis.quantidadeEstoque);
-                cmd.Parameters.AddWithValue("@data", variaveis.dataCadastroEstoque);
-                cmd.Parameters.AddWithValue("@dataAtual", variaveis.dataAtualiEstoque);
                 cmd.Parameters.AddWithValue("@status", variaveis.statusEstoque);
-                cmd.Parameters.AddWithValue("@hora", variaveis.horaEstoque);
                 cmd.Parameters.AddWithValue("@nomeDoproduto", variaveis.nomeProduto);
                
                 //fim parâmetros
@@ -1135,11 +1137,9 @@ namespace Adega_Irmandade
                 if (reader.Read())
                 {
                     variaveis.nomeEstoque = reader.GetString(1);
-                    variaveis.quantidadeEstoque = reader.GetString(2);
-                    variaveis.dataCadastroEstoque = reader.GetDateTime(3);
-                    variaveis.dataAtualiEstoque = reader.GetDateTime(4);
-                    variaveis.statusEstoque = reader.GetString(5);
-                    variaveis.horaEstoque = reader.GetDateTime(6);
+                    variaveis.quantidadeEstoque = reader.GetInt32(2);
+                    
+                    variaveis.statusEstoque = reader.GetString(5);                   
                     variaveis.nomeProduto = reader.GetString(7);
 
 
@@ -1157,15 +1157,12 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string alterar = "UPDATE tblestoque SET nomeEstoque= @nome, quantidadeEstoque=@quantidade, dataCadastroEstoque=@data, dataAtualiEstoque=@dataAtual, statusEstoque=@status, horaEstoque=@hora, idProduto=@produto WHERE idEstoque =@codigo;";
+                string alterar = "UPDATE tblestoque SET nomeEstoque= @nome, quantidadeEstoque=@quantidade,statusEstoque=@status, idProduto=@produto WHERE idEstoque =@codigo;";
                 MySqlCommand cmd = new MySqlCommand(alterar, conexao.conn);
                 //parâmetros 
                 cmd.Parameters.AddWithValue("@nome", variaveis.nomeEstoque);
-                cmd.Parameters.AddWithValue("@alt", variaveis.quantidadeEstoque);
-                cmd.Parameters.AddWithValue("@dataNasc", variaveis.dataCadastroEstoque);
-                cmd.Parameters.AddWithValue("@cargo", variaveis.dataAtualiEstoque);
+                cmd.Parameters.AddWithValue("@alt", variaveis.quantidadeEstoque); 
                 cmd.Parameters.AddWithValue("@especialidade", variaveis.statusEstoque);
-                cmd.Parameters.AddWithValue("@email", variaveis.horaEstoque);
                 cmd.Parameters.AddWithValue("@senha", variaveis.idProduto);
                 cmd.Parameters.AddWithValue("@codigo", variaveis.codEstoque);
                

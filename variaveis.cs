@@ -33,11 +33,11 @@ namespace Adega_Irmandade
         public static string nomeProduto, descricaoProduto,categoriaProduto,statusProduto,fornecedorProduto;
         public static DateTime dataReceProduto, horaProduto;
 
-      
+
         // FORMULÁRIO ESTOQUE //
 
-        public static string nomeEstoque,quantidadeEstoque, statusEstoque,  idProduto;
-        public static DateTime dataCadastroEstoque, dataAtualiEstoque, horaEstoque;
+        public static int quantidadeEstoque;
+        public static string nomeEstoque, statusEstoque, idProduto;
 
         // FORMULÁRIO VENDAS //
 
