@@ -37,7 +37,7 @@ namespace Adega_Irmandade
         // FORMULÁRIO ESTOQUE //
 
         public static int quantidadeEstoque;
-        public static string nomeEstoque, statusEstoque, idProduto;
+        public static string nomeEstoque, statusEstoque;
 
         // FORMULÁRIO VENDAS //
 
