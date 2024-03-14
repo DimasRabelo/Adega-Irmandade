@@ -249,10 +249,7 @@ namespace Adega_Irmandade
             }
         }
 
-        private void txtCadNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }
 

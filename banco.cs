@@ -45,6 +45,7 @@ namespace Adega_Irmandade
                 byte[] imageToByte = ftpclient.DownloadData(variaveis.enderecoServidorFtp + @"\funcionario\fotoUser.png");
                 return imageToByte;
             }
+            
         }
         public static Bitmap ByteToImage(byte[] blob)
         {
@@ -55,6 +56,8 @@ namespace Adega_Irmandade
             memoryStream.Dispose();
             return bm;
         }
+
+    
         // Tratamento de imagem do Cliente Usuario //
 
 

@@ -135,7 +135,7 @@
             this.txtCadNome.Name = "txtCadNome";
             this.txtCadNome.Size = new System.Drawing.Size(664, 26);
             this.txtCadNome.TabIndex = 91;
-            this.txtCadNome.TextChanged += new System.EventHandler(this.txtCadNome_TextChanged);
+          
             this.txtCadNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCadNome_KeyPress);
             // 
             // lblCadFoto
