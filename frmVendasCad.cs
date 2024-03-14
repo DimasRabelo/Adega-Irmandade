@@ -106,7 +106,7 @@ namespace Adega_Irmandade
                 variaveis.nomeFuncionario = cmbCadFuncionario.Text;
                 variaveis.statusVenda = cmbCadStatus.Text;
                 variaveis.valorTotalVenda = txtCadValor.Text;
-                variaveis.idProduto = cmbCadVendasProdutos.Text;
+                variaveis.nomeProduto = cmbCadVendasProdutos.Text;
 
                 if (variaveis.funcao == "CADASTRAR")
                 {
@@ -139,7 +139,7 @@ namespace Adega_Irmandade
                 cmbCadFuncionario.SelectedItem = variaveis.nomeFuncionario;
                 cmbCadStatus.SelectedItem = variaveis.statusVenda;
                 txtCadValor.Text = variaveis.valorTotalVenda;
-                cmbCadVendasProdutos.SelectedItem = variaveis.idProduto;
+                cmbCadVendasProdutos.SelectedItem = variaveis.nomeProduto;
                 btnCadSalvar.Enabled = true;
                 btnLimpar.Enabled = false;
 

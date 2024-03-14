@@ -1140,7 +1140,7 @@ namespace Adega_Irmandade
                 if (reader.Read())
                 {
                     variaveis.nomeEstoque = reader.GetString(1); // Assumindo que o nome do estoque está na coluna de índice 1
-                    variaveis.quantidadeEstoque = reader.GetDouble(2); // Assumindo que a quantidade está na coluna de índice 2
+                    variaveis.quantidadeEstoque = (int)reader.GetDouble(2); // Assumindo que a quantidade está na coluna de índice 2
                     variaveis.statusEstoque = reader.GetString(5); // Assumindo que o status está na coluna de índice 5
                     variaveis.nomeProduto = reader.GetString(7).ToString(); // Assumindo que o nome do produto está na coluna de índice 7
 
@@ -1166,7 +1166,7 @@ namespace Adega_Irmandade
                 cmd.Parameters.AddWithValue("@nome", variaveis.nomeEstoque);
                 cmd.Parameters.AddWithValue("@quantidade", variaveis.quantidadeEstoque); 
                 cmd.Parameters.AddWithValue("@status", variaveis.statusEstoque);
-                cmd.Parameters.AddWithValue("@produto", variaveis.idProduto);
+                cmd.Parameters.AddWithValue("@produto", variaveis.nomeProduto);
                 cmd.Parameters.AddWithValue("@codigo", variaveis.codEstoque);
                
                 //fim parâmetros
@@ -1318,7 +1318,7 @@ namespace Adega_Irmandade
                 cmd.Parameters.AddWithValue("@funcionario", variaveis.idFuncionario);
                 cmd.Parameters.AddWithValue("@status", variaveis.statusVenda);
                 cmd.Parameters.AddWithValue("@valor", variaveis.valorTotalVenda);
-                cmd.Parameters.AddWithValue("@produto", variaveis.idProduto);
+                cmd.Parameters.AddWithValue("@produto", variaveis.nomeProduto);
 
                 // Fim parâmetros
                 cmd.ExecuteNonQuery();
