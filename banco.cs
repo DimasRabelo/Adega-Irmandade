@@ -1551,6 +1551,8 @@ namespace Adega_Irmandade
                     variaveis.emailUsuario = reader.GetString(2);
                     variaveis.senhaUsuario = reader.GetString(3);
                     variaveis.statusUsuario = reader.GetString(4);
+                    variaveis.fotoUsuario = reader.GetString(5);
+                    variaveis.fotoUsuario = variaveis.fotoUsuario.Remove(0, 8);
                 }
                 conexao.Desconectar();
             }

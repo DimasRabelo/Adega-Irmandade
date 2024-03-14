@@ -168,6 +168,12 @@ namespace Adega_Irmandade
             }
         }
 
+
+
+
+
+
+
         private void pctCadFoto_Click(object sender, EventArgs e)
         {
             try
@@ -183,11 +189,13 @@ namespace Adega_Irmandade
                 ofdFoto.RestoreDirectory = true;  // Restaurar ao Diretorio Inicial
 
                 DialogResult dr = ofdFoto.ShowDialog();
-                pctCadFoto.Image = Image.FromFile(ofdFoto.FileName); // Colocar a foto na picture box
-                variaveis.fotoUsuario = "Usuario/" + Regex.Replace(txtCadNome.Text, @"\s", "").ToLower() + ".png";
 
+                // Verificar se o usuário selecionou um arquivo e se a operação foi confirmada
                 if (dr == DialogResult.OK)
                 {
+                    pctCadFoto.Image = Image.FromFile(ofdFoto.FileName); // Colocar a foto na picture box
+                    variaveis.fotoUsuario = "Usuario/" + Regex.Replace(txtCadNome.Text, @"\s", "").ToLower() + ".png";
+
                     try
                     {
                         variaveis.atFotoUsuario = "S";
@@ -201,18 +209,16 @@ namespace Adega_Irmandade
                     {
                         MessageBox.Show(" Você Não tem Permissão. \n Mensagem: " + ex.Message);
                     }
+
+                    // Ativar o botão de salvar após selecionar a foto
+                    btnCadSalvar.Enabled = true;
+                    btnCadSalvar.Focus();
                 }
-                btnCadSalvar.Enabled = true;
-                btnCadSalvar.Focus();
             }
-
-            catch
+            catch (Exception ex)
             {
-                btnCadSalvar.Enabled = true;
-                btnCadSalvar.Focus();
+                MessageBox.Show("Erro ao selecionar a foto: " + ex.Message);
             }
-
-
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
