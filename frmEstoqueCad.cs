@@ -115,7 +115,7 @@ namespace Adega_Irmandade
                 variaveis.nomeEstoque = txtCadNome.Text;
                 variaveis.quantidadeEstoque = (int)nudQuantidade.Value;              
                 variaveis.statusEstoque = cmbCadStatus.Text;
-                variaveis.idProduto = cmbCadProduto.Text;
+                variaveis.nomeProduto = cmbCadProduto.Text;
 
                 if (variaveis.funcao == "CADASTRAR")
                 {
@@ -159,7 +159,7 @@ namespace Adega_Irmandade
                
                 cmbCadStatus.Text = variaveis.statusEstoque;
                
-                cmbCadProduto.SelectedItem = variaveis.idProduto; 
+                cmbCadProduto.SelectedItem = variaveis.nomeProduto; 
 
                 txtCadNome.Enabled = true;
                 nudQuantidade.Enabled = true;              

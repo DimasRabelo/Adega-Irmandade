@@ -1140,7 +1140,7 @@ namespace Adega_Irmandade
                 if (reader.Read())
                 {
                     variaveis.nomeEstoque = reader.GetString(1); // Assumindo que o nome do estoque está na coluna de índice 1
-                    variaveis.quantidadeEstoque = reader.GetInt32(2); // Assumindo que a quantidade está na coluna de índice 2
+                    variaveis.quantidadeEstoque = reader.GetDouble(2); // Assumindo que a quantidade está na coluna de índice 2
                     variaveis.statusEstoque = reader.GetString(5); // Assumindo que o status está na coluna de índice 5
                     variaveis.nomeProduto = reader.GetString(7).ToString(); // Assumindo que o nome do produto está na coluna de índice 7
 
@@ -1346,7 +1346,7 @@ namespace Adega_Irmandade
                     variaveis.nomeFuncionario = reader.GetString(1);
                     variaveis.statusVenda = reader.GetString(4);
                     variaveis.valorTotalVenda = reader.GetString(5);
-                    variaveis.idProduto = reader.GetString(6);
+                    variaveis.nomeProduto = reader.GetString(6);
 
 
                 }
