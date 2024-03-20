@@ -133,7 +133,6 @@
             this.btnCadastrar.TabIndex = 85;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
-          
             // 
             // pctFechar
             // 
@@ -227,6 +226,7 @@
             this.Name = "frmRelatorio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RELATÓRIOS";
+            this.Load += new System.EventHandler(this.frmRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();

@@ -13,7 +13,7 @@ namespace Adega_Irmandade
 {
     public static class banco
     {
-        public static DataGridView dgProdutosVendidos, dgContato, dgFuncionario, dgProdutos, dgEmails, dgEstoque,dgVendas,dgClientes;
+        public static DataGridView dgProdutosVendidos, dgContato, dgFuncionario, dgProdutos, dgEmails, dgEstoque,dgVendas,dgClientes,dgRelatorio;
         
 
         private static bool ValidarFTP()
@@ -57,8 +57,134 @@ namespace Adega_Irmandade
             return bm;
         }
 
-    
+
         // Tratamento de imagem do Cliente Usuario //
+
+        // Inicio do Relátórios //
+
+        public static string TraduzirMes(string mesEmIngles)
+        {
+            switch (mesEmIngles.ToLower())
+            {
+                case "january":
+                    return "Janeiro";
+                case "february":
+                    return "Fevereiro";
+                case "march":
+                    return "Março";
+                case "april":
+                    return "Abril";
+                case "may":
+                    return "Maio";
+                case "june":
+                    return "Junho";
+                case "july":
+                    return "Julho";
+                case "august":
+                    return "Agosto";
+                case "september":
+                    return "Setembro";
+                case "october":
+                    return "Outubro";
+                case "november":
+                    return "Novembro";
+                case "december":
+                    return "Dezembro";
+                default:
+                    return mesEmIngles;
+            }
+        }
+
+        public static void CarregarVendasRelatorio()
+        {
+            try
+            {
+                conexao.Conectar(); // Certifique-se de que conexao está corretamente inicializado e acessível
+                string selecionar = "SELECT * FROM vwvendaspormesanofuncionario";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Reorganize as colunas na ordem desejada
+                DataTable dtReordered = new DataTable();
+                dtReordered.Columns.Add("Funcionario", typeof(string));
+                dtReordered.Columns.Add("ValorTotalVenda", typeof(decimal));
+                dtReordered.Columns.Add("Mes", typeof(string));
+                dtReordered.Columns.Add("Ano", typeof(int));
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    string mesTraduzido = TraduzirMes(row["Mes"].ToString());
+                    dtReordered.Rows.Add(row["Funcionario"], row["ValorTotalVenda"], mesTraduzido, row["Ano"]);
+                }
+
+                dgRelatorio.DataSource = dtReordered;
+                dgRelatorio.Columns[1].DefaultCellStyle.Format = "C2";
+
+                dgRelatorio.ClearSelection();
+
+                // Renomear as colunas no DataGridView
+                dgRelatorio.Columns["Funcionario"].HeaderText = "FUNCIONÁRIO";
+                dgRelatorio.Columns["ValorTotalVenda"].HeaderText = "VALOR TOTAL";
+                dgRelatorio.Columns["ValorTotalVenda"].DefaultCellStyle.Format = "c"; // Formato de moeda
+                dgRelatorio.Columns["Mes"].HeaderText = "MÊS";
+                dgRelatorio.Columns["Ano"].HeaderText = "ANO";
+
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os itens vendidos!\n\n" + erro);
+            }
+        }
+
+        public static void CarregarVendasRelatorioMesAno()
+        {
+            try
+            {
+                conexao.Conectar(); // Certifique-se de que conexao está corretamente inicializado e acessível
+                string selecionar = "SELECT * FROM vwvendaspormesano";
+                MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Reorganize as colunas na ordem desejada
+                DataTable dtReordered = new DataTable();
+                dtReordered.Columns.Add("Funcionario", typeof(string));
+                dtReordered.Columns.Add("ValorTotalVenda", typeof(decimal));
+                dtReordered.Columns.Add("Mes", typeof(string));
+                dtReordered.Columns.Add("Ano", typeof(int));
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    string mesTraduzido = TraduzirMes(row["Mes"].ToString());
+                    dtReordered.Rows.Add(row["Funcionario"], row["ValorTotalVenda"], mesTraduzido, row["Ano"]);
+                }
+
+                dgRelatorio.DataSource = dtReordered;
+                dgRelatorio.Columns[1].DefaultCellStyle.Format = "C2";
+
+                dgRelatorio.ClearSelection();
+
+                // Renomear as colunas no DataGridView
+                dgRelatorio.Columns["Funcionario"].HeaderText = "FUNCIONÁRIO";
+                dgRelatorio.Columns["ValorTotalVenda"].HeaderText = "VALOR TOTAL";
+                dgRelatorio.Columns["ValorTotalVenda"].DefaultCellStyle.Format = "c"; // Formato de moeda
+                dgRelatorio.Columns["Mes"].HeaderText = "MÊS";
+                dgRelatorio.Columns["Ano"].HeaderText = "ANO";
+
+                conexao.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar os itens vendidos!\n\n" + erro);
+            }
+        }
+
+
+
 
 
 

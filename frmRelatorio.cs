@@ -23,6 +23,11 @@ namespace Adega_Irmandade
             Close();
         }
 
-        
+        private void frmRelatorio_Load(object sender, EventArgs e)
+        {
+            banco.dgRelatorio = dgvRelatorios;
+            banco.CarregarVendasRelatorio();
+
+        }
     }
 }
