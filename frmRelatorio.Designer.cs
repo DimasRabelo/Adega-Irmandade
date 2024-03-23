@@ -32,15 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.dgvRelatorios = new System.Windows.Forms.DataGridView();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.pctFechar = new System.Windows.Forms.PictureBox();
-            this.chkAtivo = new System.Windows.Forms.CheckBox();
+            this.chkFunc = new System.Windows.Forms.CheckBox();
             this.lblRelaStatus = new System.Windows.Forms.Label();
-            this.txtRelaNome = new System.Windows.Forms.TextBox();
-            this.lblRelaNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.chkAno = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
@@ -51,9 +48,9 @@
             this.pctLogo.BackColor = System.Drawing.Color.Transparent;
             this.pctLogo.Image = global::Adega_Irmandade.Properties.Resources.adegalogo_2;
             this.pctLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pctLogo.Location = new System.Drawing.Point(986, 64);
+            this.pctLogo.Location = new System.Drawing.Point(601, 268);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(225, 204);
+            this.pctLogo.Size = new System.Drawing.Size(225, 319);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogo.TabIndex = 89;
             this.pctLogo.TabStop = false;
@@ -83,63 +80,22 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRelatorios.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRelatorios.GridColor = System.Drawing.Color.White;
-            this.dgvRelatorios.Location = new System.Drawing.Point(52, 64);
+            this.dgvRelatorios.Location = new System.Drawing.Point(12, 314);
             this.dgvRelatorios.MultiSelect = false;
             this.dgvRelatorios.Name = "dgvRelatorios";
             this.dgvRelatorios.ReadOnly = true;
             this.dgvRelatorios.RowHeadersVisible = false;
             this.dgvRelatorios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRelatorios.Size = new System.Drawing.Size(928, 430);
+            this.dgvRelatorios.Size = new System.Drawing.Size(583, 214);
             this.dgvRelatorios.TabIndex = 88;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
-            this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.ForeColor = System.Drawing.Color.Transparent;
-            this.btnExcluir.Location = new System.Drawing.Point(1035, 580);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(170, 40);
-            this.btnExcluir.TabIndex = 87;
-            this.btnExcluir.Text = "EXCLUIR";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAlterar.Location = new System.Drawing.Point(859, 580);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(170, 40);
-            this.btnAlterar.TabIndex = 86;
-            this.btnAlterar.Text = "ALTERAR";
-            this.btnAlterar.UseVisualStyleBackColor = false;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastrar.Location = new System.Drawing.Point(683, 580);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(170, 40);
-            this.btnCadastrar.TabIndex = 85;
-            this.btnCadastrar.Text = "CADASTRAR";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.dgvRelatorios.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRelatorios_CellFormatting);
             // 
             // pctFechar
             // 
             this.pctFechar.BackColor = System.Drawing.Color.Transparent;
             this.pctFechar.Image = global::Adega_Irmandade.Properties.Resources.botaoFechar;
             this.pctFechar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pctFechar.Location = new System.Drawing.Point(1172, 11);
+            this.pctFechar.Location = new System.Drawing.Point(770, 12);
             this.pctFechar.Name = "pctFechar";
             this.pctFechar.Size = new System.Drawing.Size(39, 30);
             this.pctFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -147,18 +103,19 @@
             this.pctFechar.TabStop = false;
             this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
-            // chkAtivo
+            // chkFunc
             // 
-            this.chkAtivo.AutoSize = true;
-            this.chkAtivo.BackColor = System.Drawing.Color.Transparent;
-            this.chkAtivo.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkAtivo.ForeColor = System.Drawing.Color.White;
-            this.chkAtivo.Location = new System.Drawing.Point(338, 580);
-            this.chkAtivo.Name = "chkAtivo";
-            this.chkAtivo.Size = new System.Drawing.Size(108, 31);
-            this.chkAtivo.TabIndex = 83;
-            this.chkAtivo.Text = "ATIVO?";
-            this.chkAtivo.UseVisualStyleBackColor = false;
+            this.chkFunc.AutoSize = true;
+            this.chkFunc.BackColor = System.Drawing.Color.Transparent;
+            this.chkFunc.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFunc.ForeColor = System.Drawing.Color.White;
+            this.chkFunc.Location = new System.Drawing.Point(130, 237);
+            this.chkFunc.Name = "chkFunc";
+            this.chkFunc.Size = new System.Drawing.Size(108, 31);
+            this.chkFunc.TabIndex = 83;
+            this.chkFunc.Text = "ATIVO?";
+            this.chkFunc.UseVisualStyleBackColor = false;
+            this.chkFunc.CheckedChanged += new System.EventHandler(this.chkFunc_CheckedChanged);
             // 
             // lblRelaStatus
             // 
@@ -166,67 +123,68 @@
             this.lblRelaStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblRelaStatus.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRelaStatus.ForeColor = System.Drawing.Color.White;
-            this.lblRelaStatus.Location = new System.Drawing.Point(218, 581);
+            this.lblRelaStatus.Location = new System.Drawing.Point(21, 238);
             this.lblRelaStatus.Name = "lblRelaStatus";
             this.lblRelaStatus.Size = new System.Drawing.Size(103, 27);
             this.lblRelaStatus.TabIndex = 82;
             this.lblRelaStatus.Text = "STATUS:";
-            // 
-            // txtRelaNome
-            // 
-            this.txtRelaNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRelaNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRelaNome.Location = new System.Drawing.Point(230, 520);
-            this.txtRelaNome.Name = "txtRelaNome";
-            this.txtRelaNome.Size = new System.Drawing.Size(750, 27);
-            this.txtRelaNome.TabIndex = 81;
-            // 
-            // lblRelaNome
-            // 
-            this.lblRelaNome.AutoSize = true;
-            this.lblRelaNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblRelaNome.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRelaNome.ForeColor = System.Drawing.Color.White;
-            this.lblRelaNome.Location = new System.Drawing.Point(142, 520);
-            this.lblRelaNome.Name = "lblRelaNome";
-            this.lblRelaNome.Size = new System.Drawing.Size(82, 27);
-            this.lblRelaNome.TabIndex = 80;
-            this.lblRelaNome.Text = "NOME:";
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 11);
+            this.label1.Location = new System.Drawing.Point(262, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(312, 50);
             this.label1.TabIndex = 79;
             this.label1.Text = "RELATÓRIOS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // chkAno
+            // 
+            this.chkAno.AutoSize = true;
+            this.chkAno.BackColor = System.Drawing.Color.Transparent;
+            this.chkAno.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAno.ForeColor = System.Drawing.Color.White;
+            this.chkAno.Location = new System.Drawing.Point(155, 186);
+            this.chkAno.Name = "chkAno";
+            this.chkAno.Size = new System.Drawing.Size(108, 31);
+            this.chkAno.TabIndex = 90;
+            this.chkAno.Text = "ATIVO?";
+            this.chkAno.UseVisualStyleBackColor = false;
+            this.chkAno.CheckedChanged += new System.EventHandler(this.chkAno_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(21, 190);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 27);
+            this.label2.TabIndex = 91;
+            this.label2.Text = "STATUS:";
+            // 
             // frmRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
-            this.ClientSize = new System.Drawing.Size(1220, 630);
+            this.ClientSize = new System.Drawing.Size(833, 630);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.chkAno);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.dgvRelatorios);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.pctFechar);
-            this.Controls.Add(this.chkAtivo);
+            this.Controls.Add(this.chkFunc);
             this.Controls.Add(this.lblRelaStatus);
-            this.Controls.Add(this.txtRelaNome);
-            this.Controls.Add(this.lblRelaNome);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRelatorio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RELATÓRIOS";
-            this.Load += new System.EventHandler(this.frmRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
@@ -239,14 +197,11 @@
 
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.DataGridView dgvRelatorios;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.PictureBox pctFechar;
-        private System.Windows.Forms.CheckBox chkAtivo;
+        private System.Windows.Forms.CheckBox chkFunc;
         private System.Windows.Forms.Label lblRelaStatus;
-        private System.Windows.Forms.TextBox txtRelaNome;
-        private System.Windows.Forms.Label lblRelaNome;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox chkAno;
+        private System.Windows.Forms.Label label2;
     }
 }

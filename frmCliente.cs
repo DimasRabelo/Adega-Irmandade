@@ -148,5 +148,10 @@ namespace Adega_Irmandade
 
             }
         }
+
+        private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
