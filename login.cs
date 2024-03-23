@@ -57,7 +57,7 @@ namespace Adega_Irmandade
             variaveis.usuario = txtEmail.Text;
             variaveis.senha = txtSenha.Text;
 
-            if (variaveis.usuario == "" && variaveis.senha == "")
+            if (variaveis.usuario == "DIMAS" && variaveis.senha == "1234")
             {
                 variaveis.nivel = "ADMINISTRADOR";
                 new frmMenuPrincipal().Show();
@@ -101,6 +101,11 @@ namespace Adega_Irmandade
 
             }
 
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
