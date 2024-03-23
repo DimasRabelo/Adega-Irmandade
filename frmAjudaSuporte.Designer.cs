@@ -31,8 +31,11 @@
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pctFechar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pctLogo
@@ -40,9 +43,9 @@
             this.pctLogo.BackColor = System.Drawing.Color.Transparent;
             this.pctLogo.Image = global::Adega_Irmandade.Properties.Resources.adegalogo_2;
             this.pctLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pctLogo.Location = new System.Drawing.Point(986, 47);
+            this.pctLogo.Location = new System.Drawing.Point(946, 75);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(225, 204);
+            this.pctLogo.Size = new System.Drawing.Size(276, 228);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogo.TabIndex = 100;
             this.pctLogo.TabStop = false;
@@ -72,12 +75,38 @@
             this.label1.Text = "AJUDA E SUPORTE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Adega_Irmandade.Properties.Resources.ajudaSuporte;
+            this.pictureBox1.Location = new System.Drawing.Point(391, 107);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(328, 253);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 101;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(229, 363);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(657, 289);
+            this.label2.TabIndex = 102;
+            this.label2.Text = "Olá! Dúvidas e Suporte\r\nVocê pode nos contatar\r\nvia WhatsApp (11)97249-5017\r\nou v" +
+    "ia email para:\r\nsandini.infor@gmail.com.";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // frmAjudaSuporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
             this.ClientSize = new System.Drawing.Size(1220, 630);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.pctFechar);
             this.Controls.Add(this.label1);
@@ -87,6 +116,7 @@
             this.Text = "frmAjudaSuporte";
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -96,5 +126,7 @@
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.PictureBox pctFechar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -341,5 +341,8 @@
   <ItemGroup>
     <None Include="img\fundofumacaCad.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ajudaSuporte.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

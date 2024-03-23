@@ -47,9 +47,9 @@
             this.pctLogo.BackColor = System.Drawing.Color.Transparent;
             this.pctLogo.Image = global::Adega_Irmandade.Properties.Resources.adegalogo_2;
             this.pctLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pctLogo.Location = new System.Drawing.Point(680, 63);
+            this.pctLogo.Location = new System.Drawing.Point(681, 72);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(151, 110);
+            this.pctLogo.Size = new System.Drawing.Size(151, 153);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogo.TabIndex = 89;
             this.pctLogo.TabStop = false;
