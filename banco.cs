@@ -113,9 +113,9 @@ namespace Adega_Irmandade
 
                 // Renomear a coluna "nomeProduto" para "Produto" no DataGridView
                 dgRelatorio.Columns["nomeFuncionario"].HeaderText = "FUNCIONÁRIO";
-                dgRelatorio.Columns["ValorTotalVenda"].HeaderText = "VALOR TOTAL";
+                dgRelatorio.Columns["ValorTotalVenda"].HeaderText = "VALOR TOTAL DA VENDA";
                 dgRelatorio.Columns["ValorTotalVenda"].DefaultCellStyle.Format = "c"; // Formato de moeda
-                dgRelatorio.Columns["Mes"].HeaderText = "MES";
+                dgRelatorio.Columns["Mes"].HeaderText = "MÊS";
                 dgRelatorio.Columns["Ano"].HeaderText = "ANO";
 
                 // Traduzir os nomes dos meses
@@ -154,8 +154,8 @@ namespace Adega_Irmandade
                 dgRelatorio.ClearSelection();
 
                 
-                dgRelatorio.Columns["ano"].HeaderText = "ANO";
-                dgRelatorio.Columns["total_vendas"].HeaderText = "VALOR ANUAL";
+                dgRelatorio.Columns["ano"].HeaderText = "ANO REFERENCIA";
+                dgRelatorio.Columns["total_vendas"].HeaderText = "VALOR TOTAL EM REAIS";
                 dgRelatorio.Columns["total_vendas"].DefaultCellStyle.Format = "c"; // Formato de moeda
 
             }

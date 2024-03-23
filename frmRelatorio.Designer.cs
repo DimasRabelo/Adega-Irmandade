@@ -34,7 +34,6 @@
             this.dgvRelatorios = new System.Windows.Forms.DataGridView();
             this.pctFechar = new System.Windows.Forms.PictureBox();
             this.chkFunc = new System.Windows.Forms.CheckBox();
-            this.lblRelaStatus = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.chkAno = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,9 +47,9 @@
             this.pctLogo.BackColor = System.Drawing.Color.Transparent;
             this.pctLogo.Image = global::Adega_Irmandade.Properties.Resources.adegalogo_2;
             this.pctLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pctLogo.Location = new System.Drawing.Point(601, 268);
+            this.pctLogo.Location = new System.Drawing.Point(680, 63);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(225, 319);
+            this.pctLogo.Size = new System.Drawing.Size(151, 110);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogo.TabIndex = 89;
             this.pctLogo.TabStop = false;
@@ -64,7 +63,7 @@
             this.dgvRelatorios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
@@ -73,22 +72,24 @@
             this.dgvRelatorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRelatorios.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRelatorios.GridColor = System.Drawing.Color.White;
-            this.dgvRelatorios.Location = new System.Drawing.Point(12, 314);
+            this.dgvRelatorios.Location = new System.Drawing.Point(61, 322);
             this.dgvRelatorios.MultiSelect = false;
             this.dgvRelatorios.Name = "dgvRelatorios";
             this.dgvRelatorios.ReadOnly = true;
             this.dgvRelatorios.RowHeadersVisible = false;
             this.dgvRelatorios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRelatorios.Size = new System.Drawing.Size(583, 214);
+            this.dgvRelatorios.Size = new System.Drawing.Size(694, 279);
             this.dgvRelatorios.TabIndex = 88;
+            this.dgvRelatorios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRelatorios_CellClick);
             this.dgvRelatorios.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRelatorios_CellFormatting);
+            this.dgvRelatorios.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRelatorios_ColumnHeaderMouseClick);
             // 
             // pctFechar
             // 
@@ -109,32 +110,20 @@
             this.chkFunc.BackColor = System.Drawing.Color.Transparent;
             this.chkFunc.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkFunc.ForeColor = System.Drawing.Color.White;
-            this.chkFunc.Location = new System.Drawing.Point(130, 237);
+            this.chkFunc.Location = new System.Drawing.Point(61, 285);
             this.chkFunc.Name = "chkFunc";
-            this.chkFunc.Size = new System.Drawing.Size(108, 31);
+            this.chkFunc.Size = new System.Drawing.Size(342, 31);
             this.chkFunc.TabIndex = 83;
-            this.chkFunc.Text = "ATIVO?";
+            this.chkFunc.Text = "VENDAS POR FUNCIONÁRIOS";
             this.chkFunc.UseVisualStyleBackColor = false;
             this.chkFunc.CheckedChanged += new System.EventHandler(this.chkFunc_CheckedChanged);
-            // 
-            // lblRelaStatus
-            // 
-            this.lblRelaStatus.AutoSize = true;
-            this.lblRelaStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblRelaStatus.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRelaStatus.ForeColor = System.Drawing.Color.White;
-            this.lblRelaStatus.Location = new System.Drawing.Point(21, 238);
-            this.lblRelaStatus.Name = "lblRelaStatus";
-            this.lblRelaStatus.Size = new System.Drawing.Size(103, 27);
-            this.lblRelaStatus.TabIndex = 82;
-            this.lblRelaStatus.Text = "STATUS:";
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(262, 70);
+            this.label1.Location = new System.Drawing.Point(251, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(312, 50);
             this.label1.TabIndex = 79;
@@ -147,25 +136,25 @@
             this.chkAno.BackColor = System.Drawing.Color.Transparent;
             this.chkAno.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAno.ForeColor = System.Drawing.Color.White;
-            this.chkAno.Location = new System.Drawing.Point(155, 186);
+            this.chkAno.Location = new System.Drawing.Point(61, 231);
             this.chkAno.Name = "chkAno";
-            this.chkAno.Size = new System.Drawing.Size(108, 31);
+            this.chkAno.Size = new System.Drawing.Size(207, 31);
             this.chkAno.TabIndex = 90;
-            this.chkAno.Text = "ATIVO?";
+            this.chkAno.Text = "VENDAS ANUAIS";
             this.chkAno.UseVisualStyleBackColor = false;
             this.chkAno.CheckedChanged += new System.EventHandler(this.chkAno_CheckedChanged);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(21, 190);
+            this.label2.Location = new System.Drawing.Point(53, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 27);
+            this.label2.Size = new System.Drawing.Size(205, 50);
             this.label2.TabIndex = 91;
-            this.label2.Text = "STATUS:";
+            this.label2.Text = "PERÍODOS";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmRelatorio
             // 
@@ -179,7 +168,6 @@
             this.Controls.Add(this.dgvRelatorios);
             this.Controls.Add(this.pctFechar);
             this.Controls.Add(this.chkFunc);
-            this.Controls.Add(this.lblRelaStatus);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRelatorio";
@@ -199,7 +187,6 @@
         private System.Windows.Forms.DataGridView dgvRelatorios;
         private System.Windows.Forms.PictureBox pctFechar;
         private System.Windows.Forms.CheckBox chkFunc;
-        private System.Windows.Forms.Label lblRelaStatus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkAno;
         private System.Windows.Forms.Label label2;

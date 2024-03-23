@@ -71,6 +71,24 @@ namespace Adega_Irmandade
 
 
             }
+
+        }
+
+        private void dgvRelatorios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            variaveis.linhaSelecionada = e.RowIndex;
+            if (variaveis.linhaSelecionada >= 0)
+            {
+                variaveis.codFuncionario = Convert.ToInt32(dgvRelatorios[0, variaveis.linhaSelecionada].Value);
+            }
+        }
+
+        private void dgvRelatorios_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvRelatorios.Sort(dgvRelatorios.Columns[1], ListSortDirection.Ascending);
+            dgvRelatorios.ClearSelection();
         }
     }
+
+      
 }
