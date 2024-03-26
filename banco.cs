@@ -61,7 +61,6 @@ namespace Adega_Irmandade
         // Tratamento de imagem do Cliente Usuario //
 
         // Inicio do Relátórios //
-
         public static string TraduzirMes(string mesEmIngles)
         {
             switch (mesEmIngles.ToLower())
@@ -153,7 +152,7 @@ namespace Adega_Irmandade
 
                 dgRelatorio.ClearSelection();
 
-                
+
                 dgRelatorio.Columns["ano"].HeaderText = "ANO REFERENCIA";
                 dgRelatorio.Columns["total_vendas"].HeaderText = "VALOR TOTAL EM REAIS";
                 dgRelatorio.Columns["total_vendas"].DefaultCellStyle.Format = "c"; // Formato de moeda
@@ -196,6 +195,7 @@ namespace Adega_Irmandade
 
 
 
+
                 conexao.Desconectar();
             }
             catch (Exception erro)
@@ -203,6 +203,7 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar os itens vendidos!\n\n" + erro);
             }
         }
+
 
         public static void CarregarNumFuncionario()
         {
@@ -1232,7 +1233,6 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao Cadastrar o estoque!\n\n" + erro.Message, "ERRO");
             }
         }
-
         public static void CarregarDadosEstoque()
         {
             try
@@ -1244,21 +1244,34 @@ namespace Adega_Irmandade
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    variaveis.nomeEstoque = reader.GetString(1); // Assumindo que o nome do estoque está na coluna de índice 1
-                    variaveis.quantidadeEstoque = (int)reader.GetDouble(2); // Assumindo que a quantidade está na coluna de índice 2
-                    variaveis.statusEstoque = reader.GetString(5); // Assumindo que o status está na coluna de índice 5
-                    variaveis.nomeProduto = reader.GetString(7).ToString(); // Assumindo que o nome do produto está na coluna de índice 7
+                    variaveis.nomeEstoque = reader.GetString(1);
 
+                    // Convertendo a string para inteiro corretamente
+                    if (!reader.IsDBNull(2)) // Verifica se o valor não é nulo
+                    {
+                        variaveis.quantidadeEstoque = reader.GetInt32(2);
+                    }
+                    else
+                    {
+                        // Tratar o caso em que a quantidade de estoque é nula
+                        // Por exemplo, definir um valor padrão
+                        variaveis.quantidadeEstoque = 0; // ou outro valor padrão desejado
+                    }
 
+                    variaveis.statusEstoque = reader.GetString(5);
 
+                    // Ajustando o índice para obter o nome do produto corretamente
+                    variaveis.nomeProduto = reader.GetString(6); // Supondo que 6 é o índice correto para o nome do produto
                 }
                 conexao.Desconectar();
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao carregar dados do Estoque!\n\n" + erro);
+                MessageBox.Show("Erro ao carregar os Funcionários!\n\n" + erro);
             }
         }
+
+
 
         public static void AlterarEstoque()
         {
@@ -1442,7 +1455,10 @@ namespace Adega_Irmandade
             try
             {
                 conexao.Conectar();
-                string selecionar = "SELECT * FROM tblvendas WHERE idVenda = @codigo;";
+                string selecionar = "SELECT v.*, p.nomeProduto " +
+                                    "FROM tblvendas v " +
+                                    "INNER JOIN tblprodutos p ON v.idProduto = p.idProduto " +
+                                    "WHERE v.idVenda = @codigo;";
                 MySqlCommand cmd = new MySqlCommand(selecionar, conexao.conn);
                 cmd.Parameters.AddWithValue("@codigo", variaveis.codVendas);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -1452,8 +1468,6 @@ namespace Adega_Irmandade
                     variaveis.statusVenda = reader.GetString(4);
                     variaveis.valorTotalVenda = reader.GetString(5);
                     variaveis.nomeProduto = reader.GetString(6);
-
-
                 }
                 conexao.Desconectar();
             }
@@ -1462,6 +1476,7 @@ namespace Adega_Irmandade
                 MessageBox.Show("Erro ao carregar vendas!\n\n" + erro);
             }
         }
+
 
         public static void AlterarVendas()
         {

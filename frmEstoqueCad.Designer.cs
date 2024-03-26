@@ -40,10 +40,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblCadCadastrar = new System.Windows.Forms.Label();
             this.cmbCadProduto = new System.Windows.Forms.ComboBox();
-            this.nudQuantidade = new System.Windows.Forms.NumericUpDown();
             this.pctFechar = new System.Windows.Forms.PictureBox();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,14 +210,6 @@
             this.cmbCadProduto.TabIndex = 110;
             this.cmbCadProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCadProduto_KeyPress);
             // 
-            // nudQuantidade
-            // 
-            this.nudQuantidade.Location = new System.Drawing.Point(46, 246);
-            this.nudQuantidade.Name = "nudQuantidade";
-            this.nudQuantidade.Size = new System.Drawing.Size(120, 20);
-            this.nudQuantidade.TabIndex = 111;
-            this.nudQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nudQuantidade_KeyPress);
-            // 
             // pctFechar
             // 
             this.pctFechar.BackColor = System.Drawing.Color.Transparent;
@@ -232,14 +223,24 @@
             this.pctFechar.TabStop = false;
             this.pctFechar.Click += new System.EventHandler(this.pctFechar_Click);
             // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtQuantidade.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantidade.Location = new System.Drawing.Point(46, 256);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(93, 26);
+            this.txtQuantidade.TabIndex = 113;
+            this.txtQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantidade_KeyPress);
+            // 
             // frmEstoqueCad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Adega_Irmandade.Properties.Resources.fundofumacaCad;
             this.ClientSize = new System.Drawing.Size(1230, 665);
+            this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.pctFechar);
-            this.Controls.Add(this.nudQuantidade);
             this.Controls.Add(this.cmbCadProduto);
             this.Controls.Add(this.btnCadSalvar);
             this.Controls.Add(this.pctLogo);
@@ -258,7 +259,6 @@
             this.Text = "frmEstoqueCad";
             this.Load += new System.EventHandler(this.frmEstoqueCad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -278,7 +278,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCadCadastrar;
         private System.Windows.Forms.ComboBox cmbCadProduto;
-        private System.Windows.Forms.NumericUpDown nudQuantidade;
         private System.Windows.Forms.PictureBox pctFechar;
+        private System.Windows.Forms.TextBox txtQuantidade;
     }
 }

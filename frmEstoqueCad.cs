@@ -27,20 +27,19 @@ namespace Adega_Irmandade
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                nudQuantidade.Enabled = true;
-                nudQuantidade.Focus();
+                txtQuantidade.Enabled = true;
+                txtQuantidade.Focus();
             }
-
         }
 
-        private void nudQuantidade_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void txtQuantidade_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
                 cmbCadStatus.Enabled = true;
                 cmbCadStatus.Focus();
             }
-
         }
 
         private void cmbCadStatus_KeyPress(object sender, KeyPressEventArgs e)
@@ -50,7 +49,6 @@ namespace Adega_Irmandade
                 cmbCadProduto.Enabled = true;
                 cmbCadProduto.Focus();
             }
-
         }
 
         private void cmbCadProduto_KeyPress(object sender, KeyPressEventArgs e)
@@ -60,22 +58,17 @@ namespace Adega_Irmandade
                 btnCadSalvar.Enabled = true;
                 btnCadSalvar.Focus();
             }
-
         }
-
-
-
 
 
         private void btnCadSalvar_Click(object sender, EventArgs e)
         {
             lblCadNome.ForeColor = Color.FromArgb(0, 0, 255);
             lblCadQuantidade.ForeColor = Color.FromArgb(0, 0, 255);
-           
-            lblCadStatus.ForeColor = Color.FromArgb(0, 0, 255);
-           
-            lblCadProdutos.ForeColor = Color.FromArgb(0, 0, 255);
 
+            lblCadStatus.ForeColor = Color.FromArgb(0, 0, 255);
+
+            lblCadProdutos.ForeColor = Color.FromArgb(0, 0, 255);
             if (txtCadNome.Text.Length <= 5) // Não aceita menos que 6 caracteres 
             {
                 MessageBox.Show("Favor Preencher o Nome Completo");
@@ -83,55 +76,27 @@ namespace Adega_Irmandade
                 txtCadNome.Focus();
                 lblCadNome.ForeColor = Color.Red;
             }
-            else if (string.IsNullOrWhiteSpace(nudQuantidade.Value.ToString())) // Não Aceita Campo Vazio
+            else if (string.IsNullOrWhiteSpace(txtQuantidade.Text))// Não Aceita Campo Vazio
             {
-                MessageBox.Show("Favor Preencher a Quantidade ");
-                nudQuantidade.Value = 0; // Limpa definindo o valor para zero
-                nudQuantidade.Focus();
+                MessageBox.Show("Favor Preencher o Cargo ");
+                txtQuantidade.Clear();
+                txtQuantidade.Focus();
                 lblCadQuantidade.ForeColor = Color.Red;
             }
-           
-           
             else if (string.IsNullOrWhiteSpace(cmbCadStatus.Text))// Não Aceita Campo Vazio
             {
-                MessageBox.Show("Favor Escolha o Status ");
+                MessageBox.Show("Favor Escolha o Nivel ");
                 cmbCadStatus.SelectedIndex = -1;
                 cmbCadStatus.Focus();
                 lblCadStatus.ForeColor = Color.Red;
             }
-           
             else if (string.IsNullOrWhiteSpace(cmbCadProduto.Text))// Não Aceita Campo Vazio
             {
-                MessageBox.Show("Favor Escolha o Produto ");
+                MessageBox.Show("Favor Escolha o Nivel ");
                 cmbCadProduto.SelectedIndex = -1;
                 cmbCadProduto.Focus();
                 lblCadProdutos.ForeColor = Color.Red;
             }
-
-
-
-            else
-            {
-                variaveis.nomeEstoque = txtCadNome.Text;
-                variaveis.quantidadeEstoque = (int)nudQuantidade.Value;              
-                variaveis.statusEstoque = cmbCadStatus.Text;
-                variaveis.nomeProduto = cmbCadProduto.Text;
-
-                if (variaveis.funcao == "CADASTRAR")
-                {
-                    banco.InserirEstoque();
-                    btnCadSalvar.Enabled = false;
-                    btnLimpar.PerformClick();
-                }
-                else if (variaveis.funcao == "ALTERAR")
-                {
-                    banco.AlterarEstoque();
-                    banco.CarregarDadosEstoque();
-
-                }
-                btnLimpar.Enabled = false;
-            }
-
 
 
 
@@ -145,31 +110,20 @@ namespace Adega_Irmandade
                 banco.CarregarDadosEstoque();
 
                 txtCadNome.Text = variaveis.nomeEstoque;
-                // Verificar se o valor de variaveis.quantidadeEstoque está dentro dos limites do NumericUpDown
-                if (variaveis.quantidadeEstoque >= nudQuantidade.Minimum && variaveis.quantidadeEstoque <= nudQuantidade.Maximum)
-                {
-                    nudQuantidade.Value = variaveis.quantidadeEstoque;
-                }
-                else
-                {
-                    // Se estiver fora dos limites, defina o valor padrão ou trate de outra forma
-                    nudQuantidade.Value = nudQuantidade.Minimum; // Ou qualquer valor padrão desejado
-                }
-               
-               
+
+                // Convertendo a quantidade de estoque para string antes de atribuir ao TextBox
+                txtQuantidade.Text = variaveis.quantidadeEstoque.ToString();
+
                 cmbCadStatus.Text = variaveis.statusEstoque;
-               
-                cmbCadProduto.SelectedItem = variaveis.nomeProduto; 
+                cmbCadProduto.Text = variaveis.nomeProduto;
 
                 txtCadNome.Enabled = true;
-                nudQuantidade.Enabled = true;              
+                txtQuantidade.Enabled = true;
                 cmbCadStatus.Enabled = true;
                 cmbCadProduto.Enabled = true;
                 btnCadSalvar.Enabled = true;
                 btnLimpar.Enabled = false;
             }
         }
-
-       
     }
-}
+  }
