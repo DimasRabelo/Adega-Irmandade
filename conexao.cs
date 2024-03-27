@@ -7,7 +7,9 @@ namespace Adega_Irmandade
     public static class conexao
     {
         // string de conexao com o banco de dados
-        public static string db = "SERVER=localhost;USER=root;DATABASE=adegairmandade";
+        //public static string db = "SERVER=localhost;USER=root;DATABASE=adegairmandade";
+        public static string db = "SERVER=195.179.239.0;USER=u283879542_adegairmandade;PASSWORD=SenacAdega01;DATABASE=u283879542_adegairmandade;SSL MODE=None";
+
 
         // Reconhecer a Bilbioteca do mysql
         public static MySqlConnection conn;
